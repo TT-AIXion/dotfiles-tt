@@ -1,0 +1,30 @@
+return {
+  "stevearc/conform.nvim",
+  event = { "BufReadPre", "BufNewFile" },
+  config = function()
+    local conform = require("conform")
+    
+    conform.setup({
+      formatters_by_ft = {
+        lua = { "stylua" },
+        python = { "isort", "black" },
+        javascript = { "prettier" },
+        typescript = { "prettier" },
+        go = { "gofmt", "goimports" },
+        rust = { "rustfmt" },
+      },
+      
+      -- 保存時に自動フォーマット
+      format_on_save = {
+        lsp_fallback = true,
+        async = false,
+        timeout_ms = 500,
+      },
+    })
+    
+    -- 手動フォーマットのキーマップ
+    vim.keymap.set({ "n", "v" }, "<leader>f", function()
+      conform.format({ async = true })
+    end, { desc = "Format buffer" })
+  end,
+}
