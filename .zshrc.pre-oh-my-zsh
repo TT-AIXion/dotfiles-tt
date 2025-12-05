@@ -1,0 +1,12 @@
+export PATH="/Users/tt/.npm-global/bin":$PATH
+export PATH="$HOME/.local/bin:$PATH"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/tt/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+alias cc='claude --dangerously-skip-permissions'
+
+# Added by Antigravity
+export PATH="/Users/tt/.antigravity/antigravity/bin:$PATH"
