@@ -25,6 +25,7 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 vim.opt.relativenumber = true
 vim.opt.number = true
+vim.opt.clipboard = "unnamedplus"
 
 -- Setup lazy.nvim
 require("lazy").setup({
