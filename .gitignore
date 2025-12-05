@@ -15,3 +15,7 @@
 !.codex
 !.codex/prompts
 !.codex/prompts/*
+!Library
+!Library/Application Support/
+!Library/Application Support/com.mitchellh.ghostty/
+!Library/Application Support/com.mitchellh.ghostty/config
