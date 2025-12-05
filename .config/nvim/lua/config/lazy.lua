@@ -23,6 +23,8 @@ vim.g.maplocalleader = "\\"
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
+vim.opt.relativenumber = true
+vim.opt.number = true
 
 -- Setup lazy.nvim
 require("lazy").setup({
