@@ -5,3 +5,10 @@
 .config/*
 !.config/nvim/
 !.config/nvim/**
+!.codex/AGENTS.md
+!.claude
+!.claude/agents
+!.claude/agents/*
+!.claude/commands
+!.claude/commands/*
+!.claude/CLAUDE.md
