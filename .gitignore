@@ -12,3 +12,6 @@
 !.claude/commands
 !.claude/commands/*
 !.claude/CLAUDE.md
+!.codex
+!.codex/prompts
+!.codex/prompts/*
