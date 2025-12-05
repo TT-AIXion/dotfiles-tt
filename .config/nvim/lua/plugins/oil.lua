@@ -24,6 +24,5 @@ return {
     })
     -- キーマップ
     vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Oil: 親ディレクトリ" })
-    vim.keymap.set("n", "<leader>e", "<CMD>Oil<CR>", { desc = "Oil: ファイルエクスプローラー" })
   end,
 }
