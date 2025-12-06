@@ -2,7 +2,7 @@
 name: drawio-file-handler
 description: Use this agent when you need to read, write, edit, or analyze DrawIO (.drawio, .drawio.svg, .drawio.png) diagram files. This includes viewing diagram contents, modifying existing diagrams, creating new diagrams, extracting information from diagrams, or converting diagram formats.\n\nExamples:\n\n<example>\nContext: User wants to understand the current architecture diagram\nuser: "アーキテクチャ図の内容を確認したい"\nassistant: "drawio-file-handlerエージェントを使用してDrawIOファイルの内容を読み込みます"\n<Task tool call to drawio-file-handler>\n</example>\n\n<example>\nContext: User needs to update an existing diagram\nuser: "システム構成図に新しいコンポーネントを追加してください"\nassistant: "DrawIOファイルの編集が必要なため、drawio-file-handlerエージェントに委任します"\n<Task tool call to drawio-file-handler>\n</example>\n\n<example>\nContext: User wants to create a new diagram\nuser: "データフローを示す新しい図を作成してください"\nassistant: "新規DrawIOファイルの作成をdrawio-file-handlerエージェントに依頼します"\n<Task tool call to drawio-file-handler>\n</example>\n\n<example>\nContext: After implementing a feature, need to update related diagrams\nuser: "認証機能を実装したので、関連するシーケンス図を更新してください"\nassistant: "実装に合わせてDrawIO図を更新する必要があるため、drawio-file-handlerエージェントを呼び出します"\n<Task tool call to drawio-file-handler>\n</example>
 tools: Glob, Grep, Read, WebFetch, TodoWrite, WebSearch, BashOutput, ListMcpResourcesTool, ReadMcpResourceTool, Edit, Write, NotebookEdit, Bash
-model: opus
+model: sonnet
 color: yellow
 ---
 

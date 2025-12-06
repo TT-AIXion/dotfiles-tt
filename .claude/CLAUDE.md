@@ -85,10 +85,11 @@
 | --------------------------- | ------ | ------------------------------------------------------------------ |
 | `web-research-specialist`   | sonnet | **最初に必ず起動**。技術調査、ベストプラクティス検索、最新情報取得 |
 | `fullstack-implementer`     | opus   | 機能実装、リファクタリング、バグ修正                               |
-| `vitest-test-designer`      | opus   | 単体テスト・統合テスト設計と実装                                   |
-| `playwright-e2e-specialist` | opus   | E2E テスト設計と実装                                               |
-| `mcp-tool-orchestrator`     | opus   | MCP サーバー・ツール関連の実装                                     |
-| `drawio-file-handler`       | opus   | draw.io ダイアグラム作成・編集、アーキテクチャ図、フローチャート   |
+| `vitest-test-designer`      | sonnet | 単体テスト・統合テスト設計と実装                                   |
+| `playwright-e2e-specialist` | sonnet | E2E テスト設計と実装                                               |
+| `playwright-manual-tester`  | sonnet | 手動E2Eテスト実行、UIテストシナリオ検証                            |
+| `mcp-tool-orchestrator`     | sonnet | MCP サーバー・ツール関連の実装                                     |
+| `drawio-file-handler`       | sonnet | draw.io ダイアグラム作成・編集、アーキテクチャ図、フローチャート   |
 | `structure-reviewer`        | sonnet | アーキテクチャ評価、設計レビュー                                   |
 | `source-code-investigator`  | sonnet | コードベース調査、影響範囲分析                                     |
 | `git-operations`            | haiku  | commit、branch、merge、rebase 操作                                 |
@@ -97,20 +98,163 @@
 ### 4.1 並列実行の原則
 
 1. **依存関係がないタスクは必ず並列実行する**
-2. 同時起動数の目安: 3-5 エージェント
-3. 並列パターン例:
-   - 初動: `web-research-specialist` + `source-code-investigator` + `file-explorer`
-   - 実装: `fullstack-implementer` + `vitest-test-designer` + `playwright-e2e-specialist`
-   - ドキュメント: `drawio-file-handler`（設計図が必要な場合）
-   - 完了後: `git-operations`（直列）
+2. 同時起動数の目安: 3-7 エージェント（タスク規模による）
+3. 待機時間を最小化: 調査・実装・テスト・レビューを可能な限り並行処理
+4. エージェント間の依存関係を明確化し、クリティカルパスを最短化
 
-### 4.2 作業フロー
+### 4.2 並列実行パターン（強化版）
+
+#### パターン1: 新機能開発（フルスタック）
+```
+Phase 1（並列3-4タスク）:
+├─ web-research-specialist: 最新ベストプラクティス調査
+├─ source-code-investigator: 既存コード影響範囲分析
+├─ file-explorer: 関連ファイル構造確認
+└─ drawio-file-handler: アーキテクチャ図作成（オプション）
+
+Phase 2（並列2-3タスク）:
+├─ fullstack-implementer: 機能実装（バックエンド+フロントエンド）
+├─ vitest-test-designer: 単体テスト実装
+└─ playwright-e2e-specialist: E2Eテストシナリオ設計・実装
+
+Phase 3（並列2タスク）:
+├─ structure-reviewer: コード品質・設計レビュー
+└─ playwright-manual-tester: 手動テスト実行・UI検証
+
+Phase 4（直列）:
+└─ git-operations: commit & push
+```
+
+#### パターン2: バグ修正（緊急対応）
+```
+Phase 1（並列3タスク）:
+├─ web-research-specialist: エラーメッセージ・既知の問題調査
+├─ source-code-investigator: バグ発生箇所特定・影響範囲分析
+└─ file-explorer: 関連ファイル洗い出し
+
+Phase 2（並列2-3タスク）:
+├─ fullstack-implementer: バグ修正実装
+├─ vitest-test-designer: 回帰テスト追加
+└─ playwright-e2e-specialist: E2Eテストケース補強（必要に応じて）
+
+Phase 3（直列）:
+├─ playwright-manual-tester: 修正箇所の動作確認
+└─ git-operations: commit & push
+```
+
+#### パターン3: リファクタリング（大規模）
+```
+Phase 1（並列4タスク）:
+├─ web-research-specialist: 最新パターン・ツール調査
+├─ source-code-investigator: 全体アーキテクチャ分析
+├─ file-explorer: 対象ファイル一覧作成
+└─ drawio-file-handler: Before/Afterアーキテクチャ図作成
+
+Phase 2（並列2タスク）:
+├─ structure-reviewer: リファクタリング計画レビュー
+└─ vitest-test-designer: 既存テストの動作確認・補強計画
+
+Phase 3（並列2-3タスク）:
+├─ fullstack-implementer: リファクタリング実装（段階的）
+├─ vitest-test-designer: テストケース更新
+└─ playwright-e2e-specialist: E2Eテストの互換性確認
+
+Phase 4（並列2タスク）:
+├─ structure-reviewer: リファクタリング後のコード品質評価
+└─ playwright-manual-tester: 全体動作確認
+
+Phase 5（直列）:
+└─ git-operations: commit & push
+```
+
+#### パターン4: テスト強化（既存機能）
+```
+Phase 1（並列3タスク）:
+├─ web-research-specialist: テストベストプラクティス調査
+├─ source-code-investigator: テストカバレッジ分析
+└─ file-explorer: テスト対象ファイル特定
+
+Phase 2（並列3タスク）:
+├─ vitest-test-designer: 単体テスト追加・改善
+├─ playwright-e2e-specialist: E2Eテスト追加・改善
+└─ playwright-manual-tester: テストシナリオ検証
+
+Phase 3（直列）:
+├─ structure-reviewer: テスト品質レビュー
+└─ git-operations: commit & push
+```
+
+#### パターン5: ドキュメント整備
+```
+並列4タスク:
+├─ source-code-investigator: コードベース全体分析
+├─ file-explorer: ドキュメント構造確認
+├─ drawio-file-handler: システム図・フローチャート作成
+└─ web-research-specialist: ドキュメンテーションベストプラクティス調査
+
+直列:
+└─ git-operations: commit & push
+```
+
+#### パターン6: MCP/ツール開発
+```
+Phase 1（並列3タスク）:
+├─ web-research-specialist: MCP仕様・ベストプラクティス調査
+├─ source-code-investigator: 既存MCP実装パターン分析
+└─ drawio-file-handler: MCPアーキテクチャ図作成
+
+Phase 2（並列2タスク）:
+├─ mcp-tool-orchestrator: MCP実装
+└─ vitest-test-designer: MCPテスト実装
+
+Phase 3（並列2タスク）:
+├─ structure-reviewer: MCP実装レビュー
+└─ playwright-manual-tester: MCP動作確認（統合テスト）
+
+Phase 4（直列）:
+└─ git-operations: commit & push
+```
+
+#### パターン7: パフォーマンス最適化
+```
+Phase 1（並列3タスク）:
+├─ web-research-specialist: パフォーマンス最適化手法調査
+├─ source-code-investigator: ボトルネック分析
+└─ file-explorer: 影響範囲ファイル特定
+
+Phase 2（並列2タスク）:
+├─ fullstack-implementer: 最適化実装
+└─ vitest-test-designer: パフォーマンステスト実装
+
+Phase 3（並列2タスク）:
+├─ playwright-e2e-specialist: E2Eパフォーマンステスト
+└─ playwright-manual-tester: 実機での体感速度検証
+
+Phase 4（直列）:
+├─ structure-reviewer: 最適化結果レビュー
+└─ git-operations: commit & push
+```
+
+### 4.3 並列実行の最適化ポイント
+
+1. **Phase分割**: 依存関係を考慮し、2-4 Phaseに分割
+2. **クリティカルパス特定**: 最長経路を見極め、そこを優先的に並列化
+3. **待機時間削減**: 
+   - 調査系（web-research-specialist, source-code-investigator）は最優先で起動
+   - 実装系とテスト系は可能な限り並列化
+   - レビュー系は実装完了後に並列起動
+4. **リソース配分**: 
+   - opus（重い処理）: 2-3タスク同時
+   - sonnet（中程度）: 3-4タスク同時
+   - haiku（軽い処理）: 制限なし
+
+### 4.4 作業フロー
 ```text
 要求 → 検索(必須) → 分析 → 分解 → 並列委任 → 結果統合 → 検証 → 完了/再委任
 ```
 
 1. **検索**: `web-research-specialist` で最新情報取得（必須・スキップ不可）
-2. **分析**: 全体像把握、依存関係特定
+2. **分析**: 全体像把握、依存関係特定、Phase分割
 3. **分解**: 2-10 ステップ、並列可能な作業を識別
 4. **委任**: スコープ・制約・成果物を明示し**並列で**サブエージェントに渡す
 5. **統合**: 矛盾検証、次ステップへ整理
