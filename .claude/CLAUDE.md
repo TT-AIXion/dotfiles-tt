@@ -92,17 +92,27 @@
 | `drawio-file-handler`       | sonnet | draw.io ダイアグラム作成・編集、アーキテクチャ図、フローチャート   |
 | `structure-reviewer`        | sonnet | アーキテクチャ評価、設計レビュー                                   |
 | `source-code-investigator`  | sonnet | コードベース調査、影響範囲分析                                     |
+| `ux-psychology-reviewer`    | sonnet | **実装完了時に必ず起動**。UX心理学観点でのUI/UXレビュー、認知負荷・ユーザビリティ評価 |
 | `git-operations`            | haiku  | commit、branch、merge、rebase 操作                                 |
 | `file-explorer`             | haiku  | ファイル構造確認、ファイル検索                                     |
 
-### 4.1 並列実行の原則
+### 4.1 必須エージェント起動ルール
+
+**以下のエージェントは条件に応じて必ず起動する。スキップ不可。**
+
+| タイミング | 必須エージェント | 条件 |
+|-----------|-----------------|------|
+| **タスク開始時** | `web-research-specialist` | 全タスク |
+| **タスク完了時** | `ux-psychology-reviewer` | UI/フロントエンド実装を含むタスク |
+
+### 4.2 並列実行の原則
 
 1. **依存関係がないタスクは必ず並列実行する**
 2. 同時起動数の目安: 3-7 エージェント（タスク規模による）
 3. 待機時間を最小化: 調査・実装・テスト・レビューを可能な限り並行処理
 4. エージェント間の依存関係を明確化し、クリティカルパスを最短化
 
-### 4.2 並列実行パターン（強化版）
+### 4.3 並列実行パターン（強化版）
 
 #### パターン1: 新機能開発（フルスタック）
 ```
@@ -117,11 +127,16 @@ Phase 2（並列2-3タスク）:
 ├─ vitest-test-designer: 単体テスト実装
 └─ playwright-e2e-specialist: E2Eテストシナリオ設計・実装
 
-Phase 3（並列2タスク）:
+Phase 3（並列2-3タスク）:
 ├─ structure-reviewer: コード品質・設計レビュー
-└─ playwright-manual-tester: 手動テスト実行・UI検証
+├─ playwright-manual-tester: 手動テスト実行・UI検証
+└─ ux-psychology-reviewer: UX心理学観点レビュー【必須】
 
-Phase 4（直列）:
+Phase 4（条件付きループ）:
+├─ UXレビュー指摘あり → fullstack-implementer で修正 → Phase 3 へ戻る
+└─ UXレビューOK → Phase 5 へ進む
+
+Phase 5（直列）:
 └─ git-operations: commit & push
 ```
 
@@ -137,8 +152,15 @@ Phase 2（並列2-3タスク）:
 ├─ vitest-test-designer: 回帰テスト追加
 └─ playwright-e2e-specialist: E2Eテストケース補強（必要に応じて）
 
-Phase 3（直列）:
+Phase 3（並列2タスク）:
 ├─ playwright-manual-tester: 修正箇所の動作確認
+└─ ux-psychology-reviewer: UI変更がある場合はUXレビュー【条件付き必須】
+
+Phase 4（条件付きループ）:
+├─ UXレビュー指摘あり → fullstack-implementer で修正 → Phase 3 へ戻る
+└─ UXレビューOK or UI変更なし → Phase 5 へ進む
+
+Phase 5（直列）:
 └─ git-operations: commit & push
 ```
 
@@ -159,11 +181,16 @@ Phase 3（並列2-3タスク）:
 ├─ vitest-test-designer: テストケース更新
 └─ playwright-e2e-specialist: E2Eテストの互換性確認
 
-Phase 4（並列2タスク）:
+Phase 4（並列3タスク）:
 ├─ structure-reviewer: リファクタリング後のコード品質評価
-└─ playwright-manual-tester: 全体動作確認
+├─ playwright-manual-tester: 全体動作確認
+└─ ux-psychology-reviewer: UI変更がある場合はUXレビュー【条件付き必須】
 
-Phase 5（直列）:
+Phase 5（条件付きループ）:
+├─ UXレビュー指摘あり → fullstack-implementer で修正 → Phase 4 へ戻る
+└─ UXレビューOK or UI変更なし → Phase 6 へ進む
+
+Phase 6（直列）:
 └─ git-operations: commit & push
 ```
 
@@ -226,31 +253,55 @@ Phase 2（並列2タスク）:
 ├─ fullstack-implementer: 最適化実装
 └─ vitest-test-designer: パフォーマンステスト実装
 
-Phase 3（並列2タスク）:
+Phase 3（並列3タスク）:
 ├─ playwright-e2e-specialist: E2Eパフォーマンステスト
-└─ playwright-manual-tester: 実機での体感速度検証
+├─ playwright-manual-tester: 実機での体感速度検証
+└─ ux-psychology-reviewer: 体感速度・レスポンス性のUX評価【必須】
 
-Phase 4（直列）:
+Phase 4（条件付きループ）:
+├─ UXレビュー指摘あり → fullstack-implementer で修正 → Phase 3 へ戻る
+└─ UXレビューOK → Phase 5 へ進む
+
+Phase 5（直列）:
 ├─ structure-reviewer: 最適化結果レビュー
 └─ git-operations: commit & push
 ```
 
-### 4.3 並列実行の最適化ポイント
+#### パターン8: UI/UX改善（専用）
+```
+Phase 1（並列3タスク）:
+├─ web-research-specialist: 最新UI/UXトレンド・心理学調査
+├─ source-code-investigator: 現行UI実装分析
+└─ file-explorer: UIコンポーネント構造確認
 
-1. **Phase分割**: 依存関係を考慮し、2-4 Phaseに分割
+Phase 2（並列2タスク）:
+├─ fullstack-implementer: UI改善実装
+└─ playwright-e2e-specialist: UIテスト実装
+
+Phase 3（並列2タスク）:
+├─ playwright-manual-tester: 手動UI検証
+└─ ux-psychology-reviewer: UX心理学観点レビュー【必須】
+
+Phase 4（条件付きループ）:
+├─ UXレビュー指摘あり → fullstack-implementer で修正 → Phase 3 へ戻る
+└─ UXレビューOK → Phase 5 へ進む
+
+Phase 5（直列）:
+└─ git-operations: commit & push
+```
+
+### 4.4 並列実行の最適化ポイント
+
+1. **Phase分割**: 依存関係を考慮し、2-6 Phaseに分割
 2. **クリティカルパス特定**: 最長経路を見極め、そこを優先的に並列化
 3. **待機時間削減**: 
    - 調査系（web-research-specialist, source-code-investigator）は最優先で起動
    - 実装系とテスト系は可能な限り並列化
    - レビュー系は実装完了後に並列起動
-4. **リソース配分**: 
-   - opus（重い処理）: 2-3タスク同時
-   - sonnet（中程度）: 3-4タスク同時
-   - haiku（軽い処理）: 制限なし
 
-### 4.4 作業フロー
+### 4.5 作業フロー
 ```text
-要求 → 検索(必須) → 分析 → 分解 → 並列委任 → 結果統合 → 検証 → 完了/再委任
+要求 → 検索(必須) → 分析 → 分解 → 並列委任 → 結果統合 → 検証 → UXレビュー(UI変更時必須) → 完了/再委任
 ```
 
 1. **検索**: `web-research-specialist` で最新情報取得（必須・スキップ不可）
@@ -258,9 +309,43 @@ Phase 4（直列）:
 3. **分解**: 2-10 ステップ、並列可能な作業を識別
 4. **委任**: スコープ・制約・成果物を明示し**並列で**サブエージェントに渡す
 5. **統合**: 矛盾検証、次ステップへ整理
-6. **判断**: 品質不十分なら再委任、3 回失敗でエスカレーション
+6. **UXレビュー**: UI/フロントエンド変更がある場合、`ux-psychology-reviewer`でレビュー（必須・スキップ不可）
+7. **判断**: 品質不十分なら再委任、UXレビュー指摘があれば修正ループ、3 回失敗でエスカレーション
 
 ※ 方針不明時は 3-5 選択肢 + 5 段階推奨度でユーザーに確認
+
+### 4.6 UXレビュー必須ルール
+
+**UI/フロントエンド実装を含むタスクでは、完了前に必ず `ux-psychology-reviewer` を起動する。**
+
+#### 対象タスク
+- 新規画面・コンポーネントの実装
+- 既存UIの修正・改善
+- レイアウト・デザイン変更
+- ユーザーインタラクションの追加・変更
+- エラーメッセージ・フィードバック表示の実装
+- フォーム・入力系UIの実装
+- ナビゲーション・導線の変更
+
+#### レビュー観点
+- 認知負荷の最小化
+- 視覚的階層と情報設計
+- ユーザーの期待との整合性
+- エラー防止とリカバリー設計
+- フィードバックの即時性と明確性
+- アクセシビリティ考慮
+- 一貫性と学習容易性
+
+#### レビューフロー
+```
+実装完了 → ux-psychology-reviewer 起動 → レビュー結果確認
+    ├─ 指摘あり → fullstack-implementer で修正 → 再レビュー
+    └─ 指摘なし（OK） → git-operations で commit
+```
+
+#### 最大ループ回数
+- UXレビュー → 修正のループは**最大3回**まで
+- 3回を超える場合はユーザーにエスカレーションし、優先度と対応方針を確認
 
 ---
 
@@ -435,6 +520,7 @@ src/
 
 - **既存の他ページのデザインやコンポーネントを参考**に一貫性を保つ
 - ユーザーにとって直感的で分かりやすいインターフェースを心がける
+- **実装完了後は必ず`ux-psychology-reviewer`でレビューを受ける**
 
 ### 7.7 実装の品質
 
