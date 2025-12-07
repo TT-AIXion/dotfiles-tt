@@ -48,6 +48,6 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-background-opacity = 0.8
+background-opacity = 0.5
 window-padding-x = 30
 window-padding-y = 20
