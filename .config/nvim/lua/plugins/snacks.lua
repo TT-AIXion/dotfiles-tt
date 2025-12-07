@@ -25,7 +25,19 @@ return {
       enabled = true,
       timeout = 3000,
     },
-    picker = { enabled = true },
+    picker = { 
+      enabled = true,
+      sources = {
+        explorer = {
+          hidden = true,     -- ドットファイル（.envなど）を常時表示
+          ignored = false,   -- gitignoreされたファイル（node_modulesなど）は隠す
+        },
+        -- 検索（grep）やファイル検索でも隠しファイルを出したい場合は以下も追加
+        files = {
+          hidden = true,
+        },
+      },
+    },
     quickfile = { enabled = true },
     scope = { enabled = true },
     scroll = { enabled = true },
