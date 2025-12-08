@@ -115,5 +115,7 @@ return {
     -- Terminal
     { "<C-/>", function() Snacks.terminal() end, desc = "Terminal (cwd)", mode = { "n", "t" } },
     { "<C-_>", function() Snacks.terminal() end, desc = "Terminal (cwd)", mode = { "n", "t" } },
+    -- Buffer
+    { "<leader>BD", function() Snacks.bufdelete.other() end, desc = "delete Buffers"},
   },
 }
