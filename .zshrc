@@ -1,8 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# Path to your Oh My Zsh installation. export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -116,3 +114,35 @@ function cdghq() {
 bindkey -s '^g' 'cdghq\n'
 
 eval "$(zoxide init zsh)"
+
+# --- brew auto-upgrade on new terminal (every time) ---
+brew_auto_upgrade() {
+  command -v brew >/dev/null 2>&1 || return 0
+  [[ $- != *i* ]] && return 0
+  [[ ${SHLVL:-1} -ne 1 ]] && return 0
+
+  local state_dir="$HOME/.cache/brew-auto-upgrade"
+  local lock="$state_dir/lockdir"
+  local log="$state_dir/run.log"
+
+  mkdir -p "$state_dir"
+
+  # 多重起動防止（同時に複数ターミナル開いても1回だけ）
+  if ! mkdir "$lock" 2>/dev/null; then
+    return 0
+  fi
+
+  (
+    trap 'rmdir "$lock" 2>/dev/null || true' EXIT
+    {
+      echo "===== $(date) ====="
+      brew update-if-needed
+      brew upgrade
+      # 必要なら:
+      # brew upgrade --cask --greedy
+    } >>"$log" 2>&1
+  ) &!
+}
+
+brew_auto_upgrade
+# --- end ---
