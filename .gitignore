@@ -19,5 +19,5 @@
 !Library/Application Support/
 !Library/Application Support/com.mitchellh.ghostty/
 !Library/Application Support/com.mitchellh.ghostty/config
-!.zshrc
-!.zshrc.pre-oh-my-zsh
+!.claude-mem
+!.claude-mem/**
