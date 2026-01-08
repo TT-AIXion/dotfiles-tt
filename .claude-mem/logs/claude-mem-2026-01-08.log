@@ -446,3 +446,31 @@ EOF
 [2026-01-08 13:32:47.791] [INFO ] [HOOK  ] → Stop: Requesting summary {workerPort=37777, hasLastAssistantMessage=true}
 [2026-01-08 13:32:47.884] [INFO ] [SYSTEM] Worker already running and healthy
 [2026-01-08 13:36:29.999] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:03:26.960] [INFO ] [SYSTEM] Claude-mem search server started
+[2026-01-08 14:03:26.988] [INFO ] [SYSTEM] Worker available {"workerUrl":"http://127.0.0.1:37777"}
+[2026-01-08 14:03:27.147] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:03:36.613] [INFO ] [HOOK  ] [session-343] INIT_COMPLETE | sessionDbId=343 | promptNumber=1 | project=owner
+[2026-01-08 14:03:36.717] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:03:46.579] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/.gitignore) {workerPort=37777}
+[2026-01-08 14:03:46.656] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:04:00.131] [INFO ] [HOOK  ] → PostToolUse: Bash(git rm --cached .zshrc) {workerPort=37777}
+[2026-01-08 14:04:00.217] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:04:05.336] [INFO ] [HOOK  ] → PostToolUse: Bash(git status .zshrc) {workerPort=37777}
+[2026-01-08 14:04:05.412] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:04:11.205] [INFO ] [HOOK  ] → Stop: Requesting summary {workerPort=37777, hasLastAssistantMessage=true}
+[2026-01-08 14:04:11.289] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:06:09.564] [INFO ] [HOOK  ] [session-343] INIT_COMPLETE | sessionDbId=343 | promptNumber=2 | project=owner
+[2026-01-08 14:06:09.680] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:06:16.008] [INFO ] [HOOK  ] → PostToolUse: Bash(git status) {workerPort=37777}
+[2026-01-08 14:06:16.100] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:06:26.637] [INFO ] [HOOK  ] → PostToolUse: Bash(git rm --cached .zshrc && git commit -m "$(cat <<'EOF'
+Stop tracking .zshrc
+
+Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
+EOF
+)") {workerPort=37777}
+[2026-01-08 14:06:26.728] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:06:30.288] [INFO ] [HOOK  ] → PostToolUse: Bash(git status) {workerPort=37777}
+[2026-01-08 14:06:30.385] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-08 14:06:33.699] [INFO ] [HOOK  ] → Stop: Requesting summary {workerPort=37777, hasLastAssistantMessage=true}
+[2026-01-08 14:06:33.783] [INFO ] [SYSTEM] Worker already running and healthy
