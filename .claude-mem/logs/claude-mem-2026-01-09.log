@@ -526,3 +526,1458 @@ EOF
 [2026-01-09 16:59:26.536] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
 [2026-01-09 16:59:26.537] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
 [2026-01-09 16:59:26.537] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 16:59:42.593] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945582593} 
+[2026-01-09 16:59:42.594] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945582593, duration=0ms}
+[2026-01-09 16:59:42.595] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945582595} 
+[2026-01-09 16:59:42.595] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945582595, duration=0ms}
+[2026-01-09 16:59:42.596] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/frontend-design/SKILL.md) {workerPort=37777}
+[2026-01-09 16:59:42.599] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945582599} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/frontend-design/SKILL.md)
+[2026-01-09 16:59:42.600] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1103 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/frontend-design/SKILL.md) | depth=1
+[2026-01-09 16:59:42.600] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:42.601] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945582599, duration=2ms}
+[2026-01-09 16:59:42.601] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1103 | type=observation
+[2026-01-09 16:59:42.679] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945582679} 
+[2026-01-09 16:59:42.679] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945582679, duration=0ms}
+[2026-01-09 16:59:42.683] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945582683} 
+[2026-01-09 16:59:42.683] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945582683, duration=0ms}
+[2026-01-09 16:59:42.684] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:46.616] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945586616} 
+[2026-01-09 16:59:46.616] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945586616, duration=0ms}
+[2026-01-09 16:59:46.617] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945586617} 
+[2026-01-09 16:59:46.617] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945586617, duration=0ms}
+[2026-01-09 16:59:46.617] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f -name "*.tsx" -o -name "*.ts" | grep -E "(component|layout)" | head -20) {workerPort=37777}
+[2026-01-09 16:59:46.619] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945586619} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f -name "*.tsx" -o -name "*.ts" | grep -E "(component|layout)" | head -20)
+[2026-01-09 16:59:46.620] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1104 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f -name "*.tsx" -o -name "*.ts" | grep -E "(component|layout)" | head -20) | depth=1
+[2026-01-09 16:59:46.620] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:46.620] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945586619, duration=1ms}
+[2026-01-09 16:59:46.620] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1104 | type=observation
+[2026-01-09 16:59:46.689] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945586689} 
+[2026-01-09 16:59:46.689] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945586689, duration=0ms}
+[2026-01-09 16:59:46.692] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945586692} 
+[2026-01-09 16:59:46.692] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945586692, duration=0ms}
+[2026-01-09 16:59:46.693] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:50.172] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945590172} 
+[2026-01-09 16:59:50.172] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945590172, duration=0ms}
+[2026-01-09 16:59:50.174] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945590174} 
+[2026-01-09 16:59:50.174] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945590174, duration=0ms}
+[2026-01-09 16:59:50.175] [INFO ] [HOOK  ] → PostToolUse: Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/) {workerPort=37777}
+[2026-01-09 16:59:50.178] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945590178} tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/)
+[2026-01-09 16:59:50.179] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1105 | type=observation | tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/) | depth=1
+[2026-01-09 16:59:50.179] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:50.179] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945590178, duration=1ms}
+[2026-01-09 16:59:50.179] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1105 | type=observation
+[2026-01-09 16:59:50.234] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945590234} 
+[2026-01-09 16:59:50.235] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945590234, duration=1ms}
+[2026-01-09 16:59:50.236] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945590236} 
+[2026-01-09 16:59:50.236] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945590236, duration=0ms}
+[2026-01-09 16:59:50.237] [INFO ] [HOOK  ] → PostToolUse: Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/ | head -30) {workerPort=37777}
+[2026-01-09 16:59:50.241] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945590241} tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/ | head -30)
+[2026-01-09 16:59:50.242] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1106 | type=observation | tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/ | head -30) | depth=1
+[2026-01-09 16:59:50.242] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:50.242] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945590241, duration=1ms}
+[2026-01-09 16:59:50.243] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1106 | type=observation
+[2026-01-09 16:59:50.258] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945590258} 
+[2026-01-09 16:59:50.258] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945590258, duration=0ms}
+[2026-01-09 16:59:50.259] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945590259} 
+[2026-01-09 16:59:50.260] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945590259, duration=1ms}
+[2026-01-09 16:59:50.261] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src -type f \( -name "*.tsx" -o -name "*.ts" \) | grep -iE "(nav|menu|bottom)" | head -20) {workerPort=37777}
+[2026-01-09 16:59:50.263] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945590263} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src -type f \( -name "*.tsx" -o -name "*.ts" \) | grep -iE "(nav|menu|bottom)" | head -20)
+[2026-01-09 16:59:50.264] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1107 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src -type f \( -name "*.tsx" -o -name "*.ts" \) | grep -iE "(nav|menu|bottom)" | head -20) | depth=1
+[2026-01-09 16:59:50.265] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:50.265] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945590263, duration=2ms}
+[2026-01-09 16:59:50.265] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1107 | type=observation
+[2026-01-09 16:59:50.272] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945590272} 
+[2026-01-09 16:59:50.272] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945590272, duration=0ms}
+[2026-01-09 16:59:50.277] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945590277} 
+[2026-01-09 16:59:50.278] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945590277, duration=1ms}
+[2026-01-09 16:59:50.279] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:50.340] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945590340} 
+[2026-01-09 16:59:50.340] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945590340, duration=0ms}
+[2026-01-09 16:59:50.344] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945590344} 
+[2026-01-09 16:59:50.345] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945590345} 
+[2026-01-09 16:59:50.345] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945590344, duration=1ms}
+[2026-01-09 16:59:50.345] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945590345, duration=0ms}
+[2026-01-09 16:59:50.346] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:50.351] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945590351} 
+[2026-01-09 16:59:50.351] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945590351, duration=0ms}
+[2026-01-09 16:59:50.352] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:53.936] [INFO ] [SDK   ] [session-1178] ← Response received (2150 chars) {promptNumber=1} <observation>
+  <type>discovery</type>
+  <title>Frontend Design Skill Guidelines Referenced for SP N...
+[2026-01-09 16:59:53.936] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | hasSummary=false
+[2026-01-09 16:59:53.937] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | obsIds=[467] | summaryId=none
+[2026-01-09 16:59:53.937] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=467, documentCount=6, project=Quwon-App}
+[2026-01-09 16:59:53.938] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 16:59:53.941] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945593941} 
+[2026-01-09 16:59:53.943] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945593941, duration=2ms}
+[2026-01-09 16:59:54.713] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945594713} 
+[2026-01-09 16:59:54.714] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945594713, duration=1ms}
+[2026-01-09 16:59:54.715] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945594715} 
+[2026-01-09 16:59:54.715] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945594715, duration=0ms}
+[2026-01-09 16:59:54.717] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945594717} 
+[2026-01-09 16:59:54.717] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945594717, duration=0ms}
+[2026-01-09 16:59:54.715] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx) {workerPort=37777}
+[2026-01-09 16:59:54.718] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945594718} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx)
+[2026-01-09 16:59:54.718] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1108 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx) | depth=1
+[2026-01-09 16:59:54.718] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:54.718] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945594718, duration=0ms}
+[2026-01-09 16:59:54.718] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1108 | type=observation
+[2026-01-09 16:59:54.719] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945594719} 
+[2026-01-09 16:59:54.719] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945594719, duration=0ms}
+[2026-01-09 16:59:54.720] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBarConnected.tsx) {workerPort=37777}
+[2026-01-09 16:59:54.722] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945594722} 
+[2026-01-09 16:59:54.722] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945594722, duration=0ms}
+[2026-01-09 16:59:54.723] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945594723} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBarConnected.tsx)
+[2026-01-09 16:59:54.723] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1109 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBarConnected.tsx) | depth=1
+[2026-01-09 16:59:54.724] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:54.724] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945594723, duration=1ms}
+[2026-01-09 16:59:54.724] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1109 | type=observation
+[2026-01-09 16:59:54.724] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945594724} 
+[2026-01-09 16:59:54.724] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945594724, duration=0ms}
+[2026-01-09 16:59:54.725] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx) {workerPort=37777}
+[2026-01-09 16:59:54.727] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945594727} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx)
+[2026-01-09 16:59:54.727] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1110 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx) | depth=1
+[2026-01-09 16:59:54.728] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:54.728] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945594727, duration=1ms}
+[2026-01-09 16:59:54.728] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1110 | type=observation
+[2026-01-09 16:59:54.729] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945594729} 
+[2026-01-09 16:59:54.730] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945594729, duration=1ms}
+[2026-01-09 16:59:54.732] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945594732} 
+[2026-01-09 16:59:54.732] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945594732, duration=0ms}
+[2026-01-09 16:59:54.732] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/MobileMenu.tsx) {workerPort=37777}
+[2026-01-09 16:59:54.735] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945594735} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/MobileMenu.tsx)
+[2026-01-09 16:59:54.735] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1111 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/MobileMenu.tsx) | depth=1
+[2026-01-09 16:59:54.735] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:54.736] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945594735, duration=1ms}
+[2026-01-09 16:59:54.736] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1111 | type=observation
+[2026-01-09 16:59:54.800] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945594799} 
+[2026-01-09 16:59:54.800] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945594799, duration=1ms}
+[2026-01-09 16:59:54.804] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945594804} 
+[2026-01-09 16:59:54.804] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945594804} 
+[2026-01-09 16:59:54.804] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945594804, duration=0ms}
+[2026-01-09 16:59:54.804] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945594804, duration=0ms}
+[2026-01-09 16:59:54.805] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:54.808] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945594808} 
+[2026-01-09 16:59:54.809] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945594809} 
+[2026-01-09 16:59:54.809] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945594808, duration=1ms}
+[2026-01-09 16:59:54.809] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945594809, duration=0ms}
+[2026-01-09 16:59:54.809] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945594809} 
+[2026-01-09 16:59:54.809] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945594809, duration=0ms}
+[2026-01-09 16:59:54.810] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:54.813] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945594813} 
+[2026-01-09 16:59:54.813] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945594813, duration=0ms}
+[2026-01-09 16:59:54.815] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945594815} 
+[2026-01-09 16:59:54.815] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945594815, duration=0ms}
+[2026-01-09 16:59:54.814] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:54.816] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:57.236] [INFO ] [SDK   ] [session-1178] ← Response received (120 chars) {promptNumber=1} (Skipping - this is a routine file search through node_modules that returned dependency files, not p...
+[2026-01-09 16:59:57.236] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 16:59:57.236] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 16:59:57.236] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 16:59:59.375] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945599375} 
+[2026-01-09 16:59:59.376] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945599375, duration=1ms}
+[2026-01-09 16:59:59.376] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945599376} 
+[2026-01-09 16:59:59.377] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945599376, duration=1ms}
+[2026-01-09 16:59:59.377] [INFO ] [HOOK  ] → PostToolUse: Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/) {workerPort=37777}
+[2026-01-09 16:59:59.379] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945599379} tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/)
+[2026-01-09 16:59:59.379] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1112 | type=observation | tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/) | depth=1
+[2026-01-09 16:59:59.380] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 16:59:59.380] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945599379, duration=1ms}
+[2026-01-09 16:59:59.380] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1112 | type=observation
+[2026-01-09 16:59:59.452] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945599452} 
+[2026-01-09 16:59:59.452] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945599452, duration=0ms}
+[2026-01-09 16:59:59.456] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945599456} 
+[2026-01-09 16:59:59.456] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945599456, duration=0ms}
+[2026-01-09 16:59:59.456] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 16:59:59.745] [INFO ] [SDK   ] [session-1178] ← Response received (67 chars) {promptNumber=1} (Skipping - routine directory listing to explore project structure)
+[2026-01-09 16:59:59.745] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 16:59:59.745] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 16:59:59.745] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 17:00:00.397] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945600397} 
+[2026-01-09 17:00:00.398] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945600397, duration=1ms}
+[2026-01-09 17:00:00.398] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945600398} 
+[2026-01-09 17:00:00.398] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945600398, duration=0ms}
+[2026-01-09 17:00:00.399] [INFO ] [HOOK  ] → PostToolUse: Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/index.ts) {workerPort=37777}
+[2026-01-09 17:00:00.401] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945600401} tool=Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/index.ts)
+[2026-01-09 17:00:00.401] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1113 | type=observation | tool=Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/index.ts) | depth=1
+[2026-01-09 17:00:00.401] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:00.401] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945600401, duration=0ms}
+[2026-01-09 17:00:00.401] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1113 | type=observation
+[2026-01-09 17:00:00.468] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945600468} 
+[2026-01-09 17:00:00.468] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945600468, duration=0ms}
+[2026-01-09 17:00:00.471] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945600471} 
+[2026-01-09 17:00:00.471] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945600471, duration=0ms}
+[2026-01-09 17:00:00.472] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:00.607] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945600607} 
+[2026-01-09 17:00:00.607] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945600607, duration=0ms}
+[2026-01-09 17:00:00.608] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945600608} 
+[2026-01-09 17:00:00.608] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945600608, duration=0ms}
+[2026-01-09 17:00:00.609] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -r "BottomTabBar\|MobileMenu" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app --include="*.tsx" | head -20) {workerPort=37777}
+[2026-01-09 17:00:00.611] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945600611} tool=Bash(grep -r "BottomTabBar\|MobileMenu" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app --include="*.tsx" | head -20)
+[2026-01-09 17:00:00.611] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1114 | type=observation | tool=Bash(grep -r "BottomTabBar\|MobileMenu" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app --include="*.tsx" | head -20) | depth=1
+[2026-01-09 17:00:00.611] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:00.611] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945600611, duration=0ms}
+[2026-01-09 17:00:00.611] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1114 | type=observation
+[2026-01-09 17:00:00.681] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945600681} 
+[2026-01-09 17:00:00.681] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945600681, duration=0ms}
+[2026-01-09 17:00:00.684] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945600684} 
+[2026-01-09 17:00:00.684] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945600684, duration=0ms}
+[2026-01-09 17:00:00.684] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:02.186] [INFO ] [SDK   ] [session-1178] ← Response received (69 chars) {promptNumber=1} (Skipping - routine directory listing to explore component structure)
+[2026-01-09 17:00:02.187] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:00:02.187] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:00:02.187] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 17:00:03.312] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945603312} 
+[2026-01-09 17:00:03.313] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945603312, duration=1ms}
+[2026-01-09 17:00:03.313] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945603313} 
+[2026-01-09 17:00:03.313] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945603313, duration=0ms}
+[2026-01-09 17:00:03.314] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app -name "layout.tsx" -type f) {workerPort=37777}
+[2026-01-09 17:00:03.316] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945603316} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app -name "layout.tsx" -type f)
+[2026-01-09 17:00:03.316] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1115 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app -name "layout.tsx" -type f) | depth=1
+[2026-01-09 17:00:03.316] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:03.316] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945603316, duration=0ms}
+[2026-01-09 17:00:03.316] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1115 | type=observation
+[2026-01-09 17:00:03.388] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945603388} 
+[2026-01-09 17:00:03.388] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945603388, duration=0ms}
+[2026-01-09 17:00:03.392] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945603392} 
+[2026-01-09 17:00:03.392] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945603392, duration=0ms}
+[2026-01-09 17:00:03.393] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:04.188] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945604188} 
+[2026-01-09 17:00:04.188] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945604188, duration=0ms}
+[2026-01-09 17:00:04.189] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945604189} 
+[2026-01-09 17:00:04.189] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945604189, duration=0ms}
+[2026-01-09 17:00:04.189] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -r "BottomTabBar\|MobileMenu" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app --include="*.tsx" 2>/dev/null | head -30) {workerPort=37777}
+[2026-01-09 17:00:04.191] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945604191} tool=Bash(grep -r "BottomTabBar\|MobileMenu" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app --include="*.tsx" 2>/dev/null | head -30)
+[2026-01-09 17:00:04.192] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1116 | type=observation | tool=Bash(grep -r "BottomTabBar\|MobileMenu" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app --include="*.tsx" 2>/dev/null | head -30) | depth=1
+[2026-01-09 17:00:04.192] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:04.192] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945604191, duration=1ms}
+[2026-01-09 17:00:04.192] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1116 | type=observation
+[2026-01-09 17:00:04.263] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945604263} 
+[2026-01-09 17:00:04.264] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945604263, duration=1ms}
+[2026-01-09 17:00:04.268] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945604268} 
+[2026-01-09 17:00:04.268] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945604268, duration=0ms}
+[2026-01-09 17:00:04.269] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:05.186] [INFO ] [SDK   ] [session-1178] ← Response received (109 chars) {promptNumber=1} (Skipping - routine file search, but found relevant navigation/menu components that will likely be r...
+[2026-01-09 17:00:05.186] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:00:05.186] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:00:05.186] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 17:00:05.492] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945605492} 
+[2026-01-09 17:00:05.492] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945605492, duration=0ms}
+[2026-01-09 17:00:05.493] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945605493} 
+[2026-01-09 17:00:05.493] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945605493, duration=0ms}
+[2026-01-09 17:00:05.493] [INFO ] [HOOK  ] → PostToolUse: Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/layout.tsx | head -100) {workerPort=37777}
+[2026-01-09 17:00:05.495] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945605495} tool=Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/layout.tsx | head -100)
+[2026-01-09 17:00:05.495] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1117 | type=observation | tool=Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/layout.tsx | head -100) | depth=1
+[2026-01-09 17:00:05.496] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:05.496] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945605495, duration=1ms}
+[2026-01-09 17:00:05.496] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1117 | type=observation
+[2026-01-09 17:00:05.565] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945605565} 
+[2026-01-09 17:00:05.565] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945605565, duration=0ms}
+[2026-01-09 17:00:05.568] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945605568} 
+[2026-01-09 17:00:05.568] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945605568, duration=0ms}
+[2026-01-09 17:00:05.569] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:08.648] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945608648} 
+[2026-01-09 17:00:08.649] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945608648, duration=1ms}
+[2026-01-09 17:00:08.649] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945608649} 
+[2026-01-09 17:00:08.649] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945608649, duration=0ms}
+[2026-01-09 17:00:08.650] [INFO ] [HOOK  ] → PostToolUse: Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/layout.tsx | tail -50) {workerPort=37777}
+[2026-01-09 17:00:08.652] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945608652} tool=Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/layout.tsx | tail -50)
+[2026-01-09 17:00:08.652] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1118 | type=observation | tool=Bash(cat /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/layout.tsx | tail -50) | depth=1
+[2026-01-09 17:00:08.652] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:08.652] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945608652, duration=0ms}
+[2026-01-09 17:00:08.652] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1118 | type=observation
+[2026-01-09 17:00:08.726] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945608726} 
+[2026-01-09 17:00:08.727] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945608726, duration=1ms}
+[2026-01-09 17:00:08.730] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945608730} 
+[2026-01-09 17:00:08.730] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945608730, duration=0ms}
+[2026-01-09 17:00:08.731] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:08.823] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945608823} 
+[2026-01-09 17:00:08.823] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945608823, duration=0ms}
+[2026-01-09 17:00:08.824] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945608824} 
+[2026-01-09 17:00:08.824] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945608824, duration=0ms}
+[2026-01-09 17:00:08.824] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/LayoutClient.tsx) {workerPort=37777}
+[2026-01-09 17:00:08.826] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945608826} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/LayoutClient.tsx)
+[2026-01-09 17:00:08.827] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1119 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/LayoutClient.tsx) | depth=1
+[2026-01-09 17:00:08.827] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:08.827] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945608826, duration=1ms}
+[2026-01-09 17:00:08.827] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1119 | type=observation
+[2026-01-09 17:00:08.839] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945608839} 
+[2026-01-09 17:00:08.842] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945608839, duration=3ms}
+[2026-01-09 17:00:08.843] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945608843} 
+[2026-01-09 17:00:08.843] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945608843, duration=0ms}
+[2026-01-09 17:00:08.843] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -r "usePathname\|useRouter" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar --include="*.tsx") {workerPort=37777}
+[2026-01-09 17:00:08.846] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945608846} tool=Bash(grep -r "usePathname\|useRouter" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar --include="*.tsx")
+[2026-01-09 17:00:08.846] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1120 | type=observation | tool=Bash(grep -r "usePathname\|useRouter" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar --include="*.tsx") | depth=1
+[2026-01-09 17:00:08.846] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:08.846] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945608846, duration=0ms}
+[2026-01-09 17:00:08.846] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1120 | type=observation
+[2026-01-09 17:00:08.899] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945608899} 
+[2026-01-09 17:00:08.899] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945608899, duration=0ms}
+[2026-01-09 17:00:08.903] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945608903} 
+[2026-01-09 17:00:08.903] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945608903, duration=0ms}
+[2026-01-09 17:00:08.903] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:08.918] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945608918} 
+[2026-01-09 17:00:08.918] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945608918, duration=0ms}
+[2026-01-09 17:00:08.922] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945608922} 
+[2026-01-09 17:00:08.923] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945608922, duration=1ms}
+[2026-01-09 17:00:08.923] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:13.177] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945613177} 
+[2026-01-09 17:00:13.177] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945613177, duration=0ms}
+[2026-01-09 17:00:13.177] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945613177} 
+[2026-01-09 17:00:13.178] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945613177, duration=1ms}
+[2026-01-09 17:00:13.178] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/contexts/MobileDrawerContext.tsx) {workerPort=37777}
+[2026-01-09 17:00:13.180] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945613180} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/contexts/MobileDrawerContext.tsx)
+[2026-01-09 17:00:13.181] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1121 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/contexts/MobileDrawerContext.tsx) | depth=1
+[2026-01-09 17:00:13.181] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:13.181] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945613180, duration=1ms}
+[2026-01-09 17:00:13.181] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1121 | type=observation
+[2026-01-09 17:00:13.208] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945613208} 
+[2026-01-09 17:00:13.208] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945613208, duration=0ms}
+[2026-01-09 17:00:13.211] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945613211} 
+[2026-01-09 17:00:13.211] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945613211, duration=0ms}
+[2026-01-09 17:00:13.212] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -r "activePathname\|isActive\|pathname" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar --include="*.tsx") {workerPort=37777}
+[2026-01-09 17:00:13.214] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945613214} tool=Bash(grep -r "activePathname\|isActive\|pathname" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar --include="*.tsx")
+[2026-01-09 17:00:13.215] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1122 | type=observation | tool=Bash(grep -r "activePathname\|isActive\|pathname" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar --include="*.tsx") | depth=1
+[2026-01-09 17:00:13.215] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:13.215] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945613214, duration=1ms}
+[2026-01-09 17:00:13.215] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1122 | type=observation
+[2026-01-09 17:00:13.230] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945613230} 
+[2026-01-09 17:00:13.230] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945613230, duration=0ms}
+[2026-01-09 17:00:13.230] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945613230} 
+[2026-01-09 17:00:13.231] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945613230, duration=1ms}
+[2026-01-09 17:00:13.231] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src -name "*.css" -o -name "*.module.css" | head -10) {workerPort=37777}
+[2026-01-09 17:00:13.233] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945613233} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src -name "*.css" -o -name "*.module.css" | head -10)
+[2026-01-09 17:00:13.234] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1123 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src -name "*.css" -o -name "*.module.css" | head -10) | depth=1
+[2026-01-09 17:00:13.234] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:13.234] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945613233, duration=1ms}
+[2026-01-09 17:00:13.234] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1123 | type=observation
+[2026-01-09 17:00:13.254] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945613254} 
+[2026-01-09 17:00:13.255] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945613254, duration=1ms}
+[2026-01-09 17:00:13.259] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945613259} 
+[2026-01-09 17:00:13.259] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945613259, duration=0ms}
+[2026-01-09 17:00:13.259] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:13.282] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945613282} 
+[2026-01-09 17:00:13.282] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945613282, duration=0ms}
+[2026-01-09 17:00:13.287] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945613287} 
+[2026-01-09 17:00:13.287] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945613287, duration=0ms}
+[2026-01-09 17:00:13.288] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:13.308] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945613308} 
+[2026-01-09 17:00:13.308] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945613308, duration=0ms}
+[2026-01-09 17:00:13.311] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945613311} 
+[2026-01-09 17:00:13.311] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945613311, duration=0ms}
+[2026-01-09 17:00:13.312] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:19.094] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945619094} 
+[2026-01-09 17:00:19.094] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945619094, duration=0ms}
+[2026-01-09 17:00:19.095] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945619095} 
+[2026-01-09 17:00:19.095] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945619095, duration=0ms}
+[2026-01-09 17:00:19.096] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/globals.css) {workerPort=37777}
+[2026-01-09 17:00:19.098] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945619098} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/globals.css)
+[2026-01-09 17:00:19.098] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1124 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/app/globals.css) | depth=1
+[2026-01-09 17:00:19.099] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:19.099] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945619098, duration=1ms}
+[2026-01-09 17:00:19.099] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1124 | type=observation
+[2026-01-09 17:00:19.124] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945619124} 
+[2026-01-09 17:00:19.124] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945619124, duration=0ms}
+[2026-01-09 17:00:19.125] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945619125} 
+[2026-01-09 17:00:19.125] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945619125, duration=0ms}
+[2026-01-09 17:00:19.126] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common -name "Sidebar*" -o -name "sidebar*") {workerPort=37777}
+[2026-01-09 17:00:19.128] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945619128} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common -name "Sidebar*" -o -name "sidebar*")
+[2026-01-09 17:00:19.129] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1125 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common -name "Sidebar*" -o -name "sidebar*") | depth=1
+[2026-01-09 17:00:19.129] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:19.129] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945619128, duration=1ms}
+[2026-01-09 17:00:19.129] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1125 | type=observation
+[2026-01-09 17:00:19.152] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945619152} 
+[2026-01-09 17:00:19.153] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945619152, duration=1ms}
+[2026-01-09 17:00:19.153] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945619153} 
+[2026-01-09 17:00:19.154] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945619153, duration=1ms}
+[2026-01-09 17:00:19.154] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -r "md:hidden\|sm:block" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common --include="*.tsx" | head -20) {workerPort=37777}
+[2026-01-09 17:00:19.157] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945619157} tool=Bash(grep -r "md:hidden\|sm:block" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common --include="*.tsx" | head -20)
+[2026-01-09 17:00:19.157] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1126 | type=observation | tool=Bash(grep -r "md:hidden\|sm:block" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common --include="*.tsx" | head -20) | depth=1
+[2026-01-09 17:00:19.158] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:19.158] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945619157, duration=1ms}
+[2026-01-09 17:00:19.158] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1126 | type=observation
+[2026-01-09 17:00:19.180] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945619180} 
+[2026-01-09 17:00:19.180] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945619180, duration=0ms}
+[2026-01-09 17:00:19.185] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945619185} 
+[2026-01-09 17:00:19.185] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945619185, duration=0ms}
+[2026-01-09 17:00:19.186] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:19.209] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945619209} 
+[2026-01-09 17:00:19.209] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945619209, duration=0ms}
+[2026-01-09 17:00:19.215] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945619215} 
+[2026-01-09 17:00:19.215] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945619215, duration=0ms}
+[2026-01-09 17:00:19.215] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:19.233] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945619233} 
+[2026-01-09 17:00:19.234] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945619233, duration=1ms}
+[2026-01-09 17:00:19.237] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945619237} 
+[2026-01-09 17:00:19.238] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945619237, duration=1ms}
+[2026-01-09 17:00:19.238] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:21.034] [INFO ] [SDK   ] [session-1178] ← Response received (2202 chars) {promptNumber=1} <observation>
+  <type>discovery</type>
+  <title>Current SP Bottom Tab Bar Navigation Structure</titl...
+[2026-01-09 17:00:21.034] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | hasSummary=false
+[2026-01-09 17:00:21.034] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | obsIds=[468] | summaryId=none
+[2026-01-09 17:00:21.034] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=468, documentCount=7, project=Quwon-App}
+[2026-01-09 17:00:21.035] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 17:00:21.035] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945621035} 
+[2026-01-09 17:00:21.036] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945621035, duration=1ms}
+[2026-01-09 17:00:22.376] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945622376} 
+[2026-01-09 17:00:22.376] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945622376, duration=0ms}
+[2026-01-09 17:00:22.377] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945622377} 
+[2026-01-09 17:00:22.377] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945622377, duration=0ms}
+[2026-01-09 17:00:22.378] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx) {workerPort=37777}
+[2026-01-09 17:00:22.380] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945622380} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx)
+[2026-01-09 17:00:22.380] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1127 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx) | depth=1
+[2026-01-09 17:00:22.380] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:22.380] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945622380, duration=0ms}
+[2026-01-09 17:00:22.381] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1127 | type=observation
+[2026-01-09 17:00:22.411] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945622411} 
+[2026-01-09 17:00:22.411] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945622411, duration=0ms}
+[2026-01-09 17:00:22.412] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945622412} 
+[2026-01-09 17:00:22.412] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945622412, duration=0ms}
+[2026-01-09 17:00:22.412] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -A5 -B5 "pathname\|usePathname" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx | head -40) {workerPort=37777}
+[2026-01-09 17:00:22.414] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945622414} tool=Bash(grep -A5 -B5 "pathname\|usePathname" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx | head -40)
+[2026-01-09 17:00:22.415] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1128 | type=observation | tool=Bash(grep -A5 -B5 "pathname\|usePathname" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx | head -40) | depth=1
+[2026-01-09 17:00:22.415] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:22.415] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945622414, duration=1ms}
+[2026-01-09 17:00:22.415] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1128 | type=observation
+[2026-01-09 17:00:22.453] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945622453} 
+[2026-01-09 17:00:22.454] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945622453, duration=1ms}
+[2026-01-09 17:00:22.457] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945622457} 
+[2026-01-09 17:00:22.458] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945622457, duration=1ms}
+[2026-01-09 17:00:22.459] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:22.487] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945622487} 
+[2026-01-09 17:00:22.487] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945622487, duration=0ms}
+[2026-01-09 17:00:22.491] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945622491} 
+[2026-01-09 17:00:22.491] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945622491, duration=0ms}
+[2026-01-09 17:00:22.492] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:24.188] [INFO ] [SDK   ] [session-1178] ← Response received (104 chars) {promptNumber=1} (Skipping - simple wrapper component connecting BottomTabBar to context, no significant new informat...
+[2026-01-09 17:00:24.188] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:00:24.188] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:00:24.188] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 17:00:25.028] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945625028} 
+[2026-01-09 17:00:25.028] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945625028, duration=0ms}
+[2026-01-09 17:00:25.029] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945625029} 
+[2026-01-09 17:00:25.029] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945625029, duration=0ms}
+[2026-01-09 17:00:25.030] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -r "pathname\|usePathname\|isActive" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx) {workerPort=37777}
+[2026-01-09 17:00:25.032] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945625032} tool=Bash(grep -r "pathname\|usePathname\|isActive" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx)
+[2026-01-09 17:00:25.032] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1129 | type=observation | tool=Bash(grep -r "pathname\|usePathname\|isActive" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx) | depth=1
+[2026-01-09 17:00:25.032] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:25.032] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945625032, duration=0ms}
+[2026-01-09 17:00:25.033] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1129 | type=observation
+[2026-01-09 17:00:25.049] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945625049} 
+[2026-01-09 17:00:25.049] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945625049, duration=0ms}
+[2026-01-09 17:00:25.050] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945625050} 
+[2026-01-09 17:00:25.050] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945625050, duration=0ms}
+[2026-01-09 17:00:25.051] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -r "Link\|href" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx | head -20) {workerPort=37777}
+[2026-01-09 17:00:25.053] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945625053} tool=Bash(grep -r "Link\|href" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx | head -20)
+[2026-01-09 17:00:25.053] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1130 | type=observation | tool=Bash(grep -r "Link\|href" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx | head -20) | depth=1
+[2026-01-09 17:00:25.053] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-09 17:00:25.053] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945625053, duration=0ms}
+[2026-01-09 17:00:25.053] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1130 | type=observation
+[2026-01-09 17:00:25.106] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945625106} 
+[2026-01-09 17:00:25.107] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945625106, duration=1ms}
+[2026-01-09 17:00:25.109] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945625109} 
+[2026-01-09 17:00:25.110] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945625109, duration=1ms}
+[2026-01-09 17:00:25.110] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:25.125] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945625125} 
+[2026-01-09 17:00:25.125] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945625125, duration=0ms}
+[2026-01-09 17:00:25.129] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945625129} 
+[2026-01-09 17:00:25.129] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945625129, duration=0ms}
+[2026-01-09 17:00:25.129] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:31.532] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945631532} 
+[2026-01-09 17:00:31.532] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945631532, duration=0ms}
+[2026-01-09 17:00:31.534] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945631534} 
+[2026-01-09 17:00:31.534] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945631534, duration=0ms}
+[2026-01-09 17:00:31.535] [INFO ] [HTTP  ] → GET /api/context/inject {requestId=GET-1767945631535} 
+[2026-01-09 17:00:31.542] [INFO ] [SYSTEM] Claude-mem search server started
+[2026-01-09 17:00:31.546] [INFO ] [HTTP  ] ← 200 /api/context/inject {requestId=GET-1767945631535, duration=11ms}
+[2026-01-09 17:00:31.546] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945631546} 
+[2026-01-09 17:00:31.546] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945631546, duration=0ms}
+[2026-01-09 17:00:31.547] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945631547} 
+[2026-01-09 17:00:31.547] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945631547, duration=0ms}
+[2026-01-09 17:00:31.548] [INFO ] [HTTP  ] → GET /api/context/inject {requestId=GET-1767945631548} 
+[2026-01-09 17:00:31.557] [INFO ] [HTTP  ] ← 200 /api/context/inject {requestId=GET-1767945631548, duration=9ms}
+[2026-01-09 17:00:31.564] [INFO ] [HTTP  ] → GET /api/health {requestId=GET-1767945631564} 
+[2026-01-09 17:00:31.564] [INFO ] [HTTP  ] ← 200 /api/health {requestId=GET-1767945631564, duration=0ms}
+[2026-01-09 17:00:31.566] [INFO ] [SYSTEM] Worker available {"workerUrl":"http://127.0.0.1:37777"}
+[2026-01-09 17:00:31.623] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945631623} 
+[2026-01-09 17:00:31.623] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945631623, duration=0ms}
+[2026-01-09 17:00:31.628] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945631628} 
+[2026-01-09 17:00:31.628] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945631628, duration=0ms}
+[2026-01-09 17:00:31.629] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:38.004] [INFO ] [SDK   ] [session-1178] ← Response received (2151 chars) {promptNumber=1} <observation>
+  <type>discovery</type>
+  <title>UserMenuDrawer Implementation as Bottom Sheet</title...
+[2026-01-09 17:00:38.004] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | hasSummary=false
+[2026-01-09 17:00:38.004] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | obsIds=[469] | summaryId=none
+[2026-01-09 17:00:38.004] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=469, documentCount=7, project=Quwon-App}
+[2026-01-09 17:00:38.005] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-09 17:00:38.005] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945638005} 
+[2026-01-09 17:00:38.006] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945638005, duration=1ms}
+[2026-01-09 17:00:52.658] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945652658} 
+[2026-01-09 17:00:52.659] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945652658, duration=1ms}
+[2026-01-09 17:00:52.660] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945652660} 
+[2026-01-09 17:00:52.660] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945652660, duration=0ms}
+[2026-01-09 17:00:52.662] [INFO ] [HTTP  ] → POST /api/sessions/init {requestId=POST-1767945652662} 
+[2026-01-09 17:00:52.662] [INFO ] [HTTP  ] SessionRoutes: handleSessionInitByClaudeId called {contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3, project=Quwon-App, prompt_length=3418}
+[2026-01-09 17:00:52.662] [INFO ] [SESSION] [session-1207] CREATED | contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3 → sessionDbId=1207 | isNew=true | project=Quwon-App
+[2026-01-09 17:00:52.663] [INFO ] [HTTP  ] ← 200 /api/sessions/init {requestId=POST-1767945652662, duration=1ms}
+[2026-01-09 17:00:52.664] [INFO ] [HTTP  ] → POST /sessions/1207/init {requestId=POST-1767945652664} 
+[2026-01-09 17:00:52.664] [INFO ] [HTTP  ] SessionRoutes: handleSessionInit called {sessionDbId=1207, promptNumber=1, has_userPrompt=true}
+[2026-01-09 17:00:52.664] [INFO ] [SESSION] [session-1207] Session initialized {project=Quwon-App, contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3, queueDepth=0, hasGenerator=false}
+[2026-01-09 17:00:52.664] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:00:52.665] [INFO ] [CHROMA_SYNC] Syncing user prompt {promptId=77, project=Quwon-App}
+[2026-01-09 17:00:52.665] [INFO ] [SESSION] [session-1207] Generator auto-starting (init) using Claude SDK {queueDepth=0, historyLength=0}
+[2026-01-09 17:00:52.667] [INFO ] [SDK   ] Starting SDK query {sessionDbId=1207, contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3, hasRealMemorySessionId=false, resume_parameter=(none - fresh start), lastPromptNumber=1}
+[2026-01-09 17:00:52.669] [INFO ] [SDK   ] Creating message generator {sessionDbId=1207, contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3, lastPromptNumber=1, isInitPrompt=true, promptType=INIT}
+[2026-01-09 17:00:52.669] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:00:52.669] [INFO ] [HTTP  ] ← 200 /sessions/1207/init {requestId=POST-1767945652664, duration=5ms}
+[2026-01-09 17:00:52.670] [INFO ] [HOOK  ] [session-1207] INIT_COMPLETE | sessionDbId=1207 | promptNumber=1 | project=Quwon-App
+[2026-01-09 17:00:52.758] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945652758} 
+[2026-01-09 17:00:52.758] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945652758, duration=0ms}
+[2026-01-09 17:00:52.766] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945652766} 
+[2026-01-09 17:00:52.766] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945652766, duration=0ms}
+[2026-01-09 17:00:52.767] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:54.095] [INFO ] [SESSION] [session-1207] MEMORY_ID_CAPTURED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | dbVerified=true
+[2026-01-09 17:00:56.293] [INFO ] [SDK   ] [session-1178] ← Response received (2103 chars) {promptNumber=1} <observation>
+  <type>discovery</type>
+  <title>MobileMenu Implementation as Side Drawer for Tablet ...
+[2026-01-09 17:00:56.294] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | hasSummary=false
+[2026-01-09 17:00:56.294] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | obsIds=[470] | summaryId=none
+[2026-01-09 17:00:56.294] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=470, documentCount=6, project=Quwon-App}
+[2026-01-09 17:00:56.294] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:00:56.295] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945656295} 
+[2026-01-09 17:00:56.296] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945656295, duration=1ms}
+[2026-01-09 17:00:56.383] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945656383} 
+[2026-01-09 17:00:56.384] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945656383, duration=1ms}
+[2026-01-09 17:00:56.385] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945656385} 
+[2026-01-09 17:00:56.385] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945656385, duration=0ms}
+[2026-01-09 17:00:56.385] [INFO ] [HOOK  ] → PostToolUse: Task(Explore) {workerPort=37777}
+[2026-01-09 17:00:56.390] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945656390} tool=Task(Explore)
+[2026-01-09 17:00:56.391] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1131 | type=observation | tool=Task(Explore) | depth=1
+[2026-01-09 17:00:56.391] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:00:56.391] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945656390, duration=1ms}
+[2026-01-09 17:00:56.391] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1131 | type=observation
+[2026-01-09 17:00:56.494] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945656494} 
+[2026-01-09 17:00:56.495] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945656494, duration=1ms}
+[2026-01-09 17:00:56.500] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945656500} 
+[2026-01-09 17:00:56.500] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945656500, duration=0ms}
+[2026-01-09 17:00:56.501] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:00:59.321] [INFO ] [SDK   ] [session-1178] ← Response received (38 chars) {promptNumber=1} (Skipping - routine directory listing)
+[2026-01-09 17:00:59.321] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:00:59.321] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:00:59.321] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:02.210] [INFO ] [SDK   ] [session-1178] ← Response received (63 chars) {promptNumber=1} (Skipping - simple export file with no significant information)
+[2026-01-09 17:01:02.210] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:02.210] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:02.210] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:04.603] [INFO ] [SDK   ] [session-1178] ← Response received (32 chars) {promptNumber=1} (Skipping - empty search result)
+[2026-01-09 17:01:04.603] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:04.603] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:04.603] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:07.810] [INFO ] [SDK   ] [session-1178] ← Response received (44 chars) {promptNumber=1} (Skipping - routine file search for layouts)
+[2026-01-09 17:01:07.810] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:07.810] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:07.810] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:08.520] [INFO ] [SDK   ] [session-1207] ← Response received (2084 chars) {promptNumber=1} ```xml
+<observation>
+  <type>change</type>
+  <title>Consolidated Slack OAuth Scopes for Devin + Clau...
+[2026-01-09 17:01:08.520] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | hasSummary=false
+[2026-01-09 17:01:08.521] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | obsIds=[471] | summaryId=none
+[2026-01-09 17:01:08.521] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=471, documentCount=6, project=Quwon-App}
+[2026-01-09 17:01:08.521] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:08.521] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945668521} 
+[2026-01-09 17:01:08.670] [WARN ] [CHROMA] [HAPPY-PATH] Missing text in MCP chroma_query_documents result {project=claude-mem, location=worker-service.cjs:950} {"query_text":"docs/slack"}
+[2026-01-09 17:01:08.672] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945668521, duration=151ms}
+[2026-01-09 17:01:10.047] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945670047} 
+[2026-01-09 17:01:10.047] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945670047, duration=0ms}
+[2026-01-09 17:01:10.047] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945670047} 
+[2026-01-09 17:01:10.047] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945670047, duration=0ms}
+[2026-01-09 17:01:10.047] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945670047} 
+[2026-01-09 17:01:10.048] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945670047, duration=1ms}
+[2026-01-09 17:01:10.048] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945670048} 
+[2026-01-09 17:01:10.048] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945670048, duration=0ms}
+[2026-01-09 17:01:10.048] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx) {workerPort=37777}
+[2026-01-09 17:01:10.048] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx) {workerPort=37777}
+[2026-01-09 17:01:10.051] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945670051} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx)
+[2026-01-09 17:01:10.055] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1132 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx) | depth=1
+[2026-01-09 17:01:10.055] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:10.055] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945670051, duration=4ms}
+[2026-01-09 17:01:10.055] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1132 | type=observation
+[2026-01-09 17:01:10.057] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945670057} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx)
+[2026-01-09 17:01:10.058] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1133 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx) | depth=1
+[2026-01-09 17:01:10.058] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:10.058] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945670057, duration=1ms}
+[2026-01-09 17:01:10.058] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1133 | type=observation
+[2026-01-09 17:01:10.118] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945670118} 
+[2026-01-09 17:01:10.118] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945670118, duration=0ms}
+[2026-01-09 17:01:10.122] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945670122} 
+[2026-01-09 17:01:10.122] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945670122, duration=0ms}
+[2026-01-09 17:01:10.123] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:10.124] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945670124} 
+[2026-01-09 17:01:10.125] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945670124, duration=1ms}
+[2026-01-09 17:01:10.128] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945670128} 
+[2026-01-09 17:01:10.129] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945670128, duration=1ms}
+[2026-01-09 17:01:10.129] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:10.273] [INFO ] [SDK   ] [session-1178] ← Response received (32 chars) {promptNumber=1} (Skipping - empty search result)
+[2026-01-09 17:01:10.273] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:10.273] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:10.273] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:13.954] [INFO ] [SDK   ] [session-1178] ← Response received (90 chars) {promptNumber=1} (Skipping - partial layout file read, will wait for full file or specific component usage)
+[2026-01-09 17:01:13.954] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:13.954] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:13.954] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:13.986] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945673986} 
+[2026-01-09 17:01:13.987] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945673986, duration=1ms}
+[2026-01-09 17:01:13.989] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945673989} 
+[2026-01-09 17:01:13.989] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945673989, duration=0ms}
+[2026-01-09 17:01:13.989] [INFO ] [HOOK  ] → PostToolUse: Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/ 2>/dev/null || echo "Directory does not exist") {workerPort=37777}
+[2026-01-09 17:01:13.991] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945673991} tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/ 2>/dev/null || echo "Directory does not exist")
+[2026-01-09 17:01:13.992] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1134 | type=observation | tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/ 2>/dev/null || echo "Directory does not exist") | depth=1
+[2026-01-09 17:01:13.992] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:13.992] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945673991, duration=1ms}
+[2026-01-09 17:01:13.992] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1134 | type=observation
+[2026-01-09 17:01:14.063] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945674063} 
+[2026-01-09 17:01:14.063] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945674063, duration=0ms}
+[2026-01-09 17:01:14.066] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945674066} 
+[2026-01-09 17:01:14.067] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945674066, duration=1ms}
+[2026-01-09 17:01:14.067] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:17.338] [INFO ] [SDK   ] [session-1207] ← Response received (80 chars) {promptNumber=1} *Skipping - routine directory listing to verify file locations, no changes made*
+[2026-01-09 17:01:17.338] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:17.338] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:17.338] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:18.069] [INFO ] [SDK   ] [session-1178] ← Response received (117 chars) {promptNumber=1} (Skipping - layout file shows LayoutClient component wrapping children, will need to see LayoutClien...
+[2026-01-09 17:01:18.069] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:18.069] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:18.069] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:18.486] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945678486} 
+[2026-01-09 17:01:18.487] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945678486, duration=1ms}
+[2026-01-09 17:01:18.487] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945678487} 
+[2026-01-09 17:01:18.488] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945678487, duration=1ms}
+[2026-01-09 17:01:18.488] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md) {workerPort=37777}
+[2026-01-09 17:01:18.490] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945678490} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md)
+[2026-01-09 17:01:18.491] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1135 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md) | depth=1
+[2026-01-09 17:01:18.491] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:18.491] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945678490, duration=1ms}
+[2026-01-09 17:01:18.491] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1135 | type=observation
+[2026-01-09 17:01:18.564] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945678564} 
+[2026-01-09 17:01:18.564] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945678564, duration=0ms}
+[2026-01-09 17:01:18.567] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945678567} 
+[2026-01-09 17:01:18.568] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945678567, duration=1ms}
+[2026-01-09 17:01:18.568] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:21.696] [INFO ] [SDK   ] [session-1207] ← Response received (105 chars) {promptNumber=1} *Skipping - reading existing setup guide to understand current scope configuration before making cha...
+[2026-01-09 17:01:21.696] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:21.696] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:21.696] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:30.937] [INFO ] [SDK   ] [session-1178] ← Response received (1916 chars) {promptNumber=1} <observation>
+  <type>discovery</type>
+  <title>LayoutClient Integration of BottomTabBar Into Root L...
+[2026-01-09 17:01:30.938] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | hasSummary=false
+[2026-01-09 17:01:30.938] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | obsIds=[472] | summaryId=none
+[2026-01-09 17:01:30.938] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=472, documentCount=5, project=Quwon-App}
+[2026-01-09 17:01:30.939] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:30.939] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945690939} 
+[2026-01-09 17:01:30.940] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945690939, duration=1ms}
+[2026-01-09 17:01:36.545] [INFO ] [SDK   ] [session-1178] ← Response received (130 chars) {promptNumber=1} (Skipping - routine grep showing UserMenuDrawer uses useRouter, but BottomTabBar.tsx doesn't use use...
+[2026-01-09 17:01:36.545] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:36.545] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:36.545] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:39.782] [INFO ] [SDK   ] [session-1178] ← Response received (115 chars) {promptNumber=1} (Skipping - simple context provider for drawer state management, no new significant information for ...
+[2026-01-09 17:01:39.782] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:39.782] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:39.783] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:42.824] [INFO ] [SDK   ] [session-1178] ← Response received (67 chars) {promptNumber=1} (Skipping - confirms BottomTabBar has no active state tracking yet)
+[2026-01-09 17:01:42.824] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:42.824] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:42.824] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:45.922] [INFO ] [SDK   ] [session-1178] ← Response received (36 chars) {promptNumber=1} (Skipping - routine CSS file search)
+[2026-01-09 17:01:45.922] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:45.923] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:45.923] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:49.163] [INFO ] [SDK   ] [session-1178] ← Response received (114 chars) {promptNumber=1} (Skipping - globals.css file showing Tailwind config and safe-area variables, will wait for more spe...
+[2026-01-09 17:01:49.163] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:49.164] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:49.164] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:50.622] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945710622} 
+[2026-01-09 17:01:50.622] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945710622, duration=0ms}
+[2026-01-09 17:01:50.623] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945710623} 
+[2026-01-09 17:01:50.623] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945710623, duration=0ms}
+[2026-01-09 17:01:50.623] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "MobileDrawerContext.tsx" -o -name "BottomTabBarConnected.tsx" -o -name "*Drawer*.tsx" -o -name "*Sidebar*.tsx" 2>/dev/null | head -20) {workerPort=37777}
+[2026-01-09 17:01:50.625] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945710625} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "MobileDrawerContext.tsx" -o -name "BottomTabBarConnected.tsx" -o -name "*Drawer*.tsx" -o -name "*Sidebar*.tsx" 2>/dev/null | head -20)
+[2026-01-09 17:01:50.626] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1136 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "MobileDrawerContext.tsx" -o -name "BottomTabBarConnected.tsx" -o -name "*Drawer*.tsx" -o -name "*Sidebar*.tsx" 2>/dev/null | head -20) | depth=1
+[2026-01-09 17:01:50.626] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:50.626] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945710625, duration=1ms}
+[2026-01-09 17:01:50.626] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1136 | type=observation
+[2026-01-09 17:01:50.699] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945710699} 
+[2026-01-09 17:01:50.699] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945710699, duration=0ms}
+[2026-01-09 17:01:50.702] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945710702} 
+[2026-01-09 17:01:50.702] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945710702, duration=0ms}
+[2026-01-09 17:01:50.703] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:52.111] [INFO ] [SDK   ] [session-1178] ← Response received (100 chars) {promptNumber=1} (Skipping - file search for sidebar components, likely exploring how menu drawer relates to sidebar)
+[2026-01-09 17:01:52.111] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:52.111] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:52.111] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:54.217] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714217} 
+[2026-01-09 17:01:54.218] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714217, duration=1ms}
+[2026-01-09 17:01:54.218] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714218} 
+[2026-01-09 17:01:54.219] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714218, duration=1ms}
+[2026-01-09 17:01:54.220] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714220} 
+[2026-01-09 17:01:54.219] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/contexts/MobileDrawerContext.tsx) {workerPort=37777}
+[2026-01-09 17:01:54.221] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714220, duration=1ms}
+[2026-01-09 17:01:54.221] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945714221} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/contexts/MobileDrawerContext.tsx)
+[2026-01-09 17:01:54.222] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1137 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/contexts/MobileDrawerContext.tsx) | depth=1
+[2026-01-09 17:01:54.222] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:54.222] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945714221, duration=1ms}
+[2026-01-09 17:01:54.222] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1137 | type=observation
+[2026-01-09 17:01:54.222] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714222} 
+[2026-01-09 17:01:54.223] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714222, duration=1ms}
+[2026-01-09 17:01:54.223] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/Sidebar.tsx) {workerPort=37777}
+[2026-01-09 17:01:54.226] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945714226} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/Sidebar.tsx)
+[2026-01-09 17:01:54.227] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1138 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/Sidebar.tsx) | depth=1
+[2026-01-09 17:01:54.227] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:54.227] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945714226, duration=1ms}
+[2026-01-09 17:01:54.227] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1138 | type=observation
+[2026-01-09 17:01:54.228] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714228} 
+[2026-01-09 17:01:54.228] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714228, duration=0ms}
+[2026-01-09 17:01:54.229] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714229} 
+[2026-01-09 17:01:54.229] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714229, duration=0ms}
+[2026-01-09 17:01:54.229] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714229} 
+[2026-01-09 17:01:54.229] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714229, duration=0ms}
+[2026-01-09 17:01:54.229] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714229} 
+[2026-01-09 17:01:54.230] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714229, duration=1ms}
+[2026-01-09 17:01:54.230] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBarConnected.tsx) {workerPort=37777}
+[2026-01-09 17:01:54.232] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945714232} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBarConnected.tsx)
+[2026-01-09 17:01:54.232] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1139 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBarConnected.tsx) | depth=1
+[2026-01-09 17:01:54.230] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx) {workerPort=37777}
+[2026-01-09 17:01:54.232] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:54.232] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945714232, duration=0ms}
+[2026-01-09 17:01:54.232] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1139 | type=observation
+[2026-01-09 17:01:54.233] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945714233} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx)
+[2026-01-09 17:01:54.233] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1140 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/UserMenuDrawer.tsx) | depth=1
+[2026-01-09 17:01:54.233] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:54.233] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945714233, duration=0ms}
+[2026-01-09 17:01:54.234] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1140 | type=observation
+[2026-01-09 17:01:54.298] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714298} 
+[2026-01-09 17:01:54.299] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714298, duration=1ms}
+[2026-01-09 17:01:54.299] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714299} 
+[2026-01-09 17:01:54.299] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714299, duration=0ms}
+[2026-01-09 17:01:54.302] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714302} 
+[2026-01-09 17:01:54.302] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714302, duration=0ms}
+[2026-01-09 17:01:54.304] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714304} 
+[2026-01-09 17:01:54.304] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714304, duration=0ms}
+[2026-01-09 17:01:54.304] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:54.306] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714306} 
+[2026-01-09 17:01:54.306] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714306} 
+[2026-01-09 17:01:54.306] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714306, duration=0ms}
+[2026-01-09 17:01:54.306] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714306, duration=0ms}
+[2026-01-09 17:01:54.307] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:54.307] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:54.312] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714312} 
+[2026-01-09 17:01:54.313] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714312, duration=1ms}
+[2026-01-09 17:01:54.316] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714316} 
+[2026-01-09 17:01:54.317] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714316, duration=1ms}
+[2026-01-09 17:01:54.317] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:54.482] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714482} 
+[2026-01-09 17:01:54.482] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714482, duration=0ms}
+[2026-01-09 17:01:54.483] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714483} 
+[2026-01-09 17:01:54.483] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714483, duration=0ms}
+[2026-01-09 17:01:54.483] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx) {workerPort=37777}
+[2026-01-09 17:01:54.485] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945714485} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx)
+[2026-01-09 17:01:54.486] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1141 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClient.tsx) | depth=1
+[2026-01-09 17:01:54.486] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:54.486] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945714485, duration=1ms}
+[2026-01-09 17:01:54.486] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1141 | type=observation
+[2026-01-09 17:01:54.555] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945714555} 
+[2026-01-09 17:01:54.556] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945714555, duration=1ms}
+[2026-01-09 17:01:54.559] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945714559} 
+[2026-01-09 17:01:54.560] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945714559, duration=1ms}
+[2026-01-09 17:01:54.560] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:57.599] [INFO ] [SDK   ] [session-1178] ← Response received (94 chars) {promptNumber=1} (Skipping - grep showing responsive class usage patterns, confirms architecture understanding)
+[2026-01-09 17:01:57.599] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:01:57.599] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:01:57.599] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:01:58.804] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945718804} 
+[2026-01-09 17:01:58.804] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945718804, duration=0ms}
+[2026-01-09 17:01:58.805] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945718805} 
+[2026-01-09 17:01:58.805] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945718805, duration=0ms}
+[2026-01-09 17:01:58.806] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClientConnected.tsx) {workerPort=37777}
+[2026-01-09 17:01:58.808] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945718808} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClientConnected.tsx)
+[2026-01-09 17:01:58.808] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1142 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/sidebar/SidebarClientConnected.tsx) | depth=1
+[2026-01-09 17:01:58.808] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:58.808] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945718808, duration=0ms}
+[2026-01-09 17:01:58.808] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1142 | type=observation
+[2026-01-09 17:01:58.881] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945718881} 
+[2026-01-09 17:01:58.882] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945718881, duration=1ms}
+[2026-01-09 17:01:58.885] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945718885} 
+[2026-01-09 17:01:58.885] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945718885, duration=0ms}
+[2026-01-09 17:01:58.886] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:01:59.001] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945719001} 
+[2026-01-09 17:01:59.001] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945719001, duration=0ms}
+[2026-01-09 17:01:59.002] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945719002} 
+[2026-01-09 17:01:59.002] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945719002, duration=0ms}
+[2026-01-09 17:01:59.002] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "BottomTabBar.tsx" -type f 2>/dev/null) {workerPort=37777}
+[2026-01-09 17:01:59.004] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945719004} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "BottomTabBar.tsx" -type f 2>/dev/null)
+[2026-01-09 17:01:59.005] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1143 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "BottomTabBar.tsx" -type f 2>/dev/null) | depth=1
+[2026-01-09 17:01:59.005] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:01:59.005] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945719004, duration=1ms}
+[2026-01-09 17:01:59.005] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1143 | type=observation
+[2026-01-09 17:01:59.077] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945719077} 
+[2026-01-09 17:01:59.077] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945719077, duration=0ms}
+[2026-01-09 17:01:59.081] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945719081} 
+[2026-01-09 17:01:59.081] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945719081, duration=0ms}
+[2026-01-09 17:01:59.081] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:02:00.932] [INFO ] [SDK   ] [session-1178] ← Response received (96 chars) {promptNumber=1} (Skipping - partial read of SidebarClient, not directly relevant to bottom tab bar styling task)
+[2026-01-09 17:02:00.933] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:00.933] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:00.933] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:02.059] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945722059} 
+[2026-01-09 17:02:02.059] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945722059, duration=0ms}
+[2026-01-09 17:02:02.059] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945722059} 
+[2026-01-09 17:02:02.060] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945722059, duration=1ms}
+[2026-01-09 17:02:02.060] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx) {workerPort=37777}
+[2026-01-09 17:02:02.062] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945722062} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx)
+[2026-01-09 17:02:02.062] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1144 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/components/common/BottomTabBar/BottomTabBar.tsx) | depth=1
+[2026-01-09 17:02:02.062] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:02:02.063] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945722062, duration=1ms}
+[2026-01-09 17:02:02.063] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1144 | type=observation
+[2026-01-09 17:02:02.139] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945722139} 
+[2026-01-09 17:02:02.139] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945722139, duration=0ms}
+[2026-01-09 17:02:02.141] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945722141} 
+[2026-01-09 17:02:02.142] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945722141, duration=1ms}
+[2026-01-09 17:02:02.142] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:02:03.645] [INFO ] [SDK   ] [session-1178] ← Response received (78 chars) {promptNumber=1} (Skipping - empty result showing sidebar doesn't use pathname tracking either)
+[2026-01-09 17:02:03.645] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:03.645] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:03.645] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:06.363] [INFO ] [SDK   ] [session-1178] ← Response received (61 chars) {promptNumber=1} (Skipping - confirms sidebar has no active pathname tracking)
+[2026-01-09 17:02:06.364] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:06.364] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:06.364] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:08.117] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945728117} 
+[2026-01-09 17:02:08.117] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945728117, duration=0ms}
+[2026-01-09 17:02:08.118] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945728118} 
+[2026-01-09 17:02:08.118] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945728118, duration=0ms}
+[2026-01-09 17:02:08.118] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "*sidebar*" -type f -path "*/types/*" 2>/dev/null) {workerPort=37777}
+[2026-01-09 17:02:08.120] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945728120} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "*sidebar*" -type f -path "*/types/*" 2>/dev/null)
+[2026-01-09 17:02:08.121] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1145 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -name "*sidebar*" -type f -path "*/types/*" 2>/dev/null) | depth=1
+[2026-01-09 17:02:08.121] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:02:08.121] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945728120, duration=1ms}
+[2026-01-09 17:02:08.121] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1145 | type=observation
+[2026-01-09 17:02:08.190] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945728190} 
+[2026-01-09 17:02:08.190] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945728190, duration=0ms}
+[2026-01-09 17:02:08.198] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945728198} 
+[2026-01-09 17:02:08.199] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945728198, duration=1ms}
+[2026-01-09 17:02:08.200] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:02:10.090] [INFO ] [SDK   ] [session-1178] ← Response received (76 chars) {promptNumber=1} (Skipping - empty result, sidebar handles chat sessions not page navigation)
+[2026-01-09 17:02:10.090] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:10.090] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:10.090] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:10.252] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945730252} 
+[2026-01-09 17:02:10.252] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945730252, duration=0ms}
+[2026-01-09 17:02:10.253] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945730253} 
+[2026-01-09 17:02:10.253] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945730253, duration=0ms}
+[2026-01-09 17:02:10.253] [INFO ] [HOOK  ] → PostToolUse: Edit(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md) {workerPort=37777}
+[2026-01-09 17:02:10.256] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945730256} tool=Edit(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md)
+[2026-01-09 17:02:10.256] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1146 | type=observation | tool=Edit(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md) | depth=1
+[2026-01-09 17:02:10.256] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:02:10.256] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945730256, duration=0ms}
+[2026-01-09 17:02:10.257] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1146 | type=observation
+[2026-01-09 17:02:10.332] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945730332} 
+[2026-01-09 17:02:10.332] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945730332, duration=0ms}
+[2026-01-09 17:02:10.336] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945730336} 
+[2026-01-09 17:02:10.336] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945730336, duration=0ms}
+[2026-01-09 17:02:10.337] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:02:10.429] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945730429} 
+[2026-01-09 17:02:10.430] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945730429, duration=1ms}
+[2026-01-09 17:02:10.431] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945730431} 
+[2026-01-09 17:02:10.431] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945730431, duration=0ms}
+[2026-01-09 17:02:10.431] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/types/sidebar.ts) {workerPort=37777}
+[2026-01-09 17:02:10.433] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945730433} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/types/sidebar.ts)
+[2026-01-09 17:02:10.434] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1147 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/types/sidebar.ts) | depth=1
+[2026-01-09 17:02:10.434] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:02:10.434] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945730433, duration=1ms}
+[2026-01-09 17:02:10.434] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1147 | type=observation
+[2026-01-09 17:02:10.508] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945730508} 
+[2026-01-09 17:02:10.509] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945730508, duration=1ms}
+[2026-01-09 17:02:10.512] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945730512} 
+[2026-01-09 17:02:10.513] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945730512, duration=1ms}
+[2026-01-09 17:02:10.513] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:02:17.386] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945737386} 
+[2026-01-09 17:02:17.387] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945737386, duration=1ms}
+[2026-01-09 17:02:17.387] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945737387} 
+[2026-01-09 17:02:17.387] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945737387, duration=0ms}
+[2026-01-09 17:02:17.388] [INFO ] [HOOK  ] → PostToolUse: Edit(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md) {workerPort=37777}
+[2026-01-09 17:02:17.390] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945737390} tool=Edit(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md)
+[2026-01-09 17:02:17.390] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1148 | type=observation | tool=Edit(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/docs/slack/setup-guide.md) | depth=1
+[2026-01-09 17:02:17.391] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:02:17.391] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945737390, duration=1ms}
+[2026-01-09 17:02:17.391] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1148 | type=observation
+[2026-01-09 17:02:17.555] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945737555} 
+[2026-01-09 17:02:17.556] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945737555, duration=1ms}
+[2026-01-09 17:02:17.560] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945737560} 
+[2026-01-09 17:02:17.560] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945737560, duration=0ms}
+[2026-01-09 17:02:17.560] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:02:24.425] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945744425} 
+[2026-01-09 17:02:24.426] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945744425, duration=1ms}
+[2026-01-09 17:02:24.426] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945744426} 
+[2026-01-09 17:02:24.427] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945744426, duration=1ms}
+[2026-01-09 17:02:24.428] [INFO ] [HOOK  ] → Stop: Requesting summary {workerPort=37777, hasLastAssistantMessage=true}
+[2026-01-09 17:02:24.430] [INFO ] [HTTP  ] → POST /api/sessions/summarize {requestId=POST-1767945744430} requesting summary
+[2026-01-09 17:02:24.430] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1149 | type=summarize | depth=1
+[2026-01-09 17:02:24.431] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:02:24.431] [INFO ] [HTTP  ] ← 200 /api/sessions/summarize {requestId=POST-1767945744430, duration=1ms}
+[2026-01-09 17:02:24.431] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1149 | type=summarize
+[2026-01-09 17:02:24.512] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945744512} 
+[2026-01-09 17:02:24.513] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945744512, duration=1ms}
+[2026-01-09 17:02:24.515] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945744515} 
+[2026-01-09 17:02:24.516] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945744515, duration=1ms}
+[2026-01-09 17:02:24.516] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:02:26.599] [INFO ] [SDK   ] [session-1207] ← Response received (2310 chars) {promptNumber=1} ```xml
+<observation>
+  <type>change</type>
+  <title>Streamlined Slack OAuth Scopes Based on Devin + ...
+[2026-01-09 17:02:26.599] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | hasSummary=false
+[2026-01-09 17:02:26.600] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | obsIds=[473] | summaryId=none
+[2026-01-09 17:02:26.600] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=473, documentCount=6, project=Quwon-App}
+[2026-01-09 17:02:26.600] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:26.601] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945746601} 
+[2026-01-09 17:02:26.602] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945746601, duration=1ms}
+[2026-01-09 17:02:29.174] [INFO ] [SDK   ] [session-1178] ← Response received (3171 chars) {promptNumber=1} <observation>
+  <type>discovery</type>
+  <title>Comprehensive SP Navigation Architecture Investigati...
+[2026-01-09 17:02:29.174] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | hasSummary=false
+[2026-01-09 17:02:29.175] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | obsIds=[474] | summaryId=none
+[2026-01-09 17:02:29.175] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=474, documentCount=8, project=Quwon-App}
+[2026-01-09 17:02:29.175] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:29.176] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945749176} 
+[2026-01-09 17:02:29.177] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945749176, duration=1ms}
+[2026-01-09 17:02:29.179] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945749178} 
+[2026-01-09 17:02:29.180] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945749178, duration=2ms}
+[2026-01-09 17:02:29.182] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945749182} 
+[2026-01-09 17:02:29.184] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945749182, duration=2ms}
+[2026-01-09 17:02:30.930] [INFO ] [SDK   ] [session-1207] ← Response received (123 chars) {promptNumber=1} *Skipping - minor section numbering correction to accommodate new User Token Scopes section, no subs...
+[2026-01-09 17:02:30.930] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:30.930] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:30.930] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:33.134] [INFO ] [SDK   ] [session-1178] ← Response received (62 chars) {promptNumber=1} (Skipping - re-reading UserMenuDrawer.tsx, already documented)
+[2026-01-09 17:02:33.134] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:33.135] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:33.135] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:36.390] [INFO ] [SDK   ] [session-1178] ← Response received (60 chars) {promptNumber=1} (Skipping - re-reading BottomTabBar.tsx, already documented)
+[2026-01-09 17:02:36.390] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:36.390] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:36.390] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:39.561] [INFO ] [SDK   ] [session-1178] ← Response received (62 chars) {promptNumber=1} (Skipping - routine file search for drawer-related components)
+[2026-01-09 17:02:39.561] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:39.561] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:39.561] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:42.313] [INFO ] [SDK   ] [session-1178] ← Response received (67 chars) {promptNumber=1} (Skipping - re-reading MobileDrawerContext.tsx, already documented)
+[2026-01-09 17:02:42.313] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:42.313] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:42.313] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:43.022] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945763022} 
+[2026-01-09 17:02:43.022] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945763022, duration=0ms}
+[2026-01-09 17:02:43.023] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945763023} 
+[2026-01-09 17:02:43.023] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945763023, duration=0ms}
+[2026-01-09 17:02:43.023] [INFO ] [HOOK  ] → PostToolUse: Task(Explore) {workerPort=37777}
+[2026-01-09 17:02:43.025] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945763025} tool=Task(Explore)
+[2026-01-09 17:02:43.026] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1150 | type=observation | tool=Task(Explore) | depth=1
+[2026-01-09 17:02:43.026] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:02:43.026] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945763025, duration=1ms}
+[2026-01-09 17:02:43.026] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1150 | type=observation
+[2026-01-09 17:02:43.103] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945763103} 
+[2026-01-09 17:02:43.103] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945763103, duration=0ms}
+[2026-01-09 17:02:43.106] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945763106} 
+[2026-01-09 17:02:43.106] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945763106, duration=0ms}
+[2026-01-09 17:02:43.107] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:02:44.836] [INFO ] [SDK   ] [session-1207] ← Response received (1897 chars) {promptNumber=1} ```xml
+<summary>
+  <request>Optimize Slack OAuth scopes in setup guide by consolidating Devin and Cl...
+[2026-01-09 17:02:44.837] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=true
+[2026-01-09 17:02:44.837] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=93
+[2026-01-09 17:02:44.837] [INFO ] [CHROMA_SYNC] Syncing summary {summaryId=93, documentCount=6, project=Quwon-App}
+[2026-01-09 17:02:44.837] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:45.698] [INFO ] [SDK   ] [session-1178] ← Response received (98 chars) {promptNumber=1} (Skipping - server component wrapper for Sidebar, not directly relevant to bottom tab bar styling)
+[2026-01-09 17:02:45.698] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:45.698] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:45.698] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:49.011] [INFO ] [SDK   ] [session-1178] ← Response received (69 chars) {promptNumber=1} (Skipping - re-reading BottomTabBarConnected.tsx, already documented)
+[2026-01-09 17:02:49.011] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:49.011] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:49.011] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:53.054] [INFO ] [SDK   ] [session-1178] ← Response received (68 chars) {promptNumber=1} (Skipping - re-reading UserMenuDrawer.tsx again, already documented)
+[2026-01-09 17:02:53.054] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:53.054] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:53.054] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:02:57.155] [INFO ] [SDK   ] [session-1178] ← Response received (87 chars) {promptNumber=1} (Skipping - very long SidebarClient.tsx file, focus is on bottom tab bar modifications)
+[2026-01-09 17:02:57.155] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:02:57.155] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:02:57.155] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:00.688] [INFO ] [SDK   ] [session-1178] ← Response received (116 chars) {promptNumber=1} (Skipping - simple wrapper connecting Sidebar to MobileDrawerContext, already understood from previo...
+[2026-01-09 17:03:00.688] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:00.688] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:00.689] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:01.390] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945781390} 
+[2026-01-09 17:03:01.391] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945781390, duration=1ms}
+[2026-01-09 17:03:01.391] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945781391} 
+[2026-01-09 17:03:01.392] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945781391, duration=1ms}
+[2026-01-09 17:03:01.392] [INFO ] [HTTP  ] → POST /api/sessions/init {requestId=POST-1767945781392} 
+[2026-01-09 17:03:01.392] [INFO ] [HTTP  ] SessionRoutes: handleSessionInitByClaudeId called {contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3, project=Quwon-App, prompt_length=22}
+[2026-01-09 17:03:01.393] [INFO ] [SESSION] [session-1207] CREATED | contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3 → sessionDbId=1207 | isNew=false | project=Quwon-App
+[2026-01-09 17:03:01.393] [INFO ] [HTTP  ] ← 200 /api/sessions/init {requestId=POST-1767945781392, duration=1ms}
+[2026-01-09 17:03:01.393] [INFO ] [HTTP  ] → POST /sessions/1207/init {requestId=POST-1767945781393} 
+[2026-01-09 17:03:01.393] [INFO ] [HTTP  ] SessionRoutes: handleSessionInit called {sessionDbId=1207, promptNumber=2, has_userPrompt=true}
+[2026-01-09 17:03:01.393] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:01.393] [INFO ] [CHROMA_SYNC] Syncing user prompt {promptId=78, project=Quwon-App}
+[2026-01-09 17:03:01.394] [INFO ] [SESSION] [session-1207] Generator auto-starting (init) using Claude SDK {queueDepth=0, historyLength=12}
+[2026-01-09 17:03:01.395] [INFO ] [SDK   ] Starting SDK query {sessionDbId=1207, contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3, hasRealMemorySessionId=true, resume_parameter=1a9f7c42-842c-4041-82ef-a5495e58c455, lastPromptNumber=2}
+[2026-01-09 17:03:01.395] [INFO ] [SDK   ] Creating message generator {sessionDbId=1207, contentSessionId=b7e0a902-9773-48be-bdaf-a7d6a29368e3, lastPromptNumber=2, isInitPrompt=false, promptType=CONTINUATION}
+[2026-01-09 17:03:01.396] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:01.396] [INFO ] [HTTP  ] ← 200 /sessions/1207/init {requestId=POST-1767945781393, duration=3ms}
+[2026-01-09 17:03:01.396] [INFO ] [HOOK  ] [session-1207] INIT_COMPLETE | sessionDbId=1207 | promptNumber=2 | project=Quwon-App
+[2026-01-09 17:03:01.482] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945781482} 
+[2026-01-09 17:03:01.482] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945781482, duration=0ms}
+[2026-01-09 17:03:01.503] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945781503} 
+[2026-01-09 17:03:01.503] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945781503, duration=0ms}
+[2026-01-09 17:03:01.504] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:04.664] [INFO ] [SDK   ] [session-1178] ← Response received (69 chars) {promptNumber=1} (Skipping - confirming BottomTabBar.tsx location, already documented)
+[2026-01-09 17:03:04.664] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:04.664] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:04.664] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:07.406] [INFO ] [SDK   ] [session-1207] ← Response received (372 chars) {promptNumber=2} I'm ready to continue observing the primary Claude session. The user has asked "そしたら実装で確認すべきところはないです...
+[2026-01-09 17:03:07.407] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:07.407] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:07.407] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:07.666] [INFO ] [SDK   ] [session-1178] ← Response received (92 chars) {promptNumber=1} (Skipping - re-reading BottomTabBar.tsx for modification, already documented multiple times)
+[2026-01-09 17:03:07.666] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:07.666] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:07.666] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:11.109] [INFO ] [SDK   ] [session-1178] ← Response received (81 chars) {promptNumber=1} (Skipping - type definition file search, not directly relevant to implementation)
+[2026-01-09 17:03:11.109] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:11.109] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:11.109] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:14.434] [INFO ] [SDK   ] [session-1178] ← Response received (96 chars) {promptNumber=1} (Skipping - type definitions for sidebar, not directly relevant to bottom tab bar modifications)
+[2026-01-09 17:03:14.434] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:14.434] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:14.434] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:26.449] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945806449} 
+[2026-01-09 17:03:26.449] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945806449, duration=0ms}
+[2026-01-09 17:03:26.449] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945806449} 
+[2026-01-09 17:03:26.450] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945806449, duration=1ms}
+[2026-01-09 17:03:26.450] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/.claude/plans/peaceful-zooming-bunny.md) {workerPort=37777}
+[2026-01-09 17:03:26.452] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945806452} tool=Write(/home/owner/.claude/plans/peaceful-zooming-bunny.md)
+[2026-01-09 17:03:26.453] [INFO ] [QUEUE ] [session-1178] ENQUEUED | sessionDbId=1178 | messageId=1151 | type=observation | tool=Write(/home/owner/.claude/plans/peaceful-zooming-bunny.md) | depth=1
+[2026-01-09 17:03:26.453] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:26.453] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945806452, duration=1ms}
+[2026-01-09 17:03:26.453] [INFO ] [QUEUE ] [session-1178] CLAIMED | sessionDbId=1178 | messageId=1151 | type=observation
+[2026-01-09 17:03:26.525] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945806525} 
+[2026-01-09 17:03:26.525] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945806525, duration=0ms}
+[2026-01-09 17:03:26.528] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945806528} 
+[2026-01-09 17:03:26.528] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945806528, duration=0ms}
+[2026-01-09 17:03:26.529] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:32.785] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945812785} 
+[2026-01-09 17:03:32.786] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945812785, duration=1ms}
+[2026-01-09 17:03:32.787] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945812787} 
+[2026-01-09 17:03:32.787] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945812787, duration=0ms}
+[2026-01-09 17:03:32.787] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -type f \( -name "*.ts" -o -name "*.js" -o -name "*.tsx" -o -name "*.jsx" \) 2>/dev/null) {workerPort=37777}
+[2026-01-09 17:03:32.790] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945812790} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -type f \( -name "*.ts" -o -name "*.js" -o -name "*.tsx" -o -name "*.jsx" \) 2>/dev/null)
+[2026-01-09 17:03:32.790] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1152 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -type f \( -name "*.ts" -o -name "*.js" -o -name "*.tsx" -o -name "*.jsx" \) 2>/dev/null) | depth=1
+[2026-01-09 17:03:32.790] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:32.790] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945812790, duration=0ms}
+[2026-01-09 17:03:32.791] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1152 | type=observation
+[2026-01-09 17:03:32.864] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945812864} 
+[2026-01-09 17:03:32.865] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945812864, duration=1ms}
+[2026-01-09 17:03:32.868] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945812868} 
+[2026-01-09 17:03:32.868] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945812868, duration=0ms}
+[2026-01-09 17:03:32.868] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:33.660] [INFO ] [SDK   ] [session-1178] ← Response received (3351 chars) {promptNumber=1} <observation>
+  <type>discovery</type>
+  <title>Comprehensive Sidebar Drawer Architecture Investigat...
+[2026-01-09 17:03:33.660] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | hasSummary=false
+[2026-01-09 17:03:33.661] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | obsIds=[475] | summaryId=none
+[2026-01-09 17:03:33.661] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=475, documentCount=7, project=Quwon-App}
+[2026-01-09 17:03:33.661] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:33.661] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945813661} 
+[2026-01-09 17:03:33.663] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945813661, duration=2ms}
+[2026-01-09 17:03:33.664] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945813664} 
+[2026-01-09 17:03:33.665] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945813664, duration=1ms}
+[2026-01-09 17:03:33.666] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945813666} 
+[2026-01-09 17:03:33.667] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945813666, duration=1ms}
+[2026-01-09 17:03:33.667] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945813667} 
+[2026-01-09 17:03:33.668] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945813667, duration=1ms}
+[2026-01-09 17:03:34.320] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945814320} 
+[2026-01-09 17:03:34.320] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945814320, duration=0ms}
+[2026-01-09 17:03:34.321] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945814321} 
+[2026-01-09 17:03:34.321] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945814321, duration=0ms}
+[2026-01-09 17:03:34.322] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f -name "*slack*" 2>/dev/null | head -20) {workerPort=37777}
+[2026-01-09 17:03:34.323] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945814323} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f -name "*slack*" 2>/dev/null | head -20)
+[2026-01-09 17:03:34.324] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1153 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f -name "*slack*" 2>/dev/null | head -20) | depth=1
+[2026-01-09 17:03:34.324] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:34.324] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945814323, duration=1ms}
+[2026-01-09 17:03:34.324] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1153 | type=observation
+[2026-01-09 17:03:34.397] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945814397} 
+[2026-01-09 17:03:34.398] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945814397, duration=1ms}
+[2026-01-09 17:03:34.401] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945814401} 
+[2026-01-09 17:03:34.401] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945814401, duration=0ms}
+[2026-01-09 17:03:34.402] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:36.289] [INFO ] [SDK   ] [session-1207] ← Response received (106 chars) {promptNumber=2} *Skipping - routine file listing to explore agent-api TypeScript structure, no changes or discoverie...
+[2026-01-09 17:03:36.289] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:36.289] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:36.289] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:37.351] [INFO ] [SDK   ] [session-1207] ← Response received (121 chars) {promptNumber=2} *Skipping - searching for Slack-related files, results show only node_modules content, no implementa...
+[2026-01-09 17:03:37.351] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:37.351] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:37.351] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:39.099] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945819099} 
+[2026-01-09 17:03:39.099] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945819099, duration=0ms}
+[2026-01-09 17:03:39.100] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945819100} 
+[2026-01-09 17:03:39.100] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945819100, duration=0ms}
+[2026-01-09 17:03:39.101] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/services/slack/oauth-service.ts) {workerPort=37777}
+[2026-01-09 17:03:39.103] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945819103} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/services/slack/oauth-service.ts)
+[2026-01-09 17:03:39.104] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1154 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/services/slack/oauth-service.ts) | depth=1
+[2026-01-09 17:03:39.104] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:39.104] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945819103, duration=1ms}
+[2026-01-09 17:03:39.104] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1154 | type=observation
+[2026-01-09 17:03:39.105] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945819105} 
+[2026-01-09 17:03:39.106] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945819105, duration=1ms}
+[2026-01-09 17:03:39.106] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945819106} 
+[2026-01-09 17:03:39.107] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945819106, duration=1ms}
+[2026-01-09 17:03:39.110] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945819110} 
+[2026-01-09 17:03:39.110] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945819110, duration=0ms}
+[2026-01-09 17:03:39.108] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/services/slack/slack-service.ts) {workerPort=37777}
+[2026-01-09 17:03:39.111] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945819111} 
+[2026-01-09 17:03:39.112] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945819112} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/services/slack/slack-service.ts)
+[2026-01-09 17:03:39.113] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1155 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/services/slack/slack-service.ts) | depth=1
+[2026-01-09 17:03:39.113] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:39.113] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945819112, duration=1ms}
+[2026-01-09 17:03:39.113] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1155 | type=observation
+[2026-01-09 17:03:39.114] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945819111, duration=3ms}
+[2026-01-09 17:03:39.114] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945819114} 
+[2026-01-09 17:03:39.114] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945819114, duration=0ms}
+[2026-01-09 17:03:39.115] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945819115} 
+[2026-01-09 17:03:39.115] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945819115, duration=0ms}
+[2026-01-09 17:03:39.115] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/middlewares/slack-auth.ts) {workerPort=37777}
+[2026-01-09 17:03:39.116] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/infrastructure/slack-api.ts) {workerPort=37777}
+[2026-01-09 17:03:39.120] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945819120} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/middlewares/slack-auth.ts)
+[2026-01-09 17:03:39.120] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1156 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/middlewares/slack-auth.ts) | depth=1
+[2026-01-09 17:03:39.120] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:39.120] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945819120, duration=0ms}
+[2026-01-09 17:03:39.121] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1156 | type=observation
+[2026-01-09 17:03:39.122] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945819122} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/infrastructure/slack-api.ts)
+[2026-01-09 17:03:39.122] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1157 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/infrastructure/slack-api.ts) | depth=1
+[2026-01-09 17:03:39.122] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:39.122] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945819122, duration=0ms}
+[2026-01-09 17:03:39.123] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1157 | type=observation
+[2026-01-09 17:03:39.187] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945819187} 
+[2026-01-09 17:03:39.187] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945819187, duration=0ms}
+[2026-01-09 17:03:39.190] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945819190} 
+[2026-01-09 17:03:39.190] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945819190} 
+[2026-01-09 17:03:39.190] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945819190, duration=0ms}
+[2026-01-09 17:03:39.191] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945819190, duration=1ms}
+[2026-01-09 17:03:39.193] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945819193} 
+[2026-01-09 17:03:39.194] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945819193, duration=1ms}
+[2026-01-09 17:03:39.194] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945819194} 
+[2026-01-09 17:03:39.194] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945819194, duration=0ms}
+[2026-01-09 17:03:39.195] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:39.196] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945819196} 
+[2026-01-09 17:03:39.197] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945819197} 
+[2026-01-09 17:03:39.197] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945819196, duration=1ms}
+[2026-01-09 17:03:39.197] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945819197, duration=0ms}
+[2026-01-09 17:03:39.198] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945819198} 
+[2026-01-09 17:03:39.198] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945819198, duration=0ms}
+[2026-01-09 17:03:39.197] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:39.197] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:39.198] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:42.611] [INFO ] [SDK   ] [session-1207] ← Response received (124 chars) {promptNumber=2} *Skipping - reading existing Slack service implementation to verify against updated scope requiremen...
+[2026-01-09 17:03:42.611] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:42.612] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:42.612] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:42.848] [INFO ] [SDK   ] [session-1207] ← Response received (95 chars) {promptNumber=2} *Skipping - reading existing OAuth service implementation to understand current scope handling*
+[2026-01-09 17:03:42.848] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:42.848] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:42.848] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:44.695] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945824695} 
+[2026-01-09 17:03:44.695] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945824695, duration=0ms}
+[2026-01-09 17:03:44.695] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945824695} 
+[2026-01-09 17:03:44.696] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945824695, duration=1ms}
+[2026-01-09 17:03:44.696] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/types/slack.ts) {workerPort=37777}
+[2026-01-09 17:03:44.698] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945824698} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/types/slack.ts)
+[2026-01-09 17:03:44.699] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1158 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/types/slack.ts) | depth=1
+[2026-01-09 17:03:44.699] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:44.699] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945824698, duration=1ms}
+[2026-01-09 17:03:44.699] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1158 | type=observation
+[2026-01-09 17:03:44.774] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945824774} 
+[2026-01-09 17:03:44.774] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945824774, duration=0ms}
+[2026-01-09 17:03:44.778] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945824778} 
+[2026-01-09 17:03:44.778] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945824778, duration=0ms}
+[2026-01-09 17:03:44.778] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:44.900] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945824900} 
+[2026-01-09 17:03:44.900] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945824900, duration=0ms}
+[2026-01-09 17:03:44.901] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945824901} 
+[2026-01-09 17:03:44.901] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945824901, duration=0ms}
+[2026-01-09 17:03:44.901] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -type f -name "*.ts" | xargs grep -l "scope\|SCOPE" 2>/dev/null | head -20) {workerPort=37777}
+[2026-01-09 17:03:44.903] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945824903} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -type f -name "*.ts" | xargs grep -l "scope\|SCOPE" 2>/dev/null | head -20)
+[2026-01-09 17:03:44.904] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1159 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -type f -name "*.ts" | xargs grep -l "scope\|SCOPE" 2>/dev/null | head -20) | depth=1
+[2026-01-09 17:03:44.904] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:44.904] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945824903, duration=1ms}
+[2026-01-09 17:03:44.904] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1159 | type=observation
+[2026-01-09 17:03:44.971] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945824971} 
+[2026-01-09 17:03:44.972] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945824971, duration=1ms}
+[2026-01-09 17:03:44.974] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945824974} 
+[2026-01-09 17:03:44.975] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945824974, duration=1ms}
+[2026-01-09 17:03:44.975] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:45.934] [INFO ] [SDK   ] [session-1207] ← Response received (88 chars) {promptNumber=2} *Skipping - reading Slack authentication middleware to understand request handling flow*
+[2026-01-09 17:03:45.935] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:45.935] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:45.935] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:46.707] [INFO ] [SDK   ] [session-1207] ← Response received (144 chars) {promptNumber=2} *Skipping - reading existing Slack API client implementation to verify API method usage against upda...
+[2026-01-09 17:03:46.707] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:46.707] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:46.707] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:48.630] [INFO ] [SDK   ] [session-1207] ← Response received (73 chars) {promptNumber=2} *Skipping - reading Slack type definitions to understand data structures*
+[2026-01-09 17:03:48.630] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:48.630] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:48.630] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:50.218] [INFO ] [SDK   ] [session-1207] ← Response received (149 chars) {promptNumber=2} *Skipping - searching for scope-related files, results show only node_modules and type definition fi...
+[2026-01-09 17:03:50.218] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:50.218] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:50.218] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:51.308] [INFO ] [SDK   ] [session-1178] ← Response received (2692 chars) {promptNumber=1} <observation>
+  <type>decision</type>
+  <title>Implementation Plan Created for SP Navigation Styling...
+[2026-01-09 17:03:51.308] [INFO ] [DB    ] [session-1178] STORING | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | hasSummary=false
+[2026-01-09 17:03:51.308] [INFO ] [DB    ] [session-1178] STORED | sessionDbId=1178 | memorySessionId=1cb28694-b588-4482-acc6-0eee9f42b295 | obsCount=1 | obsIds=[476] | summaryId=none
+[2026-01-09 17:03:51.308] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=476, documentCount=7, project=Quwon-App}
+[2026-01-09 17:03:51.309] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:03:51.309] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945831309} 
+[2026-01-09 17:03:51.386] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945831386} 
+[2026-01-09 17:03:51.387] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945831386, duration=1ms}
+[2026-01-09 17:03:51.387] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945831387} 
+[2026-01-09 17:03:51.388] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945831387, duration=1ms}
+[2026-01-09 17:03:51.388] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f \( -name "*.ts" -o -name "*.tsx" \) -path "*/slack*" 2>/dev/null | xargs grep -l "authorize\|oauth\|scope" 2>/dev/null | grep -v node_modules | head -20) {workerPort=37777}
+[2026-01-09 17:03:51.390] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945831390} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f \( -name "*.ts" -o -name "*.tsx" \) -path "*/slack*" 2>/dev/null | xargs grep -l "authorize\|oauth\|scope" 2>/dev/null | grep -v node_modules | head -20)
+[2026-01-09 17:03:51.391] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1160 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App -type f \( -name "*.ts" -o -name "*.tsx" \) -path "*/slack*" 2>/dev/null | xargs grep -l "authorize\|oauth\|scope" 2>/dev/null | grep -v node_modules | head -20) | depth=1
+[2026-01-09 17:03:51.391] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:03:51.391] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945831390, duration=1ms}
+[2026-01-09 17:03:51.392] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1160 | type=observation
+[2026-01-09 17:03:51.438] [WARN ] [CHROMA] [HAPPY-PATH] Missing text in MCP chroma_query_documents result {project=claude-mem, location=worker-service.cjs:950} {"query_text":"/home/owner/.claude/plans"}
+[2026-01-09 17:03:51.438] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945831309, duration=129ms}
+[2026-01-09 17:03:51.484] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945831484} 
+[2026-01-09 17:03:51.485] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945831484, duration=1ms}
+[2026-01-09 17:03:51.492] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945831492} 
+[2026-01-09 17:03:51.492] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945831492, duration=0ms}
+[2026-01-09 17:03:51.493] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:03:54.491] [INFO ] [SDK   ] [session-1207] ← Response received (87 chars) {promptNumber=2} *Skipping - searching for OAuth authorization files to understand scope implementation*
+[2026-01-09 17:03:54.491] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:03:54.492] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:03:54.492] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:07.213] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945847213} 
+[2026-01-09 17:04:07.213] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945847213, duration=0ms}
+[2026-01-09 17:04:07.214] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945847214} 
+[2026-01-09 17:04:07.214] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945847214, duration=0ms}
+[2026-01-09 17:04:07.214] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -r "https://slack.com/oauth" /home/owner/ghq/github.com/AIXion-Team/Quwon-App --include="*.ts" --include="*.tsx" --include="*.js" 2>/dev/null | grep -v node_modules) {workerPort=37777}
+[2026-01-09 17:04:07.217] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945847217} tool=Bash(grep -r "https://slack.com/oauth" /home/owner/ghq/github.com/AIXion-Team/Quwon-App --include="*.ts" --include="*.tsx" --include="*.js" 2>/dev/null | grep -v node_modules)
+[2026-01-09 17:04:07.217] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1161 | type=observation | tool=Bash(grep -r "https://slack.com/oauth" /home/owner/ghq/github.com/AIXion-Team/Quwon-App --include="*.ts" --include="*.tsx" --include="*.js" 2>/dev/null | grep -v node_modules) | depth=1
+[2026-01-09 17:04:07.217] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:04:07.217] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945847217, duration=0ms}
+[2026-01-09 17:04:07.217] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1161 | type=observation
+[2026-01-09 17:04:07.294] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945847294} 
+[2026-01-09 17:04:07.294] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945847294, duration=0ms}
+[2026-01-09 17:04:07.298] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945847298} 
+[2026-01-09 17:04:07.298] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945847298, duration=0ms}
+[2026-01-09 17:04:07.298] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:04:10.149] [INFO ] [SDK   ] [session-1207] ← Response received (136 chars) {promptNumber=2} *Skipping - located OAuth URL construction in slack.ts controller, waiting to see the actual file co...
+[2026-01-09 17:04:10.149] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:04:10.149] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:04:10.149] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:11.743] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945851743} 
+[2026-01-09 17:04:11.744] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945851743, duration=1ms}
+[2026-01-09 17:04:11.744] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945851744} 
+[2026-01-09 17:04:11.745] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945851744, duration=1ms}
+[2026-01-09 17:04:11.745] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/controllers/slack.ts) {workerPort=37777}
+[2026-01-09 17:04:11.748] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945851748} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/controllers/slack.ts)
+[2026-01-09 17:04:11.748] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1162 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/controllers/slack.ts) | depth=1
+[2026-01-09 17:04:11.748] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:04:11.748] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945851748, duration=0ms}
+[2026-01-09 17:04:11.749] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1162 | type=observation
+[2026-01-09 17:04:11.749] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945851749} 
+[2026-01-09 17:04:11.749] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945851749, duration=0ms}
+[2026-01-09 17:04:11.750] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945851750} 
+[2026-01-09 17:04:11.750] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945851750, duration=0ms}
+[2026-01-09 17:04:11.751] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/actions/integrations/slack/connect-slack.ts) {workerPort=37777}
+[2026-01-09 17:04:11.753] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945851753} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/actions/integrations/slack/connect-slack.ts)
+[2026-01-09 17:04:11.753] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1163 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/src/actions/integrations/slack/connect-slack.ts) | depth=1
+[2026-01-09 17:04:11.753] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:04:11.753] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945851753, duration=0ms}
+[2026-01-09 17:04:11.753] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1163 | type=observation
+[2026-01-09 17:04:11.829] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945851829} 
+[2026-01-09 17:04:11.829] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945851829, duration=0ms}
+[2026-01-09 17:04:11.832] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945851832} 
+[2026-01-09 17:04:11.832] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945851832, duration=0ms}
+[2026-01-09 17:04:11.833] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945851833} 
+[2026-01-09 17:04:11.833] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945851833, duration=0ms}
+[2026-01-09 17:04:11.833] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:04:11.836] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945851836} 
+[2026-01-09 17:04:11.836] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945851836, duration=0ms}
+[2026-01-09 17:04:11.836] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:04:14.604] [INFO ] [SDK   ] [session-1207] ← Response received (103 chars) {promptNumber=2} *Skipping - reading frontend integration code that delegates to Agent API, no scope configuration he...
+[2026-01-09 17:04:14.604] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:04:14.604] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:04:14.604] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:16.221] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945856221} 
+[2026-01-09 17:04:16.222] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945856221, duration=0ms}
+[2026-01-09 17:04:16.222] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945856222} 
+[2026-01-09 17:04:16.223] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945856222, duration=1ms}
+[2026-01-09 17:04:16.223] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/wrangler.toml) {workerPort=37777}
+[2026-01-09 17:04:16.225] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945856225} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/wrangler.toml)
+[2026-01-09 17:04:16.226] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1164 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/wrangler.toml) | depth=1
+[2026-01-09 17:04:16.226] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:04:16.226] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945856225, duration=1ms}
+[2026-01-09 17:04:16.226] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1164 | type=observation
+[2026-01-09 17:04:16.285] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945856285} 
+[2026-01-09 17:04:16.285] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945856285, duration=0ms}
+[2026-01-09 17:04:16.286] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945856286} 
+[2026-01-09 17:04:16.286] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945856286, duration=0ms}
+[2026-01-09 17:04:16.286] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -name ".env*" -o -name "wrangler.toml" -o -name "*.example" | head -10) {workerPort=37777}
+[2026-01-09 17:04:16.289] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945856289} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -name ".env*" -o -name "wrangler.toml" -o -name "*.example" | head -10)
+[2026-01-09 17:04:16.289] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1165 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api -name ".env*" -o -name "wrangler.toml" -o -name "*.example" | head -10) | depth=1
+[2026-01-09 17:04:16.289] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:04:16.289] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945856289, duration=0ms}
+[2026-01-09 17:04:16.290] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1165 | type=observation
+[2026-01-09 17:04:16.298] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945856298} 
+[2026-01-09 17:04:16.299] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945856298, duration=1ms}
+[2026-01-09 17:04:16.304] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945856304} 
+[2026-01-09 17:04:16.304] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945856304, duration=0ms}
+[2026-01-09 17:04:16.305] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:04:16.360] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945856360} 
+[2026-01-09 17:04:16.361] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945856360, duration=1ms}
+[2026-01-09 17:04:16.364] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945856364} 
+[2026-01-09 17:04:16.364] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945856364, duration=0ms}
+[2026-01-09 17:04:16.365] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:04:18.908] [INFO ] [SDK   ] [session-1207] ← Response received (99 chars) {promptNumber=2} *Skipping - found configuration files, waiting to see their contents to verify scope configuration*
+[2026-01-09 17:04:18.909] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:04:18.909] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:04:18.909] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:19.806] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945859806} 
+[2026-01-09 17:04:19.806] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945859806, duration=0ms}
+[2026-01-09 17:04:19.807] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945859807} 
+[2026-01-09 17:04:19.807] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945859807, duration=0ms}
+[2026-01-09 17:04:19.808] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/.dev.vars.example) {workerPort=37777}
+[2026-01-09 17:04:19.810] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945859810} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/.dev.vars.example)
+[2026-01-09 17:04:19.810] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1166 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/.dev.vars.example) | depth=1
+[2026-01-09 17:04:19.810] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:04:19.810] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945859810, duration=0ms}
+[2026-01-09 17:04:19.811] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1166 | type=observation
+[2026-01-09 17:04:19.826] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945859826} 
+[2026-01-09 17:04:19.826] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945859826, duration=0ms}
+[2026-01-09 17:04:19.827] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945859827} 
+[2026-01-09 17:04:19.827] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945859827, duration=0ms}
+[2026-01-09 17:04:19.827] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -n "scope\|SCOPE\|chat:write\|commands" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/controllers/slack.ts) {workerPort=37777}
+[2026-01-09 17:04:19.830] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945859830} tool=Bash(grep -n "scope\|SCOPE\|chat:write\|commands" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/controllers/slack.ts)
+[2026-01-09 17:04:19.830] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1167 | type=observation | tool=Bash(grep -n "scope\|SCOPE\|chat:write\|commands" /home/owner/ghq/github.com/AIXion-Team/Quwon-App/workers/agent-api/controllers/slack.ts) | depth=1
+[2026-01-09 17:04:19.830] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:04:19.830] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945859830, duration=0ms}
+[2026-01-09 17:04:19.831] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1167 | type=observation
+[2026-01-09 17:04:19.886] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945859886} 
+[2026-01-09 17:04:19.886] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945859886, duration=0ms}
+[2026-01-09 17:04:19.888] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945859888} 
+[2026-01-09 17:04:19.888] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945859888, duration=0ms}
+[2026-01-09 17:04:19.889] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:04:19.905] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945859905} 
+[2026-01-09 17:04:19.905] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945859905, duration=0ms}
+[2026-01-09 17:04:19.909] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945859909} 
+[2026-01-09 17:04:19.909] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945859909, duration=0ms}
+[2026-01-09 17:04:19.910] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:04:23.235] [INFO ] [SDK   ] [session-1207] ← Response received (109 chars) {promptNumber=2} *Recording discovery - found hardcoded OAuth scopes in controller that don't match the updated docum...
+[2026-01-09 17:04:23.235] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:04:23.235] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:04:23.235] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:28.871] [INFO ] [SDK   ] [session-1207] ← Response received (2629 chars) {promptNumber=2} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Slack OAuth Controller Uses Hardcoded Bot Sco...
+[2026-01-09 17:04:28.871] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | hasSummary=false
+[2026-01-09 17:04:28.871] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | obsIds=[477] | summaryId=none
+[2026-01-09 17:04:28.872] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=477, documentCount=7, project=Quwon-App}
+[2026-01-09 17:04:28.872] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:28.872] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945868872} 
+[2026-01-09 17:04:28.874] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945868872, duration=2ms}
+[2026-01-09 17:04:28.875] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945868875} 
+[2026-01-09 17:04:28.876] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945868875, duration=1ms}
+[2026-01-09 17:04:28.877] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945868877} 
+[2026-01-09 17:04:28.878] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945868877, duration=1ms}
+[2026-01-09 17:04:28.879] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945868879} 
+[2026-01-09 17:04:28.880] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945868879, duration=1ms}
+[2026-01-09 17:04:32.566] [INFO ] [SDK   ] [session-1207] ← Response received (97 chars) {promptNumber=2} *Skipping - reading wrangler configuration to understand environment setup for Slack integration*
+[2026-01-09 17:04:32.566] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:04:32.566] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:04:32.566] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:35.557] [INFO ] [SDK   ] [session-1207] ← Response received (88 chars) {promptNumber=2} *Skipping - reading environment variable template to understand configuration structure*
+[2026-01-09 17:04:35.557] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | hasSummary=false
+[2026-01-09 17:04:35.558] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-09 17:04:35.558] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:41.838] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945881838} 
+[2026-01-09 17:04:41.838] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945881838, duration=0ms}
+[2026-01-09 17:04:41.839] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945881839} 
+[2026-01-09 17:04:41.839] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945881839, duration=0ms}
+[2026-01-09 17:04:41.839] [INFO ] [HOOK  ] → PostToolUse: Task(Explore) {workerPort=37777}
+[2026-01-09 17:04:41.841] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945881841} tool=Task(Explore)
+[2026-01-09 17:04:41.842] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1168 | type=observation | tool=Task(Explore) | depth=1
+[2026-01-09 17:04:41.842] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:04:41.842] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945881841, duration=1ms}
+[2026-01-09 17:04:41.842] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1168 | type=observation
+[2026-01-09 17:04:41.915] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945881914} 
+[2026-01-09 17:04:41.915] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945881914, duration=1ms}
+[2026-01-09 17:04:41.917] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945881917} 
+[2026-01-09 17:04:41.918] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945881917, duration=1ms}
+[2026-01-09 17:04:41.918] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:04:59.290] [INFO ] [SDK   ] [session-1207] ← Response received (2996 chars) {promptNumber=2} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Slack OAuth Implementation Has Hardcoded Scop...
+[2026-01-09 17:04:59.291] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | hasSummary=false
+[2026-01-09 17:04:59.291] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | obsIds=[478] | summaryId=none
+[2026-01-09 17:04:59.291] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=478, documentCount=8, project=Quwon-App}
+[2026-01-09 17:04:59.291] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:04:59.292] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945899292} 
+[2026-01-09 17:04:59.293] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945899292, duration=1ms}
+[2026-01-09 17:04:59.294] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945899294} 
+[2026-01-09 17:04:59.295] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945899294, duration=1ms}
+[2026-01-09 17:04:59.295] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945899295} 
+[2026-01-09 17:04:59.296] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945899295, duration=1ms}
+[2026-01-09 17:04:59.297] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945899297} 
+[2026-01-09 17:04:59.298] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945899297, duration=1ms}
+[2026-01-09 17:05:01.898] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945901898} 
+[2026-01-09 17:05:01.898] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945901898, duration=0ms}
+[2026-01-09 17:05:01.899] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945901899} 
+[2026-01-09 17:05:01.899] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945901899, duration=0ms}
+[2026-01-09 17:05:01.900] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/.claude/plans/flickering-whistling-turing.md) {workerPort=37777}
+[2026-01-09 17:05:01.901] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1767945901901} tool=Write(/home/owner/.claude/plans/flickering-whistling-turing.md)
+[2026-01-09 17:05:01.902] [INFO ] [QUEUE ] [session-1207] ENQUEUED | sessionDbId=1207 | messageId=1169 | type=observation | tool=Write(/home/owner/.claude/plans/flickering-whistling-turing.md) | depth=1
+[2026-01-09 17:05:01.902] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=2}
+[2026-01-09 17:05:01.902] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1767945901901, duration=1ms}
+[2026-01-09 17:05:01.902] [INFO ] [QUEUE ] [session-1207] CLAIMED | sessionDbId=1207 | messageId=1169 | type=observation
+[2026-01-09 17:05:01.971] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1767945901971} 
+[2026-01-09 17:05:01.971] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1767945901971, duration=0ms}
+[2026-01-09 17:05:01.974] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1767945901974} 
+[2026-01-09 17:05:01.974] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1767945901974, duration=0ms}
+[2026-01-09 17:05:01.974] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-09 17:05:16.635] [INFO ] [SDK   ] [session-1207] ← Response received (2779 chars) {promptNumber=2} ```xml
+<observation>
+  <type>discovery</type>
+  <title>OAuth Scope Mismatch Between Documentation an...
+[2026-01-09 17:05:16.635] [INFO ] [DB    ] [session-1207] STORING | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | hasSummary=false
+[2026-01-09 17:05:16.636] [INFO ] [DB    ] [session-1207] STORED | sessionDbId=1207 | memorySessionId=1a9f7c42-842c-4041-82ef-a5495e58c455 | obsCount=1 | obsIds=[479] | summaryId=none
+[2026-01-09 17:05:16.636] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=479, documentCount=7, project=Quwon-App}
+[2026-01-09 17:05:16.636] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=2}
+[2026-01-09 17:05:16.637] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945916637} 
+[2026-01-09 17:05:16.638] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945916637, duration=1ms}
+[2026-01-09 17:05:16.639] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945916639} 
+[2026-01-09 17:05:16.640] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945916639, duration=1ms}
+[2026-01-09 17:05:16.640] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945916640} 
+[2026-01-09 17:05:16.641] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945916640, duration=1ms}
+[2026-01-09 17:05:16.642] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945916642} 
+[2026-01-09 17:05:16.643] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945916642, duration=1ms}
+[2026-01-09 17:05:16.643] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1767945916643} 
+[2026-01-09 17:05:16.644] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1767945916643, duration=1ms}
