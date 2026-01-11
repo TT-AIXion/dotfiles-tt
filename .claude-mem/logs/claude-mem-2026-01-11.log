@@ -1,0 +1,1269 @@
+[2026-01-11 10:33:07.959] [INFO ] [HOOK  ] [session-2659] INIT_COMPLETE | sessionDbId=2659 | promptNumber=23 | project=Quwon-App
+[2026-01-11 10:33:08.027] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:33:33.093] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879723185 --log-failed 2>/dev/null | tail -100) {workerPort=37777}
+[2026-01-11 10:33:33.174] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:33:39.338] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879723185 --log 2>/dev/null | grep -A 50 "structured_output" | head -80) {workerPort=37777}
+[2026-01-11 10:33:39.420] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:33:45.082] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879723185 --log 2>/dev/null | grep -E "(error|Error|fail|Failed|structured)" | tail -50) {workerPort=37777}
+[2026-01-11 10:33:45.161] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:33:52.308] [INFO ] [HOOK  ] → PostToolUse: Bash(gh api /repos/AIXion-Team/Quwon-App/actions/runs/20879723185/jobs --jq '.jobs[] | select(.name == "claude-review") | {conclusion, steps: [.steps[] | {name, conclusion}]}') {workerPort=37777}
+[2026-01-11 10:33:52.390] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:33:58.912] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879723185 --log 2>/dev/null | grep -A 200 "レビュー結果の統合" | head -250) {workerPort=37777}
+[2026-01-11 10:33:58.992] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:06.055] [INFO ] [HOOK  ] → PostToolUse: Bash(gh api /repos/AIXion-Team/Quwon-App/actions/jobs/59994234713/logs 2>&1 | head -500) {workerPort=37777}
+[2026-01-11 10:34:06.136] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:11.345] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/.claude/projects/-home-owner-ghq-github-com-AIXion-Team-Quwon-App/42b55f14-c64e-440c-8673-2115cf2b3f40/tool-results/toolu_015SjRyhH3fh4H2rAVF5gjPP.txt) {workerPort=37777}
+[2026-01-11 10:34:11.427] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:20.384] [INFO ] [HOOK  ] → PostToolUse: Bash(grep -n "Error\|error\|fail\|Failed\|structured" /home/owner/.claude/projects/-home-owner-ghq-github-com-AIXion-Team-Quwon-App/42b55f14-c64e-440c-8673-2115cf2b3f40/tool-results/toolu_015SjRyhH3fh4H2rAVF5gjPP.txt | tail -50) {workerPort=37777}
+[2026-01-11 10:34:20.476] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:25.515] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/.claude/projects/-home-owner-ghq-github-com-AIXion-Team-Quwon-App/42b55f14-c64e-440c-8673-2115cf2b3f40/tool-results/toolu_015SjRyhH3fh4H2rAVF5gjPP.txt) {workerPort=37777}
+[2026-01-11 10:34:25.600] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:30.800] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/.claude/projects/-home-owner-ghq-github-com-AIXion-Team-Quwon-App/42b55f14-c64e-440c-8673-2115cf2b3f40/tool-results/toolu_015SjRyhH3fh4H2rAVF5gjPP.txt) {workerPort=37777}
+[2026-01-11 10:34:30.874] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:39.836] [INFO ] [HOOK  ] → PostToolUse: Bash(gh api /repos/AIXion-Team/Quwon-App/actions/runs/20879723185/jobs --jq '.jobs[0].steps[] | select(.name == "レビュー結果の統合とコメント投稿") | {number, conclusion, started_at, completed_at}') {workerPort=37777}
+[2026-01-11 10:34:39.922] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:46.744] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879723185 --log 2>&1 | grep -A 30 "レビュー結果の統合" | head -50) {workerPort=37777}
+[2026-01-11 10:34:46.829] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:52.177] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879723185 --log 2>&1 | tail -200) {workerPort=37777}
+[2026-01-11 10:34:52.258] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:34:58.438] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run download 20879723185 --dir /tmp/ci-logs 2>&1; ls -la /tmp/ci-logs/ 2>/dev/null | head -20) {workerPort=37777}
+[2026-01-11 10:34:58.516] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:35:12.242] [INFO ] [HOOK  ] → PostToolUse: Bash(curl -s -H "Authorization: token $(gh auth token)" "https://api.github.com/repos/AIXion-Team/Quwon-App/actions/jobs/59994234713/logs" 2>&1 | tail -300 | head -200) {workerPort=37777}
+[2026-01-11 10:35:12.325] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:35:44.039] [INFO ] [HOOK  ] → PostToolUse: WebSearch(anthropics claude-code-action v1 json-schema structured_output github action 2025) {workerPort=37777}
+[2026-01-11 10:35:44.119] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:35:56.740] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.github/workflows/claude-code-review.yml) {workerPort=37777}
+[2026-01-11 10:35:56.852] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:36:13.953] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.github/workflows/claude-code-review.yml) {workerPort=37777}
+[2026-01-11 10:36:14.035] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:36:20.677] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879723185 --log 2>&1 | wc -l) {workerPort=37777}
+[2026-01-11 10:36:20.763] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:36:27.521] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879723185 --job 59994234713 --log 2>&1 | wc -l) {workerPort=37777}
+[2026-01-11 10:36:27.597] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:36:36.908] [INFO ] [HOOK  ] → PostToolUse: Bash(gh api repos/AIXion-Team/Quwon-App/actions/jobs/59994234713/logs 2>&1 | wc -c) {workerPort=37777}
+[2026-01-11 10:36:36.992] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:36:44.543] [INFO ] [HOOK  ] → PostToolUse: Bash(gh api repos/AIXion-Team/Quwon-App/actions/jobs/59994234713/logs 2>&1 | grep -E "(Error|error|structured|parse|JSON)" | tail -30) {workerPort=37777}
+[2026-01-11 10:36:44.628] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 10:36:59.051] [INFO ] [HOOK  ] → Stop: Requesting summary {workerPort=37777, hasLastAssistantMessage=true}
+[2026-01-11 10:36:59.142] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:04:32.535] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:04:57.136] [INFO ] [HOOK  ] [session-2826] INIT_COMPLETE | sessionDbId=2826 | promptNumber=1 | project=Quwon-App
+[2026-01-11 11:04:57.237] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:05:15.471] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run list --branch staging-dog --limit 10) {workerPort=37777}
+[2026-01-11 11:05:15.547] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:05:24.957] [INFO ] [HOOK  ] → Stop: Requesting summary {workerPort=37777, hasLastAssistantMessage=true}
+[2026-01-11 11:05:25.038] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:21:38.156] [INFO ] [HOOK  ] [session-2826] INIT_COMPLETE | sessionDbId=2826 | promptNumber=2 | project=Quwon-App
+[2026-01-11 11:21:38.252] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:21:55.059] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run list --workflow="Cloudflare Workers Deploy" --limit 10) {workerPort=37777}
+[2026-01-11 11:21:55.153] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:22:04.170] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879206307 --log-failed 2>/dev/null | tail -100) {workerPort=37777}
+[2026-01-11 11:22:04.252] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:22:11.735] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879206307 --log 2>/dev/null | tail -150) {workerPort=37777}
+[2026-01-11 11:22:11.816] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:22:19.573] [INFO ] [HOOK  ] → PostToolUse: Bash(gh run view 20879206307) {workerPort=37777}
+[2026-01-11 11:22:19.651] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:22:27.411] [INFO ] [HOOK  ] → Stop: Requesting summary {workerPort=37777, hasLastAssistantMessage=true}
+[2026-01-11 11:22:27.501] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:33:36.507] [INFO ] [SYSTEM] Claude-mem search server started
+[2026-01-11 11:33:36.528] [WARN ] [SYSTEM] Worker not available {"workerUrl":"http://127.0.0.1:37777"}
+[2026-01-11 11:33:36.528] [WARN ] [SYSTEM] Tools will fail until Worker is started
+[2026-01-11 11:33:36.528] [WARN ] [SYSTEM] Start Worker with: npm run worker:restart
+[2026-01-11 11:33:37.677] [INFO ] [SYSTEM] Starting worker daemon
+[2026-01-11 11:33:37.808] [INFO ] [SYSTEM] HTTP server started {host=127.0.0.1, port=37777, pid=6284}
+[2026-01-11 11:33:37.811] [INFO ] [SYSTEM] Worker started {host=127.0.0.1, port=37777, pid=6284}
+[2026-01-11 11:33:37.820] [INFO ] [SYSTEM] Mode loaded: code
+[2026-01-11 11:33:37.826] [INFO ] [DB    ] Database initialized
+[2026-01-11 11:33:37.827] [INFO ] [WORKER] SearchManager initialized and search routes registered
+[2026-01-11 11:33:37.880] [INFO ] [SYSTEM] Claude-mem search server started
+[2026-01-11 11:33:37.887] [INFO ] [WORKER] ✓ Connected to MCP server
+[2026-01-11 11:33:37.887] [INFO ] [SYSTEM] Background initialization complete
+[2026-01-11 11:33:37.903] [INFO ] [HTTP  ] → GET /api/health {requestId=GET-1768098817903} 
+[2026-01-11 11:33:37.906] [INFO ] [HTTP  ] ← 200 /api/health {requestId=GET-1768098817903, duration=3ms}
+[2026-01-11 11:33:37.909] [INFO ] [SYSTEM] Worker available {"workerUrl":"http://127.0.0.1:37777"}
+[2026-01-11 11:33:37.992] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768098817992} 
+[2026-01-11 11:33:37.992] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768098817992, duration=0ms}
+[2026-01-11 11:33:37.993] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768098817993} 
+[2026-01-11 11:33:37.994] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768098817993, duration=1ms}
+[2026-01-11 11:33:37.995] [INFO ] [HTTP  ] → GET /api/context/inject {requestId=GET-1768098817995} 
+[2026-01-11 11:33:37.995] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768098817995} 
+[2026-01-11 11:33:38.016] [INFO ] [HTTP  ] ← 200 /api/context/inject {requestId=GET-1768098817995, duration=21ms}
+[2026-01-11 11:33:38.017] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768098817995, duration=22ms}
+[2026-01-11 11:33:38.019] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768098818019} 
+[2026-01-11 11:33:38.019] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768098818019, duration=0ms}
+[2026-01-11 11:33:38.020] [INFO ] [HTTP  ] → GET /api/context/inject {requestId=GET-1768098818020} 
+[2026-01-11 11:33:38.028] [INFO ] [HTTP  ] ← 200 /api/context/inject {requestId=GET-1768098818020, duration=8ms}
+[2026-01-11 11:33:38.187] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768098818187} 
+[2026-01-11 11:33:38.187] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768098818187, duration=0ms}
+[2026-01-11 11:33:38.187] [INFO ] [SYSTEM] Worker started successfully
+[2026-01-11 11:39:16.141] [INFO ] [SYSTEM] MCP server shutting down
+[2026-01-11 11:39:23.110] [INFO ] [SYSTEM] Claude-mem search server started
+[2026-01-11 11:39:23.123] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099163123} 
+[2026-01-11 11:39:23.124] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099163123, duration=1ms}
+[2026-01-11 11:39:23.126] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099163126} 
+[2026-01-11 11:39:23.126] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099163126, duration=0ms}
+[2026-01-11 11:39:23.127] [INFO ] [HTTP  ] → GET /api/context/inject {requestId=GET-1768099163127} 
+[2026-01-11 11:39:23.138] [INFO ] [HTTP  ] ← 200 /api/context/inject {requestId=GET-1768099163127, duration=11ms}
+[2026-01-11 11:39:23.139] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099163139} 
+[2026-01-11 11:39:23.139] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099163139, duration=0ms}
+[2026-01-11 11:39:23.140] [INFO ] [HTTP  ] → GET /api/health {requestId=GET-1768099163140} 
+[2026-01-11 11:39:23.141] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099163141} 
+[2026-01-11 11:39:23.144] [INFO ] [HTTP  ] ← 200 /api/health {requestId=GET-1768099163140, duration=4ms}
+[2026-01-11 11:39:23.145] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099163141, duration=4ms}
+[2026-01-11 11:39:23.147] [INFO ] [HTTP  ] → GET /api/context/inject {requestId=GET-1768099163147} 
+[2026-01-11 11:39:23.148] [INFO ] [SYSTEM] Worker available {"workerUrl":"http://127.0.0.1:37777"}
+[2026-01-11 11:39:23.156] [INFO ] [HTTP  ] ← 200 /api/context/inject {requestId=GET-1768099163147, duration=9ms}
+[2026-01-11 11:39:23.221] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099163221} 
+[2026-01-11 11:39:23.221] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099163221, duration=0ms}
+[2026-01-11 11:39:23.226] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099163226} 
+[2026-01-11 11:39:23.226] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099163226, duration=0ms}
+[2026-01-11 11:39:23.227] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:40:31.188] [INFO ] [SYSTEM] Claude-mem search server started
+[2026-01-11 11:40:31.204] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099231204} 
+[2026-01-11 11:40:31.204] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099231204, duration=0ms}
+[2026-01-11 11:40:31.206] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099231206} 
+[2026-01-11 11:40:31.206] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099231206, duration=0ms}
+[2026-01-11 11:40:31.207] [INFO ] [HTTP  ] → GET /api/context/inject {requestId=GET-1768099231207} 
+[2026-01-11 11:40:31.215] [INFO ] [HTTP  ] ← 200 /api/context/inject {requestId=GET-1768099231207, duration=8ms}
+[2026-01-11 11:40:31.216] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099231216} 
+[2026-01-11 11:40:31.216] [INFO ] [HTTP  ] → GET /api/health {requestId=GET-1768099231216} 
+[2026-01-11 11:40:31.216] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099231216, duration=0ms}
+[2026-01-11 11:40:31.217] [INFO ] [HTTP  ] ← 200 /api/health {requestId=GET-1768099231216, duration=1ms}
+[2026-01-11 11:40:31.217] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099231217} 
+[2026-01-11 11:40:31.217] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099231217, duration=0ms}
+[2026-01-11 11:40:31.218] [INFO ] [HTTP  ] → GET /api/context/inject {requestId=GET-1768099231218} 
+[2026-01-11 11:40:31.219] [INFO ] [SYSTEM] Worker available {"workerUrl":"http://127.0.0.1:37777"}
+[2026-01-11 11:40:31.226] [INFO ] [HTTP  ] ← 200 /api/context/inject {requestId=GET-1768099231218, duration=8ms}
+[2026-01-11 11:40:31.287] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099231287} 
+[2026-01-11 11:40:31.288] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099231287, duration=1ms}
+[2026-01-11 11:40:31.294] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099231294} 
+[2026-01-11 11:40:31.295] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099231294, duration=1ms}
+[2026-01-11 11:40:31.295] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:41:47.661] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099307661} 
+[2026-01-11 11:41:47.661] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099307661, duration=0ms}
+[2026-01-11 11:41:47.662] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099307662} 
+[2026-01-11 11:41:47.662] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099307662, duration=0ms}
+[2026-01-11 11:41:47.667] [INFO ] [HTTP  ] → POST /api/sessions/init {requestId=POST-1768099307667} 
+[2026-01-11 11:41:47.667] [INFO ] [HTTP  ] SessionRoutes: handleSessionInitByClaudeId called {contentSessionId=58ec959b-db64-45f4-be36-b42dbd939e6a, project=Quwon-App, prompt_length=181}
+[2026-01-11 11:41:47.667] [INFO ] [SESSION] [session-2835] CREATED | contentSessionId=58ec959b-db64-45f4-be36-b42dbd939e6a → sessionDbId=2835 | isNew=true | project=Quwon-App
+[2026-01-11 11:41:47.668] [INFO ] [HTTP  ] ← 200 /api/sessions/init {requestId=POST-1768099307667, duration=1ms}
+[2026-01-11 11:41:47.668] [INFO ] [HTTP  ] → POST /sessions/2835/init {requestId=POST-1768099307668} 
+[2026-01-11 11:41:47.668] [INFO ] [HTTP  ] SessionRoutes: handleSessionInit called {sessionDbId=2835, promptNumber=1, has_userPrompt=true}
+[2026-01-11 11:41:47.669] [INFO ] [SESSION] [session-2835] Session initialized {project=Quwon-App, contentSessionId=58ec959b-db64-45f4-be36-b42dbd939e6a, queueDepth=0, hasGenerator=false}
+[2026-01-11 11:41:47.669] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:41:47.669] [INFO ] [CHROMA_SYNC] Syncing user prompt {promptId=198, project=Quwon-App}
+[2026-01-11 11:41:47.669] [INFO ] [CHROMA_SYNC] Connecting to Chroma MCP server... {project=claude-mem}
+[2026-01-11 11:41:47.671] [INFO ] [SESSION] [session-2835] Generator auto-starting (init) using Claude SDK {queueDepth=0, historyLength=0}
+[2026-01-11 11:41:47.673] [INFO ] [SDK   ] Starting SDK query {sessionDbId=2835, contentSessionId=58ec959b-db64-45f4-be36-b42dbd939e6a, hasRealMemorySessionId=false, resume_parameter=(none - fresh start), lastPromptNumber=1}
+[2026-01-11 11:41:47.677] [INFO ] [SDK   ] Creating message generator {sessionDbId=2835, contentSessionId=58ec959b-db64-45f4-be36-b42dbd939e6a, lastPromptNumber=1, isInitPrompt=true, promptType=INIT}
+[2026-01-11 11:41:47.678] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:41:47.678] [INFO ] [HTTP  ] ← 200 /sessions/2835/init {requestId=POST-1768099307668, duration=10ms}
+[2026-01-11 11:41:47.678] [INFO ] [HOOK  ] [session-2835] INIT_COMPLETE | sessionDbId=2835 | promptNumber=1 | project=Quwon-App
+[2026-01-11 11:41:47.755] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099307755} 
+[2026-01-11 11:41:47.756] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099307755, duration=1ms}
+[2026-01-11 11:41:47.762] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099307762} 
+[2026-01-11 11:41:47.762] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099307762, duration=0ms}
+[2026-01-11 11:41:47.763] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:41:49.145] [INFO ] [SESSION] [session-2835] MEMORY_ID_CAPTURED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | dbVerified=true
+[2026-01-11 11:41:49.616] [INFO ] [CHROMA_SYNC] Connected to Chroma MCP server {project=claude-mem}
+[2026-01-11 11:41:52.848] [INFO ] [SDK   ] [session-2835] ← Response received (351 chars) {promptNumber=1} I need to wait for tool execution data from the primary session to create observations. The user req...
+[2026-01-11 11:41:52.848] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | hasSummary=false
+[2026-01-11 11:41:52.848] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-11 11:41:52.849] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:42:23.628] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099343628} 
+[2026-01-11 11:42:23.628] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099343628, duration=0ms}
+[2026-01-11 11:42:23.629] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099343629} 
+[2026-01-11 11:42:23.629] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099343629, duration=0ms}
+[2026-01-11 11:42:23.630] [INFO ] [HOOK  ] → PostToolUse: TodoWrite {workerPort=37777}
+[2026-01-11 11:42:23.632] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099343632} tool=TodoWrite
+[2026-01-11 11:42:23.632] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099343632, duration=0ms}
+[2026-01-11 11:42:23.702] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099343702} 
+[2026-01-11 11:42:23.702] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099343702, duration=0ms}
+[2026-01-11 11:42:23.705] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099343705} 
+[2026-01-11 11:42:23.705] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099343705, duration=0ms}
+[2026-01-11 11:42:23.705] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:42:36.468] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099356468} 
+[2026-01-11 11:42:36.468] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099356468, duration=0ms}
+[2026-01-11 11:42:36.469] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099356469} 
+[2026-01-11 11:42:36.469] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099356469, duration=0ms}
+[2026-01-11 11:42:36.469] [INFO ] [HOOK  ] → PostToolUse: WebFetch(https://code.claude.com/docs/en/claude_code_docs_map.md) {workerPort=37777}
+[2026-01-11 11:42:36.471] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099356471} tool=WebFetch(https://code.claude.com/docs/en/claude_code_docs_map.md)
+[2026-01-11 11:42:36.472] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2638 | type=observation | tool=WebFetch(https://code.claude.com/docs/en/claude_code_docs_map.md) | depth=1
+[2026-01-11 11:42:36.472] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:42:36.473] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099356471, duration=2ms}
+[2026-01-11 11:42:36.473] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2638 | type=observation
+[2026-01-11 11:42:36.541] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099356541} 
+[2026-01-11 11:42:36.542] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099356541, duration=1ms}
+[2026-01-11 11:42:36.545] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099356544} 
+[2026-01-11 11:42:36.545] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099356544, duration=1ms}
+[2026-01-11 11:42:36.545] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:42:39.465] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099359464} 
+[2026-01-11 11:42:39.465] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099359464, duration=1ms}
+[2026-01-11 11:42:39.465] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099359465} 
+[2026-01-11 11:42:39.466] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099359465, duration=1ms}
+[2026-01-11 11:42:39.466] [INFO ] [HOOK  ] → PostToolUse: WebFetch(https://code.claude.com/docs/en/skills.md) {workerPort=37777}
+[2026-01-11 11:42:39.468] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099359468} tool=WebFetch(https://code.claude.com/docs/en/skills.md)
+[2026-01-11 11:42:39.469] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2639 | type=observation | tool=WebFetch(https://code.claude.com/docs/en/skills.md) | depth=1
+[2026-01-11 11:42:39.469] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:42:39.469] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099359468, duration=1ms}
+[2026-01-11 11:42:39.469] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2639 | type=observation
+[2026-01-11 11:42:39.538] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099359538} 
+[2026-01-11 11:42:39.538] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099359538, duration=0ms}
+[2026-01-11 11:42:39.540] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099359540} 
+[2026-01-11 11:42:39.540] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099359540, duration=0ms}
+[2026-01-11 11:42:39.541] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:42:39.556] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099359556} 
+[2026-01-11 11:42:39.556] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099359556, duration=0ms}
+[2026-01-11 11:42:39.557] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099359557} 
+[2026-01-11 11:42:39.557] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099359557, duration=0ms}
+[2026-01-11 11:42:39.557] [INFO ] [HOOK  ] → PostToolUse: WebFetch(https://code.claude.com/docs/en/slash-commands.md) {workerPort=37777}
+[2026-01-11 11:42:39.559] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099359559} tool=WebFetch(https://code.claude.com/docs/en/slash-commands.md)
+[2026-01-11 11:42:39.560] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2640 | type=observation | tool=WebFetch(https://code.claude.com/docs/en/slash-commands.md) | depth=1
+[2026-01-11 11:42:39.560] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:42:39.560] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099359559, duration=1ms}
+[2026-01-11 11:42:39.560] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2640 | type=observation
+[2026-01-11 11:42:39.628] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099359628} 
+[2026-01-11 11:42:39.629] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099359628, duration=1ms}
+[2026-01-11 11:42:39.631] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099359631} 
+[2026-01-11 11:42:39.632] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099359631, duration=1ms}
+[2026-01-11 11:42:39.632] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:42:45.075] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | hasSummary=false
+[2026-01-11 11:42:45.075] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-11 11:42:45.075] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:42:54.812] [INFO ] [SDK   ] [session-2835] ← Response received (1923 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Retrieved Claude Code Skills Documentation fo...
+[2026-01-11 11:42:54.812] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:42:54.813] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[965] | summaryId=none
+[2026-01-11 11:42:54.813] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=965, documentCount=6, project=Quwon-App}
+[2026-01-11 11:42:54.813] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:43:03.221] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099383221} 
+[2026-01-11 11:43:03.221] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099383221, duration=0ms}
+[2026-01-11 11:43:03.222] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099383222} 
+[2026-01-11 11:43:03.222] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099383222, duration=0ms}
+[2026-01-11 11:43:03.223] [INFO ] [HOOK  ] → PostToolUse: Task(claude-code-guide) {workerPort=37777}
+[2026-01-11 11:43:03.225] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099383225} tool=Task(claude-code-guide)
+[2026-01-11 11:43:03.225] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2641 | type=observation | tool=Task(claude-code-guide) | depth=1
+[2026-01-11 11:43:03.225] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:43:03.225] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099383225, duration=0ms}
+[2026-01-11 11:43:03.226] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2641 | type=observation
+[2026-01-11 11:43:03.295] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099383295} 
+[2026-01-11 11:43:03.295] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099383295, duration=0ms}
+[2026-01-11 11:43:03.299] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099383299} 
+[2026-01-11 11:43:03.299] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099383299, duration=0ms}
+[2026-01-11 11:43:03.299] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:43:11.658] [INFO ] [SDK   ] [session-2835] ← Response received (2394 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Detailed Skills Architecture and SKILL.md For...
+[2026-01-11 11:43:11.658] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:43:11.658] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[966] | summaryId=none
+[2026-01-11 11:43:11.658] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=966, documentCount=7, project=Quwon-App}
+[2026-01-11 11:43:11.658] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:43:16.648] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099396648} 
+[2026-01-11 11:43:16.649] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099396648, duration=1ms}
+[2026-01-11 11:43:16.650] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099396650} 
+[2026-01-11 11:43:16.650] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099396650, duration=0ms}
+[2026-01-11 11:43:16.650] [INFO ] [HOOK  ] → PostToolUse: TodoWrite {workerPort=37777}
+[2026-01-11 11:43:16.653] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099396653} tool=TodoWrite
+[2026-01-11 11:43:16.653] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099396653, duration=0ms}
+[2026-01-11 11:43:16.723] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099396723} 
+[2026-01-11 11:43:16.723] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099396723, duration=0ms}
+[2026-01-11 11:43:16.726] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099396726} 
+[2026-01-11 11:43:16.726] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099396726, duration=0ms}
+[2026-01-11 11:43:16.727] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:43:23.296] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099403296} 
+[2026-01-11 11:43:23.296] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099403296, duration=0ms}
+[2026-01-11 11:43:23.297] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099403297} 
+[2026-01-11 11:43:23.297] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099403297, duration=0ms}
+[2026-01-11 11:43:23.297] [INFO ] [HOOK  ] → PostToolUse: Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/) {workerPort=37777}
+[2026-01-11 11:43:23.299] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099403299} tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/)
+[2026-01-11 11:43:23.300] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2642 | type=observation | tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/) | depth=1
+[2026-01-11 11:43:23.300] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:43:23.300] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099403299, duration=1ms}
+[2026-01-11 11:43:23.300] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2642 | type=observation
+[2026-01-11 11:43:23.325] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099403325} 
+[2026-01-11 11:43:23.325] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099403325, duration=0ms}
+[2026-01-11 11:43:23.326] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099403326} 
+[2026-01-11 11:43:23.326] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099403326, duration=0ms}
+[2026-01-11 11:43:23.326] [INFO ] [HOOK  ] → PostToolUse: Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/ | head -30) {workerPort=37777}
+[2026-01-11 11:43:23.328] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099403328} tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/ | head -30)
+[2026-01-11 11:43:23.329] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2643 | type=observation | tool=Bash(ls -la /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/ | head -30) | depth=1
+[2026-01-11 11:43:23.329] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:43:23.329] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099403328, duration=1ms}
+[2026-01-11 11:43:23.329] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2643 | type=observation
+[2026-01-11 11:43:23.374] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099403374} 
+[2026-01-11 11:43:23.374] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099403374, duration=0ms}
+[2026-01-11 11:43:23.377] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099403377} 
+[2026-01-11 11:43:23.377] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099403377, duration=0ms}
+[2026-01-11 11:43:23.378] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:43:23.404] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099403404} 
+[2026-01-11 11:43:23.404] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099403404, duration=0ms}
+[2026-01-11 11:43:23.408] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099403408} 
+[2026-01-11 11:43:23.408] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099403408, duration=0ms}
+[2026-01-11 11:43:23.408] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:43:26.055] [INFO ] [SDK   ] [session-2835] ← Response received (2368 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Skills vs Slash Commands Differentiation and ...
+[2026-01-11 11:43:26.056] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:43:26.056] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[967] | summaryId=none
+[2026-01-11 11:43:26.056] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=967, documentCount=7, project=Quwon-App}
+[2026-01-11 11:43:26.056] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:43:36.158] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099416158} 
+[2026-01-11 11:43:36.159] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099416158, duration=1ms}
+[2026-01-11 11:43:36.160] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099416160} 
+[2026-01-11 11:43:36.160] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099416160, duration=0ms}
+[2026-01-11 11:43:36.162] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099416162} 
+[2026-01-11 11:43:36.162] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099416162, duration=0ms}
+[2026-01-11 11:43:36.163] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099416163} 
+[2026-01-11 11:43:36.163] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099416163, duration=0ms}
+[2026-01-11 11:43:36.161] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/release-stg-dog-skills/SKILL.md) {workerPort=37777}
+[2026-01-11 11:43:36.165] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099416165} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/release-stg-dog-skills/SKILL.md)
+[2026-01-11 11:43:36.164] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/release-stg-dog.md) {workerPort=37777}
+[2026-01-11 11:43:36.165] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2644 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/release-stg-dog-skills/SKILL.md) | depth=1
+[2026-01-11 11:43:36.165] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:43:36.165] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099416165, duration=0ms}
+[2026-01-11 11:43:36.166] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2644 | type=observation
+[2026-01-11 11:43:36.167] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099416167} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/release-stg-dog.md)
+[2026-01-11 11:43:36.167] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2645 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/release-stg-dog.md) | depth=1
+[2026-01-11 11:43:36.167] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:43:36.167] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099416167, duration=0ms}
+[2026-01-11 11:43:36.167] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2645 | type=observation
+[2026-01-11 11:43:36.168] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099416168} 
+[2026-01-11 11:43:36.168] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099416168, duration=0ms}
+[2026-01-11 11:43:36.169] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099416169} 
+[2026-01-11 11:43:36.169] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099416169, duration=0ms}
+[2026-01-11 11:43:36.170] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/auto-commit.md) {workerPort=37777}
+[2026-01-11 11:43:36.174] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099416174} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/auto-commit.md)
+[2026-01-11 11:43:36.179] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2646 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/auto-commit.md) | depth=1
+[2026-01-11 11:43:36.179] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:43:36.179] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099416174, duration=5ms}
+[2026-01-11 11:43:36.179] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2646 | type=observation
+[2026-01-11 11:43:36.184] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099416184} 
+[2026-01-11 11:43:36.184] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099416184, duration=0ms}
+[2026-01-11 11:43:36.185] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099416185} 
+[2026-01-11 11:43:36.185] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099416185, duration=0ms}
+[2026-01-11 11:43:36.186] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/local-dev-server/SKILL.md) {workerPort=37777}
+[2026-01-11 11:43:36.188] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099416188} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/local-dev-server/SKILL.md)
+[2026-01-11 11:43:36.189] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2647 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/local-dev-server/SKILL.md) | depth=1
+[2026-01-11 11:43:36.189] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:43:36.189] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099416188, duration=1ms}
+[2026-01-11 11:43:36.189] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2647 | type=observation
+[2026-01-11 11:43:36.243] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099416243} 
+[2026-01-11 11:43:36.243] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099416243, duration=0ms}
+[2026-01-11 11:43:36.247] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099416247} 
+[2026-01-11 11:43:36.247] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099416247, duration=0ms}
+[2026-01-11 11:43:36.248] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:43:36.253] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099416253} 
+[2026-01-11 11:43:36.253] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099416253, duration=0ms}
+[2026-01-11 11:43:36.258] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099416258} 
+[2026-01-11 11:43:36.259] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099416258, duration=1ms}
+[2026-01-11 11:43:36.261] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099416261} 
+[2026-01-11 11:43:36.259] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:43:36.261] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099416261, duration=0ms}
+[2026-01-11 11:43:36.262] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099416262} 
+[2026-01-11 11:43:36.262] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099416262, duration=0ms}
+[2026-01-11 11:43:36.266] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099416266} 
+[2026-01-11 11:43:36.266] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099416266} 
+[2026-01-11 11:43:36.266] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099416266, duration=0ms}
+[2026-01-11 11:43:36.266] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099416266, duration=0ms}
+[2026-01-11 11:43:36.267] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:43:36.267] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:43:41.764] [INFO ] [SDK   ] [session-2835] ← Response received (2357 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Completed Research on Command-to-Skill Migrat...
+[2026-01-11 11:43:41.764] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:43:41.765] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[968] | summaryId=none
+[2026-01-11 11:43:41.765] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=968, documentCount=7, project=Quwon-App}
+[2026-01-11 11:43:41.765] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:43:53.628] [INFO ] [SDK   ] [session-2835] ← Response received (2049 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Inventory of Existing Commands for Migration<...
+[2026-01-11 11:43:53.628] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:43:53.629] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[969] | summaryId=none
+[2026-01-11 11:43:53.629] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=969, documentCount=7, project=Quwon-App}
+[2026-01-11 11:43:53.629] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:43:55.809] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099435809} 
+[2026-01-11 11:43:55.809] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099435809, duration=0ms}
+[2026-01-11 11:43:55.810] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099435810} 
+[2026-01-11 11:43:55.810] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099435810, duration=0ms}
+[2026-01-11 11:43:55.810] [INFO ] [HOOK  ] → PostToolUse: TodoWrite {workerPort=37777}
+[2026-01-11 11:43:55.812] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099435812} tool=TodoWrite
+[2026-01-11 11:43:55.812] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099435812, duration=0ms}
+[2026-01-11 11:43:55.884] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099435884} 
+[2026-01-11 11:43:55.884] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099435884, duration=0ms}
+[2026-01-11 11:43:55.888] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099435888} 
+[2026-01-11 11:43:55.888] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099435888, duration=0ms}
+[2026-01-11 11:43:55.889] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:06.721] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099446721} 
+[2026-01-11 11:44:06.721] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099446721, duration=0ms}
+[2026-01-11 11:44:06.722] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099446722} 
+[2026-01-11 11:44:06.722] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099446722, duration=0ms}
+[2026-01-11 11:44:06.723] [INFO ] [HOOK  ] → PostToolUse: Bash(ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/) {workerPort=37777}
+[2026-01-11 11:44:06.725] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099446725} tool=Bash(ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/)
+[2026-01-11 11:44:06.725] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2648 | type=observation | tool=Bash(ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/) | depth=1
+[2026-01-11 11:44:06.725] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:06.725] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099446725, duration=0ms}
+[2026-01-11 11:44:06.726] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2648 | type=observation
+[2026-01-11 11:44:06.799] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099446799} 
+[2026-01-11 11:44:06.800] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099446799, duration=1ms}
+[2026-01-11 11:44:06.803] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099446803} 
+[2026-01-11 11:44:06.803] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099446803, duration=0ms}
+[2026-01-11 11:44:06.804] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:08.273] [INFO ] [SDK   ] [session-2835] ← Response received (2344 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Existing Skills Directory Structure Identifie...
+[2026-01-11 11:44:08.273] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:44:08.273] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[970] | summaryId=none
+[2026-01-11 11:44:08.273] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=970, documentCount=7, project=Quwon-App}
+[2026-01-11 11:44:08.274] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:44:23.942] [INFO ] [SDK   ] [session-2835] ← Response received (2451 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Example Skill Structure Pattern from Existing...
+[2026-01-11 11:44:23.942] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:44:23.943] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[971] | summaryId=none
+[2026-01-11 11:44:23.943] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=971, documentCount=7, project=Quwon-App}
+[2026-01-11 11:44:23.944] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:44:23.947] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099463947} 
+[2026-01-11 11:44:23.950] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099463947, duration=3ms}
+[2026-01-11 11:44:36.854] [INFO ] [SDK   ] [session-2835] ← Response received (2288 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Original Command File Before Migration</title...
+[2026-01-11 11:44:36.855] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:44:36.855] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[972] | summaryId=none
+[2026-01-11 11:44:36.855] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=972, documentCount=7, project=Quwon-App}
+[2026-01-11 11:44:36.855] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:44:36.856] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099476856} 
+[2026-01-11 11:44:36.858] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099476856, duration=2ms}
+[2026-01-11 11:44:45.420] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485420} 
+[2026-01-11 11:44:45.420] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485420, duration=0ms}
+[2026-01-11 11:44:45.421] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485421} 
+[2026-01-11 11:44:45.421] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485421, duration=0ms}
+[2026-01-11 11:44:45.421] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485421} 
+[2026-01-11 11:44:45.422] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485421, duration=1ms}
+[2026-01-11 11:44:45.422] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485422} 
+[2026-01-11 11:44:45.422] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485422, duration=0ms}
+[2026-01-11 11:44:45.422] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485422} 
+[2026-01-11 11:44:45.422] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485422} 
+[2026-01-11 11:44:45.423] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485423} 
+[2026-01-11 11:44:45.423] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485423} 
+[2026-01-11 11:44:45.423] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485423} 
+[2026-01-11 11:44:45.423] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485422, duration=1ms}
+[2026-01-11 11:44:45.423] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485422, duration=1ms}
+[2026-01-11 11:44:45.423] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485423, duration=0ms}
+[2026-01-11 11:44:45.423] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485423, duration=0ms}
+[2026-01-11 11:44:45.423] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485423, duration=0ms}
+[2026-01-11 11:44:45.424] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485424} 
+[2026-01-11 11:44:45.424] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485424} 
+[2026-01-11 11:44:45.424] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485424, duration=0ms}
+[2026-01-11 11:44:45.424] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485424, duration=0ms}
+[2026-01-11 11:44:45.424] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485424} 
+[2026-01-11 11:44:45.424] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485424} 
+[2026-01-11 11:44:45.424] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485424} 
+[2026-01-11 11:44:45.424] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485424, duration=0ms}
+[2026-01-11 11:44:45.425] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485424, duration=1ms}
+[2026-01-11 11:44:45.423] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/add-feature.md) {workerPort=37777}
+[2026-01-11 11:44:45.426] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485424, duration=2ms}
+[2026-01-11 11:44:45.425] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/feat.md) {workerPort=37777}
+[2026-01-11 11:44:45.424] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/build-fix.md) {workerPort=37777}
+[2026-01-11 11:44:45.425] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/gen-drawio-flow.md) {workerPort=37777}
+[2026-01-11 11:44:45.425] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/auto-commit.md) {workerPort=37777}
+[2026-01-11 11:44:45.429] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485429} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/add-feature.md)
+[2026-01-11 11:44:45.427] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/create-pr.md) {workerPort=37777}
+[2026-01-11 11:44:45.430] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2649 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/add-feature.md) | depth=1
+[2026-01-11 11:44:45.430] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.430] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485429, duration=1ms}
+[2026-01-11 11:44:45.431] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2649 | type=observation
+[2026-01-11 11:44:45.429] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/gen-readme.md) {workerPort=37777}
+[2026-01-11 11:44:45.433] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485433} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/feat.md)
+[2026-01-11 11:44:45.434] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2650 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/feat.md) | depth=1
+[2026-01-11 11:44:45.435] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.435] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485433, duration=2ms}
+[2026-01-11 11:44:45.435] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2650 | type=observation
+[2026-01-11 11:44:45.438] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485438} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/build-fix.md)
+[2026-01-11 11:44:45.439] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2651 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/build-fix.md) | depth=1
+[2026-01-11 11:44:45.439] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.439] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485438, duration=1ms}
+[2026-01-11 11:44:45.440] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2651 | type=observation
+[2026-01-11 11:44:45.441] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485441} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/gen-drawio-flow.md)
+[2026-01-11 11:44:45.442] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2652 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/gen-drawio-flow.md) | depth=1
+[2026-01-11 11:44:45.442] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.442] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485441, duration=1ms}
+[2026-01-11 11:44:45.443] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2652 | type=observation
+[2026-01-11 11:44:45.446] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485446} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/auto-commit.md)
+[2026-01-11 11:44:45.447] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2653 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/auto-commit.md) | depth=1
+[2026-01-11 11:44:45.447] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.447] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485446, duration=1ms}
+[2026-01-11 11:44:45.448] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2653 | type=observation
+[2026-01-11 11:44:45.449] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485449} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/create-pr.md)
+[2026-01-11 11:44:45.450] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2654 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/create-pr.md) | depth=1
+[2026-01-11 11:44:45.450] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.450] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485449, duration=1ms}
+[2026-01-11 11:44:45.451] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2654 | type=observation
+[2026-01-11 11:44:45.452] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485452} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/gen-readme.md)
+[2026-01-11 11:44:45.453] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2655 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/gen-readme.md) | depth=1
+[2026-01-11 11:44:45.453] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.453] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485452, duration=1ms}
+[2026-01-11 11:44:45.454] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2655 | type=observation
+[2026-01-11 11:44:45.455] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485455} 
+[2026-01-11 11:44:45.459] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485459} 
+[2026-01-11 11:44:45.459] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485459} 
+[2026-01-11 11:44:45.459] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485455, duration=4ms}
+[2026-01-11 11:44:45.460] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485459, duration=1ms}
+[2026-01-11 11:44:45.460] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485459, duration=1ms}
+[2026-01-11 11:44:45.461] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485461} 
+[2026-01-11 11:44:45.461] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485461} 
+[2026-01-11 11:44:45.461] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485461, duration=0ms}
+[2026-01-11 11:44:45.461] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485461, duration=0ms}
+[2026-01-11 11:44:45.462] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485462} 
+[2026-01-11 11:44:45.462] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485462, duration=0ms}
+[2026-01-11 11:44:45.462] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/review-docs.md) {workerPort=37777}
+[2026-01-11 11:44:45.462] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/playwright.md) {workerPort=37777}
+[2026-01-11 11:44:45.465] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485465} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/review-docs.md)
+[2026-01-11 11:44:45.466] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2656 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/review-docs.md) | depth=1
+[2026-01-11 11:44:45.466] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.466] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485465, duration=1ms}
+[2026-01-11 11:44:45.466] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2656 | type=observation
+[2026-01-11 11:44:45.463] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/implement-from-drawio.md) {workerPort=37777}
+[2026-01-11 11:44:45.467] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485467} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/playwright.md)
+[2026-01-11 11:44:45.468] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2657 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/playwright.md) | depth=1
+[2026-01-11 11:44:45.468] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.468] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485467, duration=1ms}
+[2026-01-11 11:44:45.469] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2657 | type=observation
+[2026-01-11 11:44:45.470] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485470} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/implement-from-drawio.md)
+[2026-01-11 11:44:45.470] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2658 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/implement-from-drawio.md) | depth=1
+[2026-01-11 11:44:45.470] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.470] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485470, duration=0ms}
+[2026-01-11 11:44:45.470] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2658 | type=observation
+[2026-01-11 11:44:45.489] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485489} 
+[2026-01-11 11:44:45.490] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485490} 
+[2026-01-11 11:44:45.490] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485489, duration=1ms}
+[2026-01-11 11:44:45.490] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485490, duration=0ms}
+[2026-01-11 11:44:45.495] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485495} 
+[2026-01-11 11:44:45.495] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485495} 
+[2026-01-11 11:44:45.496] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485495, duration=1ms}
+[2026-01-11 11:44:45.496] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485495, duration=1ms}
+[2026-01-11 11:44:45.497] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.496] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.505] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485505} 
+[2026-01-11 11:44:45.505] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485505, duration=0ms}
+[2026-01-11 11:44:45.510] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485510} 
+[2026-01-11 11:44:45.511] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485510, duration=1ms}
+[2026-01-11 11:44:45.511] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485511} 
+[2026-01-11 11:44:45.511] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485511, duration=0ms}
+[2026-01-11 11:44:45.513] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485513} 
+[2026-01-11 11:44:45.511] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.514] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485513, duration=1ms}
+[2026-01-11 11:44:45.516] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485516} 
+[2026-01-11 11:44:45.516] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485516, duration=0ms}
+[2026-01-11 11:44:45.517] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485517} 
+[2026-01-11 11:44:45.517] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485517, duration=0ms}
+[2026-01-11 11:44:45.519] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485519} 
+[2026-01-11 11:44:45.519] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485519, duration=0ms}
+[2026-01-11 11:44:45.518] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.520] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.524] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485524} 
+[2026-01-11 11:44:45.524] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485524, duration=0ms}
+[2026-01-11 11:44:45.524] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.531] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485531} 
+[2026-01-11 11:44:45.531] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485531, duration=0ms}
+[2026-01-11 11:44:45.534] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485534} 
+[2026-01-11 11:44:45.535] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485534, duration=1ms}
+[2026-01-11 11:44:45.537] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485537} 
+[2026-01-11 11:44:45.538] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485537, duration=1ms}
+[2026-01-11 11:44:45.538] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485538} 
+[2026-01-11 11:44:45.538] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485538, duration=0ms}
+[2026-01-11 11:44:45.538] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.541] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485541} 
+[2026-01-11 11:44:45.541] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485541} 
+[2026-01-11 11:44:45.541] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485541, duration=0ms}
+[2026-01-11 11:44:45.541] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485541, duration=0ms}
+[2026-01-11 11:44:45.542] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.542] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.554] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485554} 
+[2026-01-11 11:44:45.554] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485554, duration=0ms}
+[2026-01-11 11:44:45.557] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485557} 
+[2026-01-11 11:44:45.557] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485557, duration=0ms}
+[2026-01-11 11:44:45.558] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.808] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485808} 
+[2026-01-11 11:44:45.808] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485808, duration=0ms}
+[2026-01-11 11:44:45.808] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485808} 
+[2026-01-11 11:44:45.809] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485808, duration=1ms}
+[2026-01-11 11:44:45.809] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/setup-project.md) {workerPort=37777}
+[2026-01-11 11:44:45.811] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485811} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/setup-project.md)
+[2026-01-11 11:44:45.811] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2659 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/setup-project.md) | depth=1
+[2026-01-11 11:44:45.811] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.812] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485811, duration=1ms}
+[2026-01-11 11:44:45.812] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2659 | type=observation
+[2026-01-11 11:44:45.817] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485817} 
+[2026-01-11 11:44:45.817] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485817, duration=0ms}
+[2026-01-11 11:44:45.817] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485817} 
+[2026-01-11 11:44:45.818] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485817, duration=1ms}
+[2026-01-11 11:44:45.818] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/vitest.md) {workerPort=37777}
+[2026-01-11 11:44:45.820] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099485820} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/vitest.md)
+[2026-01-11 11:44:45.821] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2660 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/commands/vitest.md) | depth=1
+[2026-01-11 11:44:45.821] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:45.821] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099485820, duration=1ms}
+[2026-01-11 11:44:45.821] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2660 | type=observation
+[2026-01-11 11:44:45.882] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485881} 
+[2026-01-11 11:44:45.882] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485881, duration=1ms}
+[2026-01-11 11:44:45.885] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485885} 
+[2026-01-11 11:44:45.885] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485885, duration=0ms}
+[2026-01-11 11:44:45.885] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:45.891] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099485891} 
+[2026-01-11 11:44:45.891] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099485891, duration=0ms}
+[2026-01-11 11:44:45.894] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099485894} 
+[2026-01-11 11:44:45.894] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099485894, duration=0ms}
+[2026-01-11 11:44:45.895] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:44:52.957] [INFO ] [SDK   ] [session-2835] ← Response received (2294 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Auto-Commit Command Analysis for Migration Ev...
+[2026-01-11 11:44:52.957] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:44:52.957] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[973] | summaryId=none
+[2026-01-11 11:44:52.957] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=973, documentCount=7, project=Quwon-App}
+[2026-01-11 11:44:52.957] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:44:52.958] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099492958} 
+[2026-01-11 11:44:52.960] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099492958, duration=2ms}
+[2026-01-11 11:44:53.747] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099493747} 
+[2026-01-11 11:44:53.747] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099493747, duration=0ms}
+[2026-01-11 11:44:53.748] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099493748} 
+[2026-01-11 11:44:53.748] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099493748, duration=0ms}
+[2026-01-11 11:44:53.749] [INFO ] [HOOK  ] → PostToolUse: Bash(mkdir -p /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/{add-feature,auto-commit,build-fix,create-pr,feat,gen-drawio-flow,gen-readme,implement-from-drawio,playwright,review-docs,setup-project,vitest}) {workerPort=37777}
+[2026-01-11 11:44:53.750] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099493750} tool=Bash(mkdir -p /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/{add-feature,auto-commit,build-fix,create-pr,feat,gen-drawio-flow,gen-readme,implement-from-drawio,playwright,review-docs,setup-project,vitest})
+[2026-01-11 11:44:53.751] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2661 | type=observation | tool=Bash(mkdir -p /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/{add-feature,auto-commit,build-fix,create-pr,feat,gen-drawio-flow,gen-readme,implement-from-drawio,playwright,review-docs,setup-project,vitest}) | depth=1
+[2026-01-11 11:44:53.751] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:44:53.751] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099493750, duration=1ms}
+[2026-01-11 11:44:53.751] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2661 | type=observation
+[2026-01-11 11:44:53.826] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099493826} 
+[2026-01-11 11:44:53.827] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099493826, duration=1ms}
+[2026-01-11 11:44:53.831] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099493831} 
+[2026-01-11 11:44:53.831] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099493831, duration=0ms}
+[2026-01-11 11:44:53.832] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:45:08.732] [INFO ] [SDK   ] [session-2835] ← Response received (2366 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Minimal Skill Example with Comprehensive Trig...
+[2026-01-11 11:45:08.732] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:45:08.733] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[974] | summaryId=none
+[2026-01-11 11:45:08.733] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=974, documentCount=7, project=Quwon-App}
+[2026-01-11 11:45:08.733] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:45:08.733] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099508733} 
+[2026-01-11 11:45:08.855] [WARN ] [CHROMA] [HAPPY-PATH] Missing text in MCP chroma_query_documents result {project=claude-mem, location=worker-service.cjs:950} {"query_text":"/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/local-dev-server"}
+[2026-01-11 11:45:08.857] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099508733, duration=124ms}
+[2026-01-11 11:45:22.973] [INFO ] [SDK   ] [session-2835] ← Response received (2540 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Complete Inventory of 46 Existing Skills</tit...
+[2026-01-11 11:45:22.973] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:45:22.973] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[975] | summaryId=none
+[2026-01-11 11:45:22.973] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=975, documentCount=7, project=Quwon-App}
+[2026-01-11 11:45:22.974] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:45:40.321] [INFO ] [SDK   ] [session-2835] ← Response received (2552 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Complex Automated Workflow Command with Multi...
+[2026-01-11 11:45:40.321] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:45:40.321] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[976] | summaryId=none
+[2026-01-11 11:45:40.321] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=976, documentCount=7, project=Quwon-App}
+[2026-01-11 11:45:40.322] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:45:40.322] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099540322} 
+[2026-01-11 11:45:40.324] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099540322, duration=2ms}
+[2026-01-11 11:45:53.261] [INFO ] [SDK   ] [session-2835] ← Response received (2238 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Dual-Synchronization Workflow Command for Dra...
+[2026-01-11 11:45:53.261] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:45:53.262] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[977] | summaryId=none
+[2026-01-11 11:45:53.262] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=977, documentCount=7, project=Quwon-App}
+[2026-01-11 11:45:53.262] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:45:53.263] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099553262} 
+[2026-01-11 11:45:53.265] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099553262, duration=3ms}
+[2026-01-11 11:46:10.532] [INFO ] [SDK   ] [session-2835] ← Response received (2557 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Iterative Build Error Resolution Command with...
+[2026-01-11 11:46:10.532] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:46:10.532] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[978] | summaryId=none
+[2026-01-11 11:46:10.533] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=978, documentCount=7, project=Quwon-App}
+[2026-01-11 11:46:10.533] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:46:10.533] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099570533} 
+[2026-01-11 11:46:10.536] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099570533, duration=3ms}
+[2026-01-11 11:46:27.747] [INFO ] [SDK   ] [session-2835] ← Response received (2646 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Comprehensive Draw.io Diagram Generator with ...
+[2026-01-11 11:46:27.747] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:46:27.747] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[979] | summaryId=none
+[2026-01-11 11:46:27.747] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=979, documentCount=7, project=Quwon-App}
+[2026-01-11 11:46:27.748] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:46:27.748] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099587748} 
+[2026-01-11 11:46:27.751] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099587748, duration=3ms}
+[2026-01-11 11:46:30.702] [INFO ] [SDK   ] [session-2835] ← Response received (138 chars) {promptNumber=1} I'll skip creating an observation for this since it's a duplicate read of auto-commit.md that was al...
+[2026-01-11 11:46:30.702] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | hasSummary=false
+[2026-01-11 11:46:30.702] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-11 11:46:30.702] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:46:45.121] [INFO ] [SDK   ] [session-2835] ← Response received (2366 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Pull Request Creation Automation Command</tit...
+[2026-01-11 11:46:45.122] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:46:45.122] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[980] | summaryId=none
+[2026-01-11 11:46:45.122] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=980, documentCount=7, project=Quwon-App}
+[2026-01-11 11:46:45.122] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:46:45.123] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099605123} 
+[2026-01-11 11:46:45.125] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099605123, duration=2ms}
+[2026-01-11 11:47:03.128] [INFO ] [SDK   ] [session-2835] ← Response received (2781 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Comprehensive README Generator with Non-Engin...
+[2026-01-11 11:47:03.128] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:47:03.129] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[981] | summaryId=none
+[2026-01-11 11:47:03.129] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=981, documentCount=7, project=Quwon-App}
+[2026-01-11 11:47:03.129] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:47:03.129] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099623129} 
+[2026-01-11 11:47:03.132] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099623129, duration=3ms}
+[2026-01-11 11:47:17.587] [INFO ] [SDK   ] [session-2835] ← Response received (2356 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Document Review Command with Subagent Delegat...
+[2026-01-11 11:47:17.587] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:47:17.588] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[982] | summaryId=none
+[2026-01-11 11:47:17.588] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=982, documentCount=7, project=Quwon-App}
+[2026-01-11 11:47:17.588] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:47:17.588] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099637588} 
+[2026-01-11 11:47:17.591] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099637588, duration=3ms}
+[2026-01-11 11:47:36.305] [INFO ] [SDK   ] [session-2835] ← Response received (2822 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Playwright E2E Test Implementation with POM P...
+[2026-01-11 11:47:36.305] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:47:36.305] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[983] | summaryId=none
+[2026-01-11 11:47:36.305] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=983, documentCount=7, project=Quwon-App}
+[2026-01-11 11:47:36.306] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:47:36.306] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099656306} 
+[2026-01-11 11:47:36.308] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099656306, duration=2ms}
+[2026-01-11 11:47:51.306] [INFO ] [SDK   ] [session-2835] ← Response received (2607 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Draw.io-Driven Implementation Command</title>...
+[2026-01-11 11:47:51.307] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:47:51.307] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[984] | summaryId=none
+[2026-01-11 11:47:51.307] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=984, documentCount=7, project=Quwon-App}
+[2026-01-11 11:47:51.307] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:47:51.308] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099671308} 
+[2026-01-11 11:47:51.310] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099671308, duration=2ms}
+[2026-01-11 11:48:08.044] [INFO ] [SDK   ] [session-2835] ← Response received (2652 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Interactive Project Setup Orchestrator with S...
+[2026-01-11 11:48:08.044] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:48:08.044] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[985] | summaryId=none
+[2026-01-11 11:48:08.044] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=985, documentCount=7, project=Quwon-App}
+[2026-01-11 11:48:08.045] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:48:08.045] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099688045} 
+[2026-01-11 11:48:08.048] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099688045, duration=3ms}
+[2026-01-11 11:48:26.811] [INFO ] [SDK   ] [session-2835] ← Response received (2777 chars) {promptNumber=1} ```xml
+<observation>
+  <type>discovery</type>
+  <title>Vitest Unit and Component Test Implementation...
+[2026-01-11 11:48:26.811] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:48:26.811] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[986] | summaryId=none
+[2026-01-11 11:48:26.811] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=986, documentCount=7, project=Quwon-App}
+[2026-01-11 11:48:26.811] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:48:26.812] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099706812} 
+[2026-01-11 11:48:26.814] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099706812, duration=2ms}
+[2026-01-11 11:48:39.862] [INFO ] [SDK   ] [session-2835] ← Response received (2213 chars) {promptNumber=1} ```xml
+<observation>
+  <type>change</type>
+  <title>Created 12 Skill Directories for Command Migrati...
+[2026-01-11 11:48:39.863] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:48:39.863] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[987] | summaryId=none
+[2026-01-11 11:48:39.863] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=987, documentCount=6, project=Quwon-App}
+[2026-01-11 11:48:39.863] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:52:38.580] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099958580} 
+[2026-01-11 11:52:38.580] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099958580, duration=0ms}
+[2026-01-11 11:52:38.581] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099958581} 
+[2026-01-11 11:52:38.581] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099958581, duration=0ms}
+[2026-01-11 11:52:38.582] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/add-feature/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:38.584] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099958584} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/add-feature/SKILL.md)
+[2026-01-11 11:52:38.584] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2662 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/add-feature/SKILL.md) | depth=1
+[2026-01-11 11:52:38.585] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:38.585] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099958584, duration=1ms}
+[2026-01-11 11:52:38.585] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2662 | type=observation
+[2026-01-11 11:52:38.658] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099958658} 
+[2026-01-11 11:52:38.658] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099958658, duration=0ms}
+[2026-01-11 11:52:38.662] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099958662} 
+[2026-01-11 11:52:38.662] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099958662, duration=0ms}
+[2026-01-11 11:52:38.663] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:38.748] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099958748} 
+[2026-01-11 11:52:38.749] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099958748, duration=1ms}
+[2026-01-11 11:52:38.749] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099958749} 
+[2026-01-11 11:52:38.750] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099958749, duration=1ms}
+[2026-01-11 11:52:38.750] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/auto-commit/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:38.752] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099958752} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/auto-commit/SKILL.md)
+[2026-01-11 11:52:38.752] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2663 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/auto-commit/SKILL.md) | depth=1
+[2026-01-11 11:52:38.753] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:38.753] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099958752, duration=1ms}
+[2026-01-11 11:52:38.753] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2663 | type=observation
+[2026-01-11 11:52:38.820] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099958820} 
+[2026-01-11 11:52:38.821] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099958820, duration=1ms}
+[2026-01-11 11:52:38.824] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099958824} 
+[2026-01-11 11:52:38.824] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099958824, duration=0ms}
+[2026-01-11 11:52:38.824] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:38.904] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099958904} 
+[2026-01-11 11:52:38.905] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099958904, duration=1ms}
+[2026-01-11 11:52:38.905] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099958905} 
+[2026-01-11 11:52:38.906] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099958905, duration=1ms}
+[2026-01-11 11:52:38.906] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/build-fix/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:38.908] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099958908} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/build-fix/SKILL.md)
+[2026-01-11 11:52:38.909] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2664 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/build-fix/SKILL.md) | depth=1
+[2026-01-11 11:52:38.909] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:38.909] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099958908, duration=1ms}
+[2026-01-11 11:52:38.909] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2664 | type=observation
+[2026-01-11 11:52:38.977] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099958977} 
+[2026-01-11 11:52:38.978] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099958977, duration=1ms}
+[2026-01-11 11:52:38.981] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099958981} 
+[2026-01-11 11:52:38.981] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099958981, duration=0ms}
+[2026-01-11 11:52:38.981] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:39.059] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959059} 
+[2026-01-11 11:52:39.060] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959059, duration=1ms}
+[2026-01-11 11:52:39.060] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959060} 
+[2026-01-11 11:52:39.060] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959060, duration=0ms}
+[2026-01-11 11:52:39.061] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/create-pr/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:39.063] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099959063} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/create-pr/SKILL.md)
+[2026-01-11 11:52:39.064] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2665 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/create-pr/SKILL.md) | depth=1
+[2026-01-11 11:52:39.064] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:39.064] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099959063, duration=1ms}
+[2026-01-11 11:52:39.064] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2665 | type=observation
+[2026-01-11 11:52:39.138] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959138} 
+[2026-01-11 11:52:39.138] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959138, duration=0ms}
+[2026-01-11 11:52:39.142] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959142} 
+[2026-01-11 11:52:39.142] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959142, duration=0ms}
+[2026-01-11 11:52:39.143] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:39.243] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959243} 
+[2026-01-11 11:52:39.243] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959243, duration=0ms}
+[2026-01-11 11:52:39.244] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959244} 
+[2026-01-11 11:52:39.244] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959244, duration=0ms}
+[2026-01-11 11:52:39.244] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/feat/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:39.246] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099959246} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/feat/SKILL.md)
+[2026-01-11 11:52:39.247] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2666 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/feat/SKILL.md) | depth=1
+[2026-01-11 11:52:39.247] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:39.247] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099959246, duration=1ms}
+[2026-01-11 11:52:39.247] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2666 | type=observation
+[2026-01-11 11:52:39.314] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959314} 
+[2026-01-11 11:52:39.314] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959314, duration=0ms}
+[2026-01-11 11:52:39.317] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959317} 
+[2026-01-11 11:52:39.318] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959317, duration=1ms}
+[2026-01-11 11:52:39.318] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:39.398] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959398} 
+[2026-01-11 11:52:39.398] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959398, duration=0ms}
+[2026-01-11 11:52:39.399] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959399} 
+[2026-01-11 11:52:39.399] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959399, duration=0ms}
+[2026-01-11 11:52:39.399] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/gen-drawio-flow/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:39.401] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099959401} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/gen-drawio-flow/SKILL.md)
+[2026-01-11 11:52:39.402] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2667 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/gen-drawio-flow/SKILL.md) | depth=1
+[2026-01-11 11:52:39.402] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:39.402] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099959401, duration=1ms}
+[2026-01-11 11:52:39.402] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2667 | type=observation
+[2026-01-11 11:52:39.470] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959470} 
+[2026-01-11 11:52:39.471] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959470, duration=1ms}
+[2026-01-11 11:52:39.474] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959474} 
+[2026-01-11 11:52:39.474] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959474, duration=0ms}
+[2026-01-11 11:52:39.475] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:39.558] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959558} 
+[2026-01-11 11:52:39.558] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959558, duration=0ms}
+[2026-01-11 11:52:39.559] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959559} 
+[2026-01-11 11:52:39.559] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959559, duration=0ms}
+[2026-01-11 11:52:39.559] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/gen-readme/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:39.562] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099959562} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/gen-readme/SKILL.md)
+[2026-01-11 11:52:39.562] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2668 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/gen-readme/SKILL.md) | depth=1
+[2026-01-11 11:52:39.562] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:39.562] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099959562, duration=0ms}
+[2026-01-11 11:52:39.563] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2668 | type=observation
+[2026-01-11 11:52:39.632] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959632} 
+[2026-01-11 11:52:39.632] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959632, duration=0ms}
+[2026-01-11 11:52:39.636] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959636} 
+[2026-01-11 11:52:39.636] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959636, duration=0ms}
+[2026-01-11 11:52:39.636] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:39.723] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959723} 
+[2026-01-11 11:52:39.723] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959723, duration=0ms}
+[2026-01-11 11:52:39.724] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959724} 
+[2026-01-11 11:52:39.724] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959724, duration=0ms}
+[2026-01-11 11:52:39.724] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/implement-from-drawio/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:39.726] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099959726} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/implement-from-drawio/SKILL.md)
+[2026-01-11 11:52:39.727] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2669 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/implement-from-drawio/SKILL.md) | depth=1
+[2026-01-11 11:52:39.727] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:39.727] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099959726, duration=1ms}
+[2026-01-11 11:52:39.727] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2669 | type=observation
+[2026-01-11 11:52:39.794] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959794} 
+[2026-01-11 11:52:39.794] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959794, duration=0ms}
+[2026-01-11 11:52:39.798] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959798} 
+[2026-01-11 11:52:39.798] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959798, duration=0ms}
+[2026-01-11 11:52:39.799] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:39.881] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959881} 
+[2026-01-11 11:52:39.881] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959881, duration=0ms}
+[2026-01-11 11:52:39.882] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959882} 
+[2026-01-11 11:52:39.882] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959882, duration=0ms}
+[2026-01-11 11:52:39.882] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/playwright/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:39.884] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099959884} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/playwright/SKILL.md)
+[2026-01-11 11:52:39.885] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2670 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/playwright/SKILL.md) | depth=1
+[2026-01-11 11:52:39.885] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:39.885] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099959884, duration=1ms}
+[2026-01-11 11:52:39.885] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2670 | type=observation
+[2026-01-11 11:52:39.966] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099959966} 
+[2026-01-11 11:52:39.966] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099959966, duration=0ms}
+[2026-01-11 11:52:39.970] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099959970} 
+[2026-01-11 11:52:39.970] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099959970, duration=0ms}
+[2026-01-11 11:52:39.971] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:40.053] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099960053} 
+[2026-01-11 11:52:40.054] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099960053, duration=1ms}
+[2026-01-11 11:52:40.054] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099960054} 
+[2026-01-11 11:52:40.055] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099960054, duration=1ms}
+[2026-01-11 11:52:40.055] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/review-docs/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:40.057] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099960057} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/review-docs/SKILL.md)
+[2026-01-11 11:52:40.057] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2671 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/review-docs/SKILL.md) | depth=1
+[2026-01-11 11:52:40.058] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:40.058] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099960057, duration=1ms}
+[2026-01-11 11:52:40.058] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2671 | type=observation
+[2026-01-11 11:52:40.127] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099960127} 
+[2026-01-11 11:52:40.127] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099960127, duration=0ms}
+[2026-01-11 11:52:40.130] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099960130} 
+[2026-01-11 11:52:40.130] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099960130, duration=0ms}
+[2026-01-11 11:52:40.130] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:40.212] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099960212} 
+[2026-01-11 11:52:40.212] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099960212, duration=0ms}
+[2026-01-11 11:52:40.212] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099960212} 
+[2026-01-11 11:52:40.213] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099960212, duration=1ms}
+[2026-01-11 11:52:40.213] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/setup-project/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:40.215] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099960215} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/setup-project/SKILL.md)
+[2026-01-11 11:52:40.215] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2672 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/setup-project/SKILL.md) | depth=1
+[2026-01-11 11:52:40.216] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:40.216] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099960215, duration=1ms}
+[2026-01-11 11:52:40.216] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2672 | type=observation
+[2026-01-11 11:52:40.294] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099960294} 
+[2026-01-11 11:52:40.294] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099960294, duration=0ms}
+[2026-01-11 11:52:40.297] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099960297} 
+[2026-01-11 11:52:40.297] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099960297, duration=0ms}
+[2026-01-11 11:52:40.297] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:40.386] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099960386} 
+[2026-01-11 11:52:40.386] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099960386, duration=0ms}
+[2026-01-11 11:52:40.387] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099960387} 
+[2026-01-11 11:52:40.388] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099960387, duration=1ms}
+[2026-01-11 11:52:40.388] [INFO ] [HOOK  ] → PostToolUse: Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/vitest/SKILL.md) {workerPort=37777}
+[2026-01-11 11:52:40.391] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099960390} tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/vitest/SKILL.md)
+[2026-01-11 11:52:40.391] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2673 | type=observation | tool=Write(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/vitest/SKILL.md) | depth=1
+[2026-01-11 11:52:40.391] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:40.391] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099960390, duration=1ms}
+[2026-01-11 11:52:40.392] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2673 | type=observation
+[2026-01-11 11:52:40.463] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099960462} 
+[2026-01-11 11:52:40.463] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099960462, duration=1ms}
+[2026-01-11 11:52:40.466] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099960466} 
+[2026-01-11 11:52:40.466] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099960466, duration=0ms}
+[2026-01-11 11:52:40.467] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:47.949] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099967949} 
+[2026-01-11 11:52:47.949] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099967949, duration=0ms}
+[2026-01-11 11:52:47.950] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099967950} 
+[2026-01-11 11:52:47.950] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099967950, duration=0ms}
+[2026-01-11 11:52:47.950] [INFO ] [HOOK  ] → PostToolUse: Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills -name "SKILL.md" | sort) {workerPort=37777}
+[2026-01-11 11:52:47.952] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099967952} tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills -name "SKILL.md" | sort)
+[2026-01-11 11:52:47.953] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2674 | type=observation | tool=Bash(find /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills -name "SKILL.md" | sort) | depth=1
+[2026-01-11 11:52:47.953] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:52:47.953] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099967952, duration=1ms}
+[2026-01-11 11:52:47.953] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2674 | type=observation
+[2026-01-11 11:52:48.030] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099968030} 
+[2026-01-11 11:52:48.031] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099968030, duration=1ms}
+[2026-01-11 11:52:48.034] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099968034} 
+[2026-01-11 11:52:48.035] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099968034, duration=1ms}
+[2026-01-11 11:52:48.035] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:52:53.787] [INFO ] [SDK   ] [session-2835] ← Response received (2359 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated add-feature Command to Skill Format</t...
+[2026-01-11 11:52:53.787] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:52:53.787] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[988] | summaryId=none
+[2026-01-11 11:52:53.787] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=988, documentCount=7, project=Quwon-App}
+[2026-01-11 11:52:53.788] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:52:53.788] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099973788} 
+[2026-01-11 11:52:53.791] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099973788, duration=3ms}
+[2026-01-11 11:53:08.980] [INFO ] [SDK   ] [session-2835] ← Response received (2187 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated auto-commit Command to Skill Format</t...
+[2026-01-11 11:53:08.980] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:53:08.980] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[989] | summaryId=none
+[2026-01-11 11:53:08.981] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=989, documentCount=7, project=Quwon-App}
+[2026-01-11 11:53:08.981] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:53:08.982] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768099988982} 
+[2026-01-11 11:53:08.985] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768099988982, duration=3ms}
+[2026-01-11 11:53:19.088] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099999088} 
+[2026-01-11 11:53:19.088] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099999088, duration=0ms}
+[2026-01-11 11:53:19.089] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099999089} 
+[2026-01-11 11:53:19.089] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099999089, duration=0ms}
+[2026-01-11 11:53:19.089] [INFO ] [HOOK  ] → PostToolUse: Task(general-purpose) {workerPort=37777}
+[2026-01-11 11:53:19.092] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768099999092} tool=Task(general-purpose)
+[2026-01-11 11:53:19.092] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2675 | type=observation | tool=Task(general-purpose) | depth=1
+[2026-01-11 11:53:19.092] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:53:19.092] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768099999092, duration=0ms}
+[2026-01-11 11:53:19.093] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2675 | type=observation
+[2026-01-11 11:53:19.166] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768099999166} 
+[2026-01-11 11:53:19.166] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768099999166, duration=0ms}
+[2026-01-11 11:53:19.169] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768099999169} 
+[2026-01-11 11:53:19.169] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768099999169, duration=0ms}
+[2026-01-11 11:53:19.170] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:53:26.055] [INFO ] [SDK   ] [session-2835] ← Response received (2235 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated build-fix Command to Skill Format</tit...
+[2026-01-11 11:53:26.055] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:53:26.056] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[990] | summaryId=none
+[2026-01-11 11:53:26.056] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=990, documentCount=7, project=Quwon-App}
+[2026-01-11 11:53:26.056] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:53:26.056] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100006056} 
+[2026-01-11 11:53:26.059] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100006056, duration=3ms}
+[2026-01-11 11:53:35.179] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100015179} 
+[2026-01-11 11:53:35.180] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100015179, duration=1ms}
+[2026-01-11 11:53:35.180] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100015180} 
+[2026-01-11 11:53:35.180] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100015180, duration=0ms}
+[2026-01-11 11:53:35.181] [INFO ] [HOOK  ] → PostToolUse: TodoWrite {workerPort=37777}
+[2026-01-11 11:53:35.183] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768100015183} tool=TodoWrite
+[2026-01-11 11:53:35.183] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768100015183, duration=0ms}
+[2026-01-11 11:53:35.253] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100015253} 
+[2026-01-11 11:53:35.253] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100015253, duration=0ms}
+[2026-01-11 11:53:35.257] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100015257} 
+[2026-01-11 11:53:35.257] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100015257, duration=0ms}
+[2026-01-11 11:53:35.258] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:53:41.013] [INFO ] [SDK   ] [session-2835] ← Response received (2185 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated create-pr Command to Skill Format</tit...
+[2026-01-11 11:53:41.013] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:53:41.013] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[991] | summaryId=none
+[2026-01-11 11:53:41.013] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=991, documentCount=7, project=Quwon-App}
+[2026-01-11 11:53:41.014] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:53:41.014] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100021014} 
+[2026-01-11 11:53:41.017] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100021014, duration=3ms}
+[2026-01-11 11:53:43.775] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100023775} 
+[2026-01-11 11:53:43.775] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100023775, duration=0ms}
+[2026-01-11 11:53:43.776] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100023776} 
+[2026-01-11 11:53:43.776] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100023776, duration=0ms}
+[2026-01-11 11:53:43.777] [INFO ] [HOOK  ] → PostToolUse: Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/auto-commit/SKILL.md) {workerPort=37777}
+[2026-01-11 11:53:43.778] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768100023778} tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/auto-commit/SKILL.md)
+[2026-01-11 11:53:43.779] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2676 | type=observation | tool=Read(/home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/auto-commit/SKILL.md) | depth=1
+[2026-01-11 11:53:43.779] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:53:43.779] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768100023778, duration=1ms}
+[2026-01-11 11:53:43.779] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2676 | type=observation
+[2026-01-11 11:53:43.829] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100023829} 
+[2026-01-11 11:53:43.830] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100023829, duration=1ms}
+[2026-01-11 11:53:43.830] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100023830} 
+[2026-01-11 11:53:43.830] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100023830, duration=0ms}
+[2026-01-11 11:53:43.831] [INFO ] [HOOK  ] → PostToolUse: Bash(ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/ | wc -l && ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/) {workerPort=37777}
+[2026-01-11 11:53:43.833] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768100023833} tool=Bash(ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/ | wc -l && ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/)
+[2026-01-11 11:53:43.833] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2677 | type=observation | tool=Bash(ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/ | wc -l && ls /home/owner/ghq/github.com/AIXion-Team/Quwon-App/.claude/skills/) | depth=1
+[2026-01-11 11:53:43.833] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:53:43.833] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768100023833, duration=0ms}
+[2026-01-11 11:53:43.833] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2677 | type=observation
+[2026-01-11 11:53:43.856] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100023856} 
+[2026-01-11 11:53:43.856] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100023856, duration=0ms}
+[2026-01-11 11:53:43.860] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100023860} 
+[2026-01-11 11:53:43.860] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100023860, duration=0ms}
+[2026-01-11 11:53:43.861] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:53:43.906] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100023906} 
+[2026-01-11 11:53:43.906] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100023906, duration=0ms}
+[2026-01-11 11:53:43.910] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100023910} 
+[2026-01-11 11:53:43.910] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100023910, duration=0ms}
+[2026-01-11 11:53:43.911] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:53:53.569] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100033569} 
+[2026-01-11 11:53:53.569] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100033569, duration=0ms}
+[2026-01-11 11:53:53.570] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100033570} 
+[2026-01-11 11:53:53.570] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100033570, duration=0ms}
+[2026-01-11 11:53:53.570] [INFO ] [HOOK  ] → PostToolUse: Bash(rm -f .claude/commands/add-feature.md .claude/commands/auto-commit.md .claude/commands/build-fix.md .claude/commands/create-pr.md .claude/commands/feat.md .claude/commands/gen-drawio-flow.md .claude/commands/gen-readme.md .claude/commands/implement-from-drawio.md .claude/commands/playwright.md .claude/commands/review-docs.md .claude/commands/setup-project.md .claude/commands/vitest.md .claude/commands/release-prod.md .claude/commands/release-stg-dog.md .claude/commands/add-skill.md && ls .claude/commands/) {workerPort=37777}
+[2026-01-11 11:53:53.572] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768100033572} tool=Bash(rm -f .claude/commands/add-feature.md .claude/commands/auto-commit.md .claude/commands/build-fix.md .claude/commands/create-pr.md .claude/commands/feat.md .claude/commands/gen-drawio-flow.md .claude/commands/gen-readme.md .claude/commands/implement-from-drawio.md .claude/commands/playwright.md .claude/commands/review-docs.md .claude/commands/setup-project.md .claude/commands/vitest.md .claude/commands/release-prod.md .claude/commands/release-stg-dog.md .claude/commands/add-skill.md && ls .claude/commands/)
+[2026-01-11 11:53:53.573] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2678 | type=observation | tool=Bash(rm -f .claude/commands/add-feature.md .claude/commands/auto-commit.md .claude/commands/build-fix.md .claude/commands/create-pr.md .claude/commands/feat.md .claude/commands/gen-drawio-flow.md .claude/commands/gen-readme.md .claude/commands/implement-from-drawio.md .claude/commands/playwright.md .claude/commands/review-docs.md .claude/commands/setup-project.md .claude/commands/vitest.md .claude/commands/release-prod.md .claude/commands/release-stg-dog.md .claude/commands/add-skill.md && ls .claude/commands/) | depth=1
+[2026-01-11 11:53:53.573] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:53:53.573] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768100033572, duration=1ms}
+[2026-01-11 11:53:53.573] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2678 | type=observation
+[2026-01-11 11:53:53.641] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100033641} 
+[2026-01-11 11:53:53.642] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100033641, duration=1ms}
+[2026-01-11 11:53:53.645] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100033645} 
+[2026-01-11 11:53:53.645] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100033645, duration=0ms}
+[2026-01-11 11:53:53.646] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:53:55.764] [INFO ] [SDK   ] [session-2835] ← Response received (2329 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated feat Command to Skill Format</title>
+ ...
+[2026-01-11 11:53:55.764] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:53:55.765] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[992] | summaryId=none
+[2026-01-11 11:53:55.765] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=992, documentCount=7, project=Quwon-App}
+[2026-01-11 11:53:55.765] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:53:55.765] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100035765} 
+[2026-01-11 11:53:55.768] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100035765, duration=3ms}
+[2026-01-11 11:53:59.617] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100039617} 
+[2026-01-11 11:53:59.617] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100039617, duration=0ms}
+[2026-01-11 11:53:59.618] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100039618} 
+[2026-01-11 11:53:59.619] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100039618, duration=1ms}
+[2026-01-11 11:53:59.619] [INFO ] [HOOK  ] → PostToolUse: Bash(rm -rf .claude/commands/ && ls .claude/) {workerPort=37777}
+[2026-01-11 11:53:59.622] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768100039622} tool=Bash(rm -rf .claude/commands/ && ls .claude/)
+[2026-01-11 11:53:59.622] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2679 | type=observation | tool=Bash(rm -rf .claude/commands/ && ls .claude/) | depth=1
+[2026-01-11 11:53:59.622] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:53:59.622] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768100039622, duration=0ms}
+[2026-01-11 11:53:59.623] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2679 | type=observation
+[2026-01-11 11:53:59.695] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100039695} 
+[2026-01-11 11:53:59.695] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100039695, duration=0ms}
+[2026-01-11 11:53:59.699] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100039699} 
+[2026-01-11 11:53:59.700] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100039699, duration=1ms}
+[2026-01-11 11:53:59.700] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:54:13.216] [INFO ] [SDK   ] [session-2835] ← Response received (2541 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated gen-drawio-flow Command to Skill Forma...
+[2026-01-11 11:54:13.216] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:54:13.216] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[993] | summaryId=none
+[2026-01-11 11:54:13.216] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=993, documentCount=7, project=Quwon-App}
+[2026-01-11 11:54:13.217] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:54:13.217] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100053217} 
+[2026-01-11 11:54:13.220] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100053217, duration=2ms}
+[2026-01-11 11:54:14.566] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100054566} 
+[2026-01-11 11:54:14.567] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100054566, duration=1ms}
+[2026-01-11 11:54:14.567] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100054567} 
+[2026-01-11 11:54:14.567] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100054567, duration=0ms}
+[2026-01-11 11:54:14.568] [INFO ] [HOOK  ] → PostToolUse: TodoWrite {workerPort=37777}
+[2026-01-11 11:54:14.570] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768100054570} tool=TodoWrite
+[2026-01-11 11:54:14.570] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768100054570, duration=0ms}
+[2026-01-11 11:54:14.638] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100054638} 
+[2026-01-11 11:54:14.639] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100054638, duration=1ms}
+[2026-01-11 11:54:14.642] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100054642} 
+[2026-01-11 11:54:14.642] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100054642, duration=0ms}
+[2026-01-11 11:54:14.643] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:54:20.152] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100060152} 
+[2026-01-11 11:54:20.153] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100060152, duration=1ms}
+[2026-01-11 11:54:20.153] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100060153} 
+[2026-01-11 11:54:20.154] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100060153, duration=1ms}
+[2026-01-11 11:54:20.154] [INFO ] [HOOK  ] → PostToolUse: Bash(git status) {workerPort=37777}
+[2026-01-11 11:54:20.156] [INFO ] [HTTP  ] → POST /api/sessions/observations {requestId=POST-1768100060156} tool=Bash(git status)
+[2026-01-11 11:54:20.157] [INFO ] [QUEUE ] [session-2835] ENQUEUED | sessionDbId=2835 | messageId=2680 | type=observation | tool=Bash(git status) | depth=1
+[2026-01-11 11:54:20.157] [INFO ] [WORKER] Broadcasting processing status {isProcessing=true, queueDepth=1, activeSessions=1}
+[2026-01-11 11:54:20.157] [INFO ] [HTTP  ] ← 200 /api/sessions/observations {requestId=POST-1768100060156, duration=1ms}
+[2026-01-11 11:54:20.157] [INFO ] [QUEUE ] [session-2835] CLAIMED | sessionDbId=2835 | messageId=2680 | type=observation
+[2026-01-11 11:54:20.226] [INFO ] [HTTP  ] → GET /api/readiness {requestId=GET-1768100060226} 
+[2026-01-11 11:54:20.226] [INFO ] [HTTP  ] ← 200 /api/readiness {requestId=GET-1768100060226, duration=0ms}
+[2026-01-11 11:54:20.229] [INFO ] [HTTP  ] → GET /api/version {requestId=GET-1768100060229} 
+[2026-01-11 11:54:20.229] [INFO ] [HTTP  ] ← 200 /api/version {requestId=GET-1768100060229, duration=0ms}
+[2026-01-11 11:54:20.229] [INFO ] [SYSTEM] Worker already running and healthy
+[2026-01-11 11:54:32.060] [INFO ] [SDK   ] [session-2835] ← Response received (2638 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated gen-readme Command to Skill Format</ti...
+[2026-01-11 11:54:32.060] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:54:32.060] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[994] | summaryId=none
+[2026-01-11 11:54:32.060] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=994, documentCount=7, project=Quwon-App}
+[2026-01-11 11:54:32.061] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:54:32.061] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100072061} 
+[2026-01-11 11:54:32.063] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100072061, duration=2ms}
+[2026-01-11 11:54:48.475] [INFO ] [SDK   ] [session-2835] ← Response received (2477 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated implement-from-drawio Command to Skill...
+[2026-01-11 11:54:48.475] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:54:48.476] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[995] | summaryId=none
+[2026-01-11 11:54:48.476] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=995, documentCount=7, project=Quwon-App}
+[2026-01-11 11:54:48.476] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:54:48.476] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100088476} 
+[2026-01-11 11:54:48.479] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100088476, duration=3ms}
+[2026-01-11 11:55:06.733] [INFO ] [SDK   ] [session-2835] ← Response received (2544 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated playwright Command to Skill Format</ti...
+[2026-01-11 11:55:06.733] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:55:06.734] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[996] | summaryId=none
+[2026-01-11 11:55:06.734] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=996, documentCount=7, project=Quwon-App}
+[2026-01-11 11:55:06.734] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:55:06.735] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100106735} 
+[2026-01-11 11:55:06.737] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100106735, duration=2ms}
+[2026-01-11 11:55:22.867] [INFO ] [SDK   ] [session-2835] ← Response received (2440 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated review-docs Command to Skill Format</t...
+[2026-01-11 11:55:22.867] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:55:22.870] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[997] | summaryId=none
+[2026-01-11 11:55:22.870] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=997, documentCount=7, project=Quwon-App}
+[2026-01-11 11:55:22.871] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:55:22.871] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100122871} 
+[2026-01-11 11:55:22.874] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100122871, duration=3ms}
+[2026-01-11 11:55:40.488] [INFO ] [SDK   ] [session-2835] ← Response received (2584 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated setup-project Command to Skill Format<...
+[2026-01-11 11:55:40.488] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:55:40.489] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[998] | summaryId=none
+[2026-01-11 11:55:40.490] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=998, documentCount=7, project=Quwon-App}
+[2026-01-11 11:55:40.490] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:55:40.490] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100140490} 
+[2026-01-11 11:55:40.493] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100140490, duration=3ms}
+[2026-01-11 11:55:59.535] [INFO ] [SDK   ] [session-2835] ← Response received (2557 chars) {promptNumber=1} ```xml
+<observation>
+  <type>feature</type>
+  <title>Migrated vitest Command to Skill Format</title>...
+[2026-01-11 11:55:59.535] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:55:59.536] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[999] | summaryId=none
+[2026-01-11 11:55:59.536] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=999, documentCount=7, project=Quwon-App}
+[2026-01-11 11:55:59.536] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:55:59.537] [INFO ] [HTTP  ] → GET /api/search/by-file {requestId=GET-1768100159537} 
+[2026-01-11 11:55:59.539] [INFO ] [HTTP  ] ← 200 /api/search/by-file {requestId=GET-1768100159537, duration=2ms}
+[2026-01-11 11:56:16.090] [INFO ] [SDK   ] [session-2835] ← Response received (2498 chars) {promptNumber=1} ```xml
+<observation>
+  <type>change</type>
+  <title>Verified Complete Skills Migration</title>
+  <su...
+[2026-01-11 11:56:16.090] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:56:16.090] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[1000] | summaryId=none
+[2026-01-11 11:56:16.091] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=1000, documentCount=6, project=Quwon-App}
+[2026-01-11 11:56:16.091] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:56:33.664] [INFO ] [SDK   ] [session-2835] ← Response received (2536 chars) {promptNumber=1} ```xml
+<observation>
+  <type>change</type>
+  <title>Subagent Completed Parallel Command Migration Ve...
+[2026-01-11 11:56:33.665] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:56:33.665] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[1001] | summaryId=none
+[2026-01-11 11:56:33.665] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=1001, documentCount=7, project=Quwon-App}
+[2026-01-11 11:56:33.665] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:56:37.121] [INFO ] [SDK   ] [session-2835] ← Response received (192 chars) {promptNumber=1} I'll skip creating an observation for this routine verification read of the migrated auto-commit SKI...
+[2026-01-11 11:56:37.121] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | hasSummary=false
+[2026-01-11 11:56:37.121] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-11 11:56:37.122] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:56:40.408] [INFO ] [SDK   ] [session-2835] ← Response received (236 chars) {promptNumber=1} I'll skip creating an observation for this routine verification command that confirms the 58 total i...
+[2026-01-11 11:56:40.408] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | hasSummary=false
+[2026-01-11 11:56:40.408] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=0 | obsIds=[] | summaryId=none
+[2026-01-11 11:56:40.408] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:56:54.812] [INFO ] [SDK   ] [session-2835] ← Response received (2254 chars) {promptNumber=1} ```xml
+<observation>
+  <type>change</type>
+  <title>Cleaned Up Legacy Command Files After Migration<...
+[2026-01-11 11:56:54.812] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:56:54.812] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[1002] | summaryId=none
+[2026-01-11 11:56:54.812] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=1002, documentCount=6, project=Quwon-App}
+[2026-01-11 11:56:54.813] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:57:07.358] [INFO ] [SDK   ] [session-2835] ← Response received (2190 chars) {promptNumber=1} ```xml
+<observation>
+  <type>change</type>
+  <title>Removed Legacy Commands Directory Completing Arc...
+[2026-01-11 11:57:07.358] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:57:07.359] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[1003] | summaryId=none
+[2026-01-11 11:57:07.359] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=1003, documentCount=6, project=Quwon-App}
+[2026-01-11 11:57:07.359] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
+[2026-01-11 11:57:22.344] [INFO ] [SDK   ] [session-2835] ← Response received (2275 chars) {promptNumber=1} ```xml
+<observation>
+  <type>change</type>
+  <title>Git Status Shows Complete Migration Changeset</t...
+[2026-01-11 11:57:22.344] [INFO ] [DB    ] [session-2835] STORING | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | hasSummary=false
+[2026-01-11 11:57:22.345] [INFO ] [DB    ] [session-2835] STORED | sessionDbId=2835 | memorySessionId=77da948d-14ae-4498-be08-6cdd7c61cb45 | obsCount=1 | obsIds=[1004] | summaryId=none
+[2026-01-11 11:57:22.345] [INFO ] [CHROMA_SYNC] Syncing observation {observationId=1004, documentCount=7, project=Quwon-App}
+[2026-01-11 11:57:22.345] [INFO ] [WORKER] Broadcasting processing status {isProcessing=false, queueDepth=0, activeSessions=1}
